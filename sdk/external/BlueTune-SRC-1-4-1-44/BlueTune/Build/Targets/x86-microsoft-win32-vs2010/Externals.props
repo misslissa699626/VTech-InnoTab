@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <BLT_DDPLUS_PLUGIN_HOME>$(SolutionDir)\..\..\..\..\DolbyDigitalPlusPlugin</BLT_DDPLUS_PLUGIN_HOME>
+    <BLT_DDPLUS_PLUGIN_LIB />
+    <IPP_UMC_ROOT>C:\Program Files\Intel\IPP\6.1.1.044\ipp-samples\audio-video-codecs</IPP_UMC_ROOT>
+    <IPP_UMC_LIB>C:\Program Files\Intel\IPP\6.1.1.044\ipp-samples\audio-video-codecs\application\IppUmcLib\$(Configuration)\IppUmcLib.lib</IPP_UMC_LIB>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="BLT_DDPLUS_PLUGIN_HOME">
+      <Value>$(BLT_DDPLUS_PLUGIN_HOME)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BLT_DDPLUS_PLUGIN_LIB">
+      <Value>$(BLT_DDPLUS_PLUGIN_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="IPP_UMC_ROOT">
+      <Value>$(IPP_UMC_ROOT)</Value>
+    </BuildMacro>
+    <BuildMacro Include="IPP_UMC_LIB">
+      <Value>$(IPP_UMC_LIB)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

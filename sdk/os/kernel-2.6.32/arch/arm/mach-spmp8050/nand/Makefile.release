@@ -1,0 +1,20 @@
+#
+# Makefile for the nand
+#
+obj-m	+= gp_nand_module.o
+
+gp_nand_module-objs := \
+	spmp_nf_api.lib	\
+	spmp8k_nand.lib	\
+	nand_FDisk.lib	\
+	NF_Rom_Cache.lib	\
+	storage_op.lib	\
+	fifo.lib	\
+	nand.lib	\
+	nand_badblk.lib	\
+	nand_pgbase.lib	\
+	nftl.lib	\
+	bch.lib	\
+	bch_s336.lib	\
+	hal_base.lib	\
+	nf_s330.lib

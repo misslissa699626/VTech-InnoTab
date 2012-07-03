@@ -1,0 +1,40 @@
+#/**************************************************************************
+# *                                                                        *
+# *         Copyright (c) 2002 by Sunplus mMedia Technology Co., Ltd.      *
+# *                                                                        *
+# *  This software is copyrighted by and is the property of Sunplus        *
+# *  Technology Co., Ltd. All rights are reserved by Sunplus Technology    *
+# *  Co., Ltd. This software may only be used in accordance with the       *
+# *  corresponding license agreement. Any unauthorized use, duplication,   *
+# *  distribution, or disclosure of this software is expressly forbidden.  *
+# *                                                                        *
+# *  This Copyright notice MUST not be removed or modified without prior   *
+# *  written consent of Sunplus Technology Co., Ltd.                       *
+# *                                                                        *
+# *  Sunplus mMedia Technology Co., Ltd. reserves the right to modify this *
+# *  software without notice.                                              *
+# *                                                                        *
+# *  Sunplus mMedia Technology Co., Ltd.                                   *
+# *  19, Innovation First Road, Science-Based Industrial Park,             *
+# *  Hsin-Chu, Taiwan, R.O.C.                                              *
+# *                                                                        *
+# *  Author: Roger Hsu                                                     *
+# *                                                                        *
+# **************************************************************************/
+TOPDIR := ../../../
+include $(TOPDIR)sdk/build/core/config.mak
+
+
+all:
+	@$(MAKE) CC=$(TARGET_CC) -C src/ open_dynamic
+	@$(MKDIR) -p $(OUT_DIR)/lua/lua-5.1/bin
+	@$(CP) -f src/lua src/luac $(OUT_DIR)/lua/lua-5.1/bin
+	@$(MKDIR) -p $(OUT_DIR)/lua/lua-5.1/lib
+	@$(CP) -f src/liblua.a $(OUT_DIR)/lua/lua-5.1/lib
+	@$(MKDIR) -p $(OUT_DIR)/lua/lua-5.1/include
+	@$(CP) -f src/lua.h src/luaconf.h src/lualib.h src/lauxlib.h etc/lua.hpp $(OUT_DIR)/lua/lua-5.1/include
+
+clean:
+	@$(MAKE) CC=$(TARGET_CC) -C src/ clean
+	@$(RM) -rf $(OUT_DIR)/lua/lua-5.1
+

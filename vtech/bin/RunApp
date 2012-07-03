@@ -1,0 +1,184 @@
+#!/bin/sh
+if [ -z "$1" ]; then
+	echo "RunApp title_bin_file [SD/CART]"
+	echo "RunApp path_to_title [SD/CART]"
+	echo "RunApp -kill"
+	exit 1
+fi
+
+PID_FILE=/var/run/Title.pid
+APP_PATH=/vp_mnt/app
+
+###
+### Kill title
+###
+if [ "$1" = "-kill" ]; then
+	if [ -f $PID_FILE ]; then
+		TITLE_PID="`cat $PID_FILE`"
+		if [ -n "$TITLE_PID" ]; then
+			kill $TITLE_PID
+		fi
+		rm -f $PID_FILE
+	else
+		echo "No title is running!"
+	fi
+	exit 0
+fi
+
+###
+### Run title
+###
+if [ -f $PID_FILE ]; then
+	echo "RunApp: $PID_FILE exists, another Title is running..."
+	exit 1
+fi
+
+TARGET_PATH=`readlink -f "$1"`
+
+APP_LOC="-"
+if [ "$2" = "SD" ]; then
+	APP_LOC="S"
+elif [ "$2" = "CART" ]; then
+	APP_LOC="C"
+fi
+
+trap "export SKIP_RUN_PROG=YES; pkill LoadingScreen.x; echo \"RunApp: Received SIGTERM, clear bundle stack but do not exit...\"; appswitch -f=/tmp/bundle.stack -clear" TERM
+
+if [ -d "$TARGET_PATH" ]; then
+	#it is a directory
+	if [ -f "$1/_Run" ]; then
+		echo "RunApp: $TARGET_PATH/_Run"
+		rm -f $APP_PATH
+		ln -s "$TARGET_PATH" $APP_PATH
+		cd $APP_PATH
+		export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$APP_PATH/lib"
+		if [ "$SKIP_RUN_PROG" != "YES" ]; then
+			./_Run &
+			APP_PID=$!
+			echo "$APP_PID $APP_LOC" > $PID_FILE
+			wait_pg_except_myself $APP_PID
+			echo "RunApp: done waiting pid $APP_PID"
+			rm -f $PID_FILE
+			sleep 0.1
+		fi
+		cd /
+		rm -f $APP_PATH
+	else
+		echo "RunApp: file not found: $TARGET_PATH/_Run"
+	fi
+elif [ -f "$TARGET_PATH" ]; then
+	#it is a file
+	IS_RUN_SUCCESSFULLY=NO	
+	MOUNT_POINT=/vp_mnt/app_bin
+	mkdir -p $MOUNT_POINT
+	vmount -d /dev/loop7
+	if lmaid "$TARGET_PATH" /dev/loop7 $MOUNT_POINT ; then
+		TITLE_PATH=`ls -d $MOUNT_POINT/*`
+		if [ -n "$TITLE_PATH" ] ; then
+			echo "RunApp: $TARGET_PATH"
+			if [ -f "$TITLE_PATH/_Run" ]; then
+				ln -s "$TITLE_PATH" $APP_PATH
+				cd $APP_PATH
+				echo "RunApp: InnoTab cartridge, launch _Run..."
+				export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$APP_PATH/lib"
+
+				LIPSYNCCONFIG_DIR=/vp_mnt/Bundle/LipSyncConfig
+				if [ -d $APP_PATH/LipSyncConfig ]; then
+					LIPSYNCCONFIG_DIR=$APP_PATH/LipSyncConfig
+				fi
+				if [ -d /etc/DEVELOPMENT_AND_PRODUCTION  -a  -d /vp_mnt/sd/LipSyncConfig ]; then
+					LIPSYNCCONFIG_DIR=/vp_mnt/sd/LipSyncConfig
+				fi
+				ln -sf $LIPSYNCCONFIG_DIR /mnt/nand1-2/LipSyncConfig
+
+				if [ "$SKIP_RUN_PROG" != "YES" ]; then
+					IS_RUN_SUCCESSFULLY=YES
+					./_Run &
+					APP_PID=$!
+					echo "$APP_PID $APP_LOC" > $PID_FILE
+					wait_pg_except_myself -n=100 $APP_PID
+					echo "RunApp: done waiting pid $APP_PID"
+					rm -f $PID_FILE
+					sync
+					#sleep 0.1
+				fi
+				rm /mnt/nand1-2/LipSyncConfig
+				
+			elif [ -f "$TITLE_PATH/MainMenu/BookMainEntry.swf" ]; then
+				echo "RunApp: Storio 2011 cartridge..."
+				LIPSYNCCONFIG_DIR=/vp_mnt/Bundle/LipSyncConfig
+				if [ -d /etc/DEVELOPMENT_AND_PRODUCTION  -a  -d /vp_mnt/sd/LipSyncConfig ]; then
+					LIPSYNCCONFIG_DIR=/vp_mnt/sd/LipSyncConfig
+				fi
+				ln -sf $LIPSYNCCONFIG_DIR /mnt/nand1-2/LipSyncConfig
+				CART_ID=`readCartBin $TARGET_PATH`
+				if [ -n "$CART_ID"  -a  -d $LIPSYNCCONFIG_DIR/$CART_ID ]; then
+					STORIO_CART=/vp_mnt/storio_cart
+					mkdir -p $STORIO_CART
+					ln -s $TITLE_PATH/* $STORIO_CART
+					ln -s $STORIO_CART $APP_PATH
+					cd $APP_PATH
+					rm -f MainMenu
+					mkdir -p MainMenu
+					ln -s $TITLE_PATH/MainMenu/* $STORIO_CART/MainMenu
+					ln -sf $LIPSYNCCONFIG_DIR/$CART_ID/InnoBookEntry.swf MainMenu/InnoBookEntry.swf
+					ln -sf $LIPSYNCCONFIG_DIR/$CART_ID/SystemFun.swf MainMenu/SystemFun.swf
+					ln -sf $LIPSYNCCONFIG_DIR/$CART_ID/BookAPI.swf MainMenu/BookAPI.swf
+					
+					if [ -f $LIPSYNCCONFIG_DIR/$CART_ID/_Before_Run_Storio ]; then
+						. $LIPSYNCCONFIG_DIR/$CART_ID/_Before_Run_Storio $LIPSYNCCONFIG_DIR/$CART_ID $APP_PATH
+					fi
+					cd $APP_PATH
+
+					if [ "$SKIP_RUN_PROG" != "YES" ]; then
+						IS_RUN_SUCCESSFULLY=YES
+						systemset -w lastapp_orientation landscape
+						eat_heap 2M &
+						flashplayer MainMenu/InnoBookEntry.swf &
+						APP_PID=$!
+						echo "$APP_PID $APP_LOC" > $PID_FILE
+						wait_pg_except_myself -n=100 $APP_PID
+						pkill eat_heap
+						echo "RunApp: done waiting pid $APP_PID"
+						rm -f $PID_FILE
+						sync
+						#sleep 0.1
+					fi
+										
+					cd /vp_mnt
+					rm -rf $STORIO_CART
+					
+				else
+					echo "RunApp: No lip sync information for " $CART_ID
+				fi
+				rm /mnt/nand1-2/LipSyncConfig
+				
+			else
+				echo "RunApp: Unknown type!"
+			fi
+			cd /
+			rm -f $APP_PATH
+		else
+			echo "RunApp: TitleXXXX directory not found!"
+		fi
+	fi
+
+	umount -d $MOUNT_POINT
+	while is_mount $MOUNT_POINT ; do 
+		echo "try umount..." 
+		sleep 0.5
+		umount -d $MOUNT_POINT
+	done
+
+	echo "umount ok"
+	rmdir $MOUNT_POINT
+
+# 	if [ "$IS_RUN_SUCCESSFULLY" != "YES" -a "$SKIP_RUN_PROG" != "YES" ]; then
+# 	fi
+
+
+else
+	#unknown argument
+	echo RunApp: Unknown argument!
+	exit 1
+fi

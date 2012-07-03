@@ -1,0 +1,215 @@
+#ifndef _MKCONFIG_
+#define _MKCONFIG_
+
+#define SYSCONFIG_ARCH "GPL32900"
+
+#define SYSCONFIG_ARCH_GPL32900
+
+#define SYSCONFIG_AUDIO
+
+/* #undef SYSCONFIG_AUDIOFILE */
+
+#define SYSCONFIG_AUDIOMIXER
+
+/* #undef SYSCONFIG_BATTERY */
+
+/* #undef SYSCONFIG_BTPLAY */
+
+#define SYSCONFIG_CEVA
+
+/* #undef SYSCONFIG_CF */
+
+#define SYSCONFIG_CHUNKMEM_SIZE 29360128
+
+#define SYSCONFIG_CODEC_IMAGE
+
+#define SYSCONFIG_CODEC_VIDEO
+
+/* #undef SYSCONFIG_CSI0 */
+
+#define SYSCONFIG_CSI1
+
+/* #undef SYSCONFIG_CSI2 */
+
+/* #undef SYSCONFIG_DC2DC */
+
+#define SYSCONFIG_DEFCONFIG_FILE "gpl32900_pm_defconfig"
+
+#define SYSCONFIG_DISP0
+
+#define SYSCONFIG_DISP0_FB
+
+#define SYSCONFIG_DISP0_PANEL "lcd_auo_A043FL01"
+
+/* #undef SYSCONFIG_DISP0_TVOUT */
+
+/* #undef SYSCONFIG_DISP1 */
+
+/* #undef SYSCONFIG_DISP1_FB */
+
+#define SYSCONFIG_DISP1_PANEL "None"
+
+/* #undef SYSCONFIG_DISP2 */
+
+/* #undef SYSCONFIG_DISP2_FB */
+
+/* #undef SYSCONFIG_EMMC_NAND */
+
+/* #undef SYSCONFIG_ESOUND */
+
+/* #undef SYSCONFIG_EXFAT */
+
+#define SYSCONFIG_EXPAT
+
+#define SYSCONFIG_FLASH
+
+/* #undef SYSCONFIG_FLASH_SUPPORT_MOUSE */
+
+#define SYSCONFIG_FREETYPE2
+
+#define SYSCONFIG_GP_FAST_BOOT
+
+/* #undef SYSCONFIG_GRAPHIC_2D */
+
+/* #undef SYSCONFIG_GSENSOR */
+
+#define SYSCONFIG_G_SENSOR
+
+#define SYSCONFIG_G_SENSOR_DEVICE "gsensor_kxtf9"
+
+#define SYSCONFIG_HOST "linux-x86"
+
+#define SYSCONFIG_INTERNAL_ADC
+
+#define SYSCONFIG_INTERNAL_RTC
+
+#define SYSCONFIG_JPEG
+
+#define SYSCONFIG_KERNEL_CMDLINE "mem=36MB gp_chunkmem.membase=0x02400000 gp_chunkmem.memsize=0x01c00000"
+
+/* #undef SYSCONFIG_KEY */
+
+/* #undef SYSCONFIG_KEYBOARD */
+
+#define SYSCONFIG_KEYBOARD_DEVICE "None"
+
+/* #undef SYSCONFIG_LIBFUSE */
+
+#define SYSCONFIG_LIBID3TAG
+
+#define SYSCONFIG_LIBZ
+
+/* #undef SYSCONFIG_LUA */
+
+#define SYSCONFIG_LZO
+
+#define SYSCONFIG_MAINSTORAGE "gp_sd"
+
+#define SYSCONFIG_MAIN_FILESYSTEM "cramfs"
+
+#define SYSCONFIG_MEM_SIZE 67108864
+
+/* #undef SYSCONFIG_MS */
+
+/* #undef SYSCONFIG_NAND */
+
+#define SYSCONFIG_OPENVG
+
+#define SYSCONFIG_PLATFORM "gplus.evm32900"
+
+#define SYSCONFIG_PLATFORM_DIR "platform/gplus/evm32900"
+
+#define SYSCONFIG_PNG
+
+/* #undef SYSCONFIG_POWER */
+
+#define SYSCONFIG_PPU 1
+
+/* #undef SYSCONFIG_PPU_TV */
+
+#define SYSCONFIG_PRODUCT "gplus.sampleCode__gplus.evm32900"
+
+#define SYSCONFIG_PROJECT "gplus.sampleCode"
+
+#define SYSCONFIG_PROJECT_DIR "project/gplus/sampleCode"
+
+/* #undef SYSCONFIG_PS2MOUSE */
+
+#define SYSCONFIG_PS2MOUSE_DEVICE "None"
+
+/* #undef SYSCONFIG_PULSEAUDIO */
+
+#define SYSCONFIG_RESAMPLE
+
+#define SYSCONFIG_SD
+
+/* #undef SYSCONFIG_SDIO */
+
+/* #undef SYSCONFIG_SDL */
+
+/* #undef SYSCONFIG_SDL_GFX */
+
+/* #undef SYSCONFIG_SDL_IMAGE */
+
+/* #undef SYSCONFIG_SDL_TTF */
+
+#define SYSCONFIG_SENSOR0 "ss_6AA_mipi"
+
+#define SYSCONFIG_SENSOR0_PORT_SEL "MIPI"
+
+#define SYSCONFIG_SENSOR1 "None"
+
+#define SYSCONFIG_SENSOR1_PORT_SEL "None"
+
+#define SYSCONFIG_SENSOR2 "None"
+
+#define SYSCONFIG_SENSOR2_PORT_SEL "None"
+
+#define SYSCONFIG_SENSOR_DRIVER_NUM 1
+
+/* #undef SYSCONFIG_SFLASH */
+
+/* #undef SYSCONFIG_SHOWLOGO */
+
+/* #undef SYSCONFIG_SIMULATOR */
+
+#define SYSCONFIG_SPU
+
+#define SYSCONFIG_TARGET "linux-arm"
+
+#define SYSCONFIG_TIFF
+
+#define SYSCONFIG_TOUCH
+
+/* #undef SYSCONFIG_TOUCHPAD */
+
+#define SYSCONFIG_TOUCHPAD_DEVICE "None"
+
+#define SYSCONFIG_TS
+
+#define SYSCONFIG_USB
+
+/* #undef SYSCONFIG_USB_HOST */
+
+#define SYSCONFIG_USB_HOST_HUB_CONFIG 5
+
+/* #undef SYSCONFIG_USB_HOST_STORAGE */
+
+/* #undef SYSCONFIG_USB_PHY0_EN */
+
+#define SYSCONFIG_USB_PHY0_VOLTAGE_UP 1
+
+#define SYSCONFIG_USB_PHY1_SEL 1
+
+#define SYSCONFIG_USB_PHY1_VOLTAGE_UP 1
+
+#define SYSCONFIG_USB_SLAVE
+
+#define SYSCONFIG_USB_SLAVE_MSDC
+
+#define SYSCONFIG_USB_WIFI "None"
+
+/* #undef SYSCONFIG_XD */
+
+
+#endif

@@ -1,0 +1,1083 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA0995A80C5AAD0D0026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0995C60C5AAD810026C140 /* ContainersTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995AD0C5AAD3C0026C140 /* ContainersTest.c */; };
+		CA0995CA0C5AADAE0026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0995D80C5AAE430026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0995D90C5AAE4B0026C140 /* HttpTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995AF0C5AAD3C0026C140 /* HttpTest.c */; };
+		CA0995E80C5AAE970026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0995EA0C5AAEAB0026C140 /* LoggingTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995B10C5AAD3C0026C140 /* LoggingTest.c */; };
+		CA0996040C5AAF990026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0996050C5AAFA10026C140 /* MiscTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995B30C5AAD3C0026C140 /* MiscTest.c */; };
+		CA09960E0C5AAFCE0026C140 /* PropertiesTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995B50C5AAD3C0026C140 /* PropertiesTest.c */; };
+		CA09960F0C5AAFD80026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0996180C5AAFFD0026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA0996190C5AB0040026C140 /* RingBufferTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995B70C5AAD3C0026C140 /* RingBufferTest.c */; };
+		CA09962B0C5AB0340026C140 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2B34A20C599CDF005900F4 /* libAtomix.a */; };
+		CA09962C0C5AB03B0026C140 /* StringsTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0995B90C5AAD3C0026C140 /* StringsTest.c */; };
+		CA2B34BF0C59A64A005900F4 /* NetPump.c in Sources */ = {isa = PBXBuildFile; fileRef = CA2B34BE0C59A64A005900F4 /* NetPump.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA0995C70C5AAD900026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0995D60C5AAE390026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0995E60C5AAE810026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0996020C5AAF8A0026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA09960C0C5AAFC20026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0996160C5AAFF10026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0996290C5AB02A0026C140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C98B30D15C14900E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C98B00D15C14800E23496 /* PropertiesTest */;
+			remoteInfo = PropertiesTest;
+		};
+		CA0C99A70D15CFBB00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C99A20D15CFBB00E23496 /* ContainersTest */;
+			remoteInfo = ContainersTest;
+		};
+		CA0C99C00D15D03500E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C99BD0D15D03500E23496 /* HttpTest */;
+			remoteInfo = HttpTest;
+		};
+		CA0C99D00D15D06000E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C99CB0D15D06000E23496 /* RingBufferTest */;
+			remoteInfo = RingBufferTest;
+		};
+		CA0C99EC0D15D0AB00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C99E90D15D0AA00E23496 /* StringsTest */;
+			remoteInfo = StringsTest;
+		};
+		CA0C9A000D15D0E900E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C99FD0D15D0E900E23496 /* MiscTest */;
+			remoteInfo = MiscTest;
+		};
+		CA0C9A170D15D12200E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C9A120D15D12100E23496 /* LoggingTest */;
+			remoteInfo = LoggingTest;
+		};
+		CA0C9A2B0D15D16D00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA0C9A260D15D16C00E23496 /* NetPump */;
+			remoteInfo = NetPump;
+		};
+		CA2B34A10C599CDF005900F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA2B34C20C59A976005900F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA0995AD0C5AAD3C0026C140 /* ContainersTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = ContainersTest.c; sourceTree = "<group>"; };
+		CA0995AF0C5AAD3C0026C140 /* HttpTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HttpTest.c; sourceTree = "<group>"; };
+		CA0995B10C5AAD3C0026C140 /* LoggingTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = LoggingTest.c; sourceTree = "<group>"; };
+		CA0995B30C5AAD3C0026C140 /* MiscTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = MiscTest.c; sourceTree = "<group>"; };
+		CA0995B50C5AAD3C0026C140 /* PropertiesTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = PropertiesTest.c; sourceTree = "<group>"; };
+		CA0995B70C5AAD3C0026C140 /* RingBufferTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = RingBufferTest.c; sourceTree = "<group>"; };
+		CA0995B90C5AAD3C0026C140 /* StringsTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = StringsTest.c; sourceTree = "<group>"; };
+		CA0995C40C5AAD790026C140 /* ContainersTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContainersTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0995D40C5AAE320026C140 /* HttpTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HttpTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0995E40C5AAE7C0026C140 /* LoggingTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LoggingTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0996000C5AAF7D0026C140 /* MiscTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MiscTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA09960A0C5AAFBE0026C140 /* PropertiesTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PropertiesTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0996140C5AAFED0026C140 /* RingBufferTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RingBufferTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0996270C5AB0270026C140 /* StringsTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringsTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Atomix.xcodeproj; sourceTree = "<group>"; };
+		CA2B34A70C599D28005900F4 /* NetPump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetPump; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2B34BE0C59A64A005900F4 /* NetPump.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = NetPump.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA0995C20C5AAD790026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995CA0C5AADAE0026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0995D20C5AAE320026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995D80C5AAE430026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0995E20C5AAE7C0026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995E80C5AAE970026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0995FE0C5AAF7D0026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0996040C5AAF990026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0996080C5AAFBE0026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA09960F0C5AAFD80026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0996120C5AAFED0026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0996180C5AAFFD0026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0996250C5AB0270026C140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA09962B0C5AB0340026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA2B34A50C599D28005900F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995A80C5AAD0D0026C140 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* AtomixApps */ = {
+			isa = PBXGroup;
+			children = (
+				CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */,
+				CA2B34BC0C59A64A005900F4 /* Apps */,
+				CA0995AB0C5AAD3C0026C140 /* Tests */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = AtomixApps;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA2B34A70C599D28005900F4 /* NetPump */,
+				CA0995C40C5AAD790026C140 /* ContainersTest */,
+				CA0995D40C5AAE320026C140 /* HttpTest */,
+				CA0995E40C5AAE7C0026C140 /* LoggingTest */,
+				CA0996000C5AAF7D0026C140 /* MiscTest */,
+				CA09960A0C5AAFBE0026C140 /* PropertiesTest */,
+				CA0996140C5AAFED0026C140 /* RingBufferTest */,
+				CA0996270C5AB0270026C140 /* StringsTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		CA0995AB0C5AAD3C0026C140 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995AC0C5AAD3C0026C140 /* Containers */,
+				CA0995AE0C5AAD3C0026C140 /* Http */,
+				CA0995B00C5AAD3C0026C140 /* Logging */,
+				CA0995B20C5AAD3C0026C140 /* Misc */,
+				CA0995B40C5AAD3C0026C140 /* Properties */,
+				CA0995B60C5AAD3C0026C140 /* RingBuffer */,
+				CA0995B80C5AAD3C0026C140 /* Strings */,
+			);
+			name = Tests;
+			path = ../../../Source/Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		CA0995AC0C5AAD3C0026C140 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995AD0C5AAD3C0026C140 /* ContainersTest.c */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		CA0995AE0C5AAD3C0026C140 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995AF0C5AAD3C0026C140 /* HttpTest.c */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		CA0995B00C5AAD3C0026C140 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995B10C5AAD3C0026C140 /* LoggingTest.c */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		CA0995B20C5AAD3C0026C140 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995B30C5AAD3C0026C140 /* MiscTest.c */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		CA0995B40C5AAD3C0026C140 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995B50C5AAD3C0026C140 /* PropertiesTest.c */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		CA0995B60C5AAD3C0026C140 /* RingBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995B70C5AAD3C0026C140 /* RingBufferTest.c */,
+			);
+			path = RingBuffer;
+			sourceTree = "<group>";
+		};
+		CA0995B80C5AAD3C0026C140 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				CA0995B90C5AAD3C0026C140 /* StringsTest.c */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		CA2B349E0C599CDF005900F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA2B34A20C599CDF005900F4 /* libAtomix.a */,
+				CA0C98B40D15C14900E23496 /* PropertiesTest */,
+				CA0C99A80D15CFBB00E23496 /* ContainersTest */,
+				CA0C99C10D15D03500E23496 /* HttpTest */,
+				CA0C99D10D15D06000E23496 /* RingBufferTest */,
+				CA0C99ED0D15D0AB00E23496 /* StringsTest */,
+				CA0C9A010D15D0E900E23496 /* MiscTest */,
+				CA0C9A180D15D12200E23496 /* LoggingTest */,
+				CA0C9A2C0D15D16D00E23496 /* NetPump */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA2B34BC0C59A64A005900F4 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				CA2B34BD0C59A64A005900F4 /* NetPump */,
+			);
+			name = Apps;
+			path = ../../../Source/Apps;
+			sourceTree = SOURCE_ROOT;
+		};
+		CA2B34BD0C59A64A005900F4 /* NetPump */ = {
+			isa = PBXGroup;
+			children = (
+				CA2B34BE0C59A64A005900F4 /* NetPump.c */,
+			);
+			path = NetPump;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA0995C30C5AAD790026C140 /* ContainersTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0995CE0C5AADC70026C140 /* Build configuration list for PBXNativeTarget "ContainersTest" */;
+			buildPhases = (
+				CA0995C10C5AAD790026C140 /* Sources */,
+				CA0995C20C5AAD790026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0995C80C5AAD900026C140 /* PBXTargetDependency */,
+			);
+			name = ContainersTest;
+			productName = ContainersTest;
+			productReference = CA0995C40C5AAD790026C140 /* ContainersTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0995D30C5AAE320026C140 /* HttpTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0995DE0C5AAE690026C140 /* Build configuration list for PBXNativeTarget "HttpTest" */;
+			buildPhases = (
+				CA0995D10C5AAE320026C140 /* Sources */,
+				CA0995D20C5AAE320026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0995D70C5AAE390026C140 /* PBXTargetDependency */,
+			);
+			name = HttpTest;
+			productName = HttpTest;
+			productReference = CA0995D40C5AAE320026C140 /* HttpTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0995E30C5AAE7C0026C140 /* LoggingTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0995F00C5AAEE60026C140 /* Build configuration list for PBXNativeTarget "LoggingTest" */;
+			buildPhases = (
+				CA0995E10C5AAE7C0026C140 /* Sources */,
+				CA0995E20C5AAE7C0026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0995E70C5AAE810026C140 /* PBXTargetDependency */,
+			);
+			name = LoggingTest;
+			productName = LoggingTest;
+			productReference = CA0995E40C5AAE7C0026C140 /* LoggingTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0995FF0C5AAF7D0026C140 /* MiscTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA09961B0C5AB0240026C140 /* Build configuration list for PBXNativeTarget "MiscTest" */;
+			buildPhases = (
+				CA0995FD0C5AAF7D0026C140 /* Sources */,
+				CA0995FE0C5AAF7D0026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0996030C5AAF8A0026C140 /* PBXTargetDependency */,
+			);
+			name = MiscTest;
+			productName = MiscTest;
+			productReference = CA0996000C5AAF7D0026C140 /* MiscTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0996090C5AAFBE0026C140 /* PropertiesTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA09961E0C5AB0240026C140 /* Build configuration list for PBXNativeTarget "PropertiesTest" */;
+			buildPhases = (
+				CA0996070C5AAFBE0026C140 /* Sources */,
+				CA0996080C5AAFBE0026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA09960D0C5AAFC20026C140 /* PBXTargetDependency */,
+			);
+			name = PropertiesTest;
+			productName = PropertiesTest;
+			productReference = CA09960A0C5AAFBE0026C140 /* PropertiesTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0996130C5AAFED0026C140 /* RingBufferTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0996210C5AB0240026C140 /* Build configuration list for PBXNativeTarget "RingBufferTest" */;
+			buildPhases = (
+				CA0996110C5AAFED0026C140 /* Sources */,
+				CA0996120C5AAFED0026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0996170C5AAFF10026C140 /* PBXTargetDependency */,
+			);
+			name = RingBufferTest;
+			productName = RingBufferTest;
+			productReference = CA0996140C5AAFED0026C140 /* RingBufferTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0996260C5AB0270026C140 /* StringsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0996330C5AB08F0026C140 /* Build configuration list for PBXNativeTarget "StringsTest" */;
+			buildPhases = (
+				CA0996240C5AB0270026C140 /* Sources */,
+				CA0996250C5AB0270026C140 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA09962A0C5AB02A0026C140 /* PBXTargetDependency */,
+			);
+			name = StringsTest;
+			productName = StringsTest;
+			productReference = CA0996270C5AB0270026C140 /* StringsTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA2B34A60C599D28005900F4 /* NetPump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA2B34AC0C599D46005900F4 /* Build configuration list for PBXNativeTarget "NetPump" */;
+			buildPhases = (
+				CA2B34A40C599D28005900F4 /* Sources */,
+				CA2B34A50C599D28005900F4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA2B34C30C59A976005900F4 /* PBXTargetDependency */,
+			);
+			name = NetPump;
+			productName = NetPump;
+			productReference = CA2B34A70C599D28005900F4 /* NetPump */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "AtomixApps" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* AtomixApps */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CA2B349E0C599CDF005900F4 /* Products */;
+					ProjectRef = CA2B349D0C599CDF005900F4 /* Atomix.xcodeproj */;
+				},
+			);
+			projectRoot = ../../..;
+			targets = (
+				CA2B34A60C599D28005900F4 /* NetPump */,
+				CA0995C30C5AAD790026C140 /* ContainersTest */,
+				CA0995D30C5AAE320026C140 /* HttpTest */,
+				CA0995E30C5AAE7C0026C140 /* LoggingTest */,
+				CA0995FF0C5AAF7D0026C140 /* MiscTest */,
+				CA0996090C5AAFBE0026C140 /* PropertiesTest */,
+				CA0996130C5AAFED0026C140 /* RingBufferTest */,
+				CA0996260C5AB0270026C140 /* StringsTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CA0C98B40D15C14900E23496 /* PropertiesTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = PropertiesTest;
+			path = build/Debug/PropertiesTest;
+			remoteRef = CA0C98B30D15C14900E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C99A80D15CFBB00E23496 /* ContainersTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = ContainersTest;
+			path = build/Debug/ContainersTest;
+			remoteRef = CA0C99A70D15CFBB00E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C99C10D15D03500E23496 /* HttpTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = HttpTest;
+			path = build/Debug/HttpTest;
+			remoteRef = CA0C99C00D15D03500E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C99D10D15D06000E23496 /* RingBufferTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = RingBufferTest;
+			path = build/Debug/RingBufferTest;
+			remoteRef = CA0C99D00D15D06000E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C99ED0D15D0AB00E23496 /* StringsTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = StringsTest;
+			path = build/Debug/StringsTest;
+			remoteRef = CA0C99EC0D15D0AB00E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C9A010D15D0E900E23496 /* MiscTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = MiscTest;
+			path = build/Debug/MiscTest;
+			remoteRef = CA0C9A000D15D0E900E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C9A180D15D12200E23496 /* LoggingTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = LoggingTest;
+			path = build/Debug/LoggingTest;
+			remoteRef = CA0C9A170D15D12200E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA0C9A2C0D15D16D00E23496 /* NetPump */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = NetPump;
+			path = build/Debug/NetPump;
+			remoteRef = CA0C9A2B0D15D16D00E23496 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
+		};
+		CA2B34A20C599CDF005900F4 /* libAtomix.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAtomix.a;
+			remoteRef = CA2B34A10C599CDF005900F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA0995C10C5AAD790026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995C60C5AAD810026C140 /* ContainersTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0995D10C5AAE320026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995D90C5AAE4B0026C140 /* HttpTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0995E10C5AAE7C0026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0995EA0C5AAEAB0026C140 /* LoggingTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0995FD0C5AAF7D0026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0996050C5AAFA10026C140 /* MiscTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0996070C5AAFBE0026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA09960E0C5AAFCE0026C140 /* PropertiesTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0996110C5AAFED0026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0996190C5AB0040026C140 /* RingBufferTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0996240C5AB0270026C140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA09962C0C5AB03B0026C140 /* StringsTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA2B34A40C599D28005900F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2B34BF0C59A64A005900F4 /* NetPump.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA0995C80C5AAD900026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA0995C70C5AAD900026C140 /* PBXContainerItemProxy */;
+		};
+		CA0995D70C5AAE390026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA0995D60C5AAE390026C140 /* PBXContainerItemProxy */;
+		};
+		CA0995E70C5AAE810026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA0995E60C5AAE810026C140 /* PBXContainerItemProxy */;
+		};
+		CA0996030C5AAF8A0026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA0996020C5AAF8A0026C140 /* PBXContainerItemProxy */;
+		};
+		CA09960D0C5AAFC20026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA09960C0C5AAFC20026C140 /* PBXContainerItemProxy */;
+		};
+		CA0996170C5AAFF10026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA0996160C5AAFF10026C140 /* PBXContainerItemProxy */;
+		};
+		CA09962A0C5AB02A0026C140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA0996290C5AB02A0026C140 /* PBXContainerItemProxy */;
+		};
+		CA2B34C30C59A976005900F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Atomix;
+			targetProxy = CA2B34C20C59A976005900F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = ATX_CONFIG_ENABLE_LOGGING;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/Core";
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = ATX_CONFIG_ENABLE_LOGGING;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/Core";
+			};
+			name = Release;
+		};
+		CA0995CF0C5AADC70026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ContainersTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA0995D00C5AADC70026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ContainersTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA0995DF0C5AAE690026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = HttpTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA0995E00C5AAE690026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = HttpTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA0995F10C5AAEE60026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = LoggingTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA0995F20C5AAEE60026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = LoggingTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA09961C0C5AB0240026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = MiscTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA09961D0C5AB0240026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = MiscTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA09961F0C5AB0240026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = PropertiesTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA0996200C5AB0240026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = PropertiesTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA0996220C5AB0240026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = RingBufferTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA0996230C5AB0240026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = RingBufferTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA0996340C5AB08F0026C140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = StringsTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA0996350C5AB08F0026C140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = StringsTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA2B34AD0C599D46005900F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = NetPump;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/Core";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA2B34AE0C599D46005900F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = NetPump;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/Core";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "AtomixApps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0995CE0C5AADC70026C140 /* Build configuration list for PBXNativeTarget "ContainersTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0995CF0C5AADC70026C140 /* Debug */,
+				CA0995D00C5AADC70026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0995DE0C5AAE690026C140 /* Build configuration list for PBXNativeTarget "HttpTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0995DF0C5AAE690026C140 /* Debug */,
+				CA0995E00C5AAE690026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0995F00C5AAEE60026C140 /* Build configuration list for PBXNativeTarget "LoggingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0995F10C5AAEE60026C140 /* Debug */,
+				CA0995F20C5AAEE60026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA09961B0C5AB0240026C140 /* Build configuration list for PBXNativeTarget "MiscTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA09961C0C5AB0240026C140 /* Debug */,
+				CA09961D0C5AB0240026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA09961E0C5AB0240026C140 /* Build configuration list for PBXNativeTarget "PropertiesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA09961F0C5AB0240026C140 /* Debug */,
+				CA0996200C5AB0240026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0996210C5AB0240026C140 /* Build configuration list for PBXNativeTarget "RingBufferTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0996220C5AB0240026C140 /* Debug */,
+				CA0996230C5AB0240026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0996330C5AB08F0026C140 /* Build configuration list for PBXNativeTarget "StringsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0996340C5AB08F0026C140 /* Debug */,
+				CA0996350C5AB08F0026C140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA2B34AC0C599D46005900F4 /* Build configuration list for PBXNativeTarget "NetPump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA2B34AD0C599D46005900F4 /* Debug */,
+				CA2B34AE0C599D46005900F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

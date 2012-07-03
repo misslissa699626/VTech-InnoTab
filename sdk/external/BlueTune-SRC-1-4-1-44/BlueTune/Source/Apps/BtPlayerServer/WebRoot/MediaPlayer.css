@@ -1,0 +1,78 @@
+body {
+	font-size: 62.5%;
+}
+
+table {
+	font-size: 1em;
+}
+
+/* Site
+   -------------------------------- */
+
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+}
+
+/* Layout
+   -------------------------------- */
+
+.stream-info {
+	border-spacing: 20px 4px;
+	border-color: gray;
+}
+
+.stream-info-attr {
+	font-weight: bold
+}
+
+/* Normal
+   -------------------------------- */
+
+.normal h3,
+.normal h4 {
+	margin: 0;
+	font-weight: normal;
+}
+
+.normal h3 {
+	padding: 0 0 9px;
+	font-size: 1.8em;
+}
+
+.normal h4 {
+	padding-bottom: 21px;
+	border-bottom: 1px dashed #999;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.normal p {
+	font-size: 1.2em;
+}
+
+.normal a:link,
+.normal a:visited { color:#1b75bb; text-decoration:none; }
+.normal a:hover,
+.normal a:active { color:#0b559b; }
+
+/* Misc */
+.player-button {
+	margin: 2px; 
+	position: relative; 
+	padding: 4px 0; 
+	cursor: pointer; 
+	float: left;  
+	list-style: none;
+}
+
+#set-input-button {
+	margin: 2px; 
+	position: relative; 
+	padding: 4px 0; 
+	cursor: pointer; 
+	float: left; 
+	list-style: none;
+}
+
+span.ui-icon { float: left; margin: 0 4px;}
+#timecode { font-size: 2.5em; font-weight: bold}

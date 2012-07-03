@@ -1,0 +1,8 @@
+LoadTool('gcc-generic', env, gcc_cross_prefix='ppu-lv2')
+
+## add a post processing step for execuables
+env['ATX_EXECUTABLE_POST_PROCESSOR'] = Action('make_fself $TARGET ${TARGET.base}.self')
+
+### Atomix System Files
+env['ATX_SYSTEM_SOURCES']={'Source/System/StdC':'*.c', 'Source/System/Bsd':'*.c', 'Source/System/PS3':'*.c'}
+env['ATX_EXTRA_LIBS']=['m','net']

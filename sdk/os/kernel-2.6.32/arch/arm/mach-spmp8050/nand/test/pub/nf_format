@@ -1,0 +1,4 @@
+mkfs.vfat /dev/nanda1
+mkfs.vfat /dev/nanda2
+mkfs.vfat /dev/nanda3
+

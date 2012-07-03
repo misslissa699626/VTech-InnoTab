@@ -1,0 +1,128 @@
+
+-------------------------------------
+-- SDL
+-------------------------------------
+if config.SDL == nil then
+	config.SDL = selectBool("SDL Config", "Enable SDL")
+end
+
+if config.SDL then
+	if config.SDL_GFX == nil then
+		config.SDL_GFX = selectBool("SDL_gfx Config", "Enable SDL_gfx")
+	end
+else
+	config.SDL_GFX = false
+end
+
+-------------------------------------
+-- libz
+-------------------------------------
+if config.LIBZ == nil then
+	config.LIBZ = selectBool("LIBZ Config", "Enable LIBZ")
+end
+
+-------------------------------------
+-- libpng
+-------------------------------------
+if config.LIBZ then
+	if config.PNG == nil then
+		config.PNG = selectBool("PNG Config", "Enable PNG")
+	end
+	
+	if config.LIBID3TAG == nil then
+		config.LIBID3TAG = selectBool("Libid3tag Config", "Enable libid3tag")
+	end
+else
+	config.PNG = false
+	config.LIBID3TAG = false
+end
+
+-------------------------------------
+-- libjpeg
+-------------------------------------
+if config.JPEG == nil then
+	config.JPEG = selectBool("JPEG Config", "Enable JPEG")
+end
+
+-------------------------------------
+-- libtiff
+-------------------------------------
+if config.LIBZ and config.JPEG then
+	if config.TIFF == nil then
+		config.TIFF = selectBool("TIFF Config", "Enable TIFF")
+	end
+else
+	config.TIFF = false
+end
+
+-------------------------------------
+-- libSDL_IMAGE
+-------------------------------------
+if config.SDL and config.LIBZ and config.PNG and config.JPEG and config.TIFF then
+	if config.SDL_IMAGE == nil then
+		config.SDL_IMAGE = selectBool("SDL_IMAGE Config", "Enable SDL_IMAGE")
+	end
+else
+	config.SDL_IMAGE = false
+end
+
+-------------------------------------
+-- libfreetype2
+-------------------------------------
+if config.FREETYPE2 == nil then
+	config.FREETYPE2 = selectBool("FreeType2 Config", "Enable FreeType2")
+end
+
+-------------------------------------
+-- SDL_ttf
+-------------------------------------
+if config.SDL and config.FREETYPE2 then
+	if config.SDL_TTF == nil then
+		config.SDL_TTF = selectBool("SDL_ttf Config", "Enable SDL_ttf")
+	end
+else
+	config.SDL_TTF = false
+end
+
+-------------------------------------
+-- TS
+-------------------------------------
+if config.TS == nil then
+	config.TS = selectBool("TSLIB for Touch Screen Config", "Enable TSLIB")
+end
+
+-------------------------------------
+-- LZO
+-------------------------------------
+if config.LZO == nil then
+	config.LZO = selectBool("LZO Config", "Enable LZO")
+end
+
+-------------------------------------
+-- Expat
+-------------------------------------
+if config.EXPAT == nil then
+	config.EXPAT = selectBool("Expat XML Parser Config", "Enable Expat")
+end
+
+-------------------------------------
+-- Audiofile
+-------------------------------------
+if config.AUDIO then
+	if config.AUDIOFILE == nil then
+		config.AUDIOFILE = selectBool("Audiofile Config", "Enable Audiofile")
+	end
+else
+	config.AUDIOFILE = false
+end
+
+-------------------------------------
+-- Esound
+-------------------------------------
+if config.AUDIOFILE then
+	if config.ESOUND == nil then
+		config.ESOUND = selectBool("Esound Config", "Enable Esound")
+	end
+else
+	config.ESOUND = false
+end

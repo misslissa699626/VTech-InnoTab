@@ -1,0 +1,4 @@
+kernel//home/vicsiu/GPL/openplatform.M8/platform/gplus/evm32900/board_config.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/gplus/evm32900/key_driver.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/gplus/evm32900/touch_driver.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/gplus/evm32900/gp_joystick_driver.ko

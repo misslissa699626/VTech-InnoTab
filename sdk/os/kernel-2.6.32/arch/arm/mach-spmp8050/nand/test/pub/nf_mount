@@ -1,0 +1,4 @@
+cd /mnt
+mount /dev/nanda1 nand1
+mount /dev/nanda2 nand2
+mount /dev/nanda3 nand3

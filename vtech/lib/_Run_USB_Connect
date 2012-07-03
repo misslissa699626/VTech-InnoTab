@@ -1,0 +1,14 @@
+#!/bin/sh
+echo ---
+echo +++++++++++++++++++++++++++++++++++++++++++
+echo ++ _Run_USB_Connect
+echo +++++++++++++++++++++++++++++++++++++++++++
+. /sbin/nand_ev.sh
+
+systemset -w lastapp_orientation portrait
+
+cd /system/lib/vtech/USBConnect
+./UsbConnectStage.x &
+APP_PID=$!
+
+echo $APP_PID > /var/run/USBConnect.pid

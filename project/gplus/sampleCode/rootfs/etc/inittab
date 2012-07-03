@@ -1,0 +1,5 @@
+::sysinit:/init.rc
+#::sysinit:/init.project.rc
+#::respawn:-/bin/sh
+::askfirst:-/bin/sh
+#::once:/usr/sbin/telnetd -l /bin/sh

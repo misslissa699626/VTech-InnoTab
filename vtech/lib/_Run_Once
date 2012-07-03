@@ -1,0 +1,294 @@
+#!/bin/sh -l
+
+. /sbin/nand_ev.sh
+
+echo ---
+echo +++++++++++++++++++++++++++++++++++++++++++
+echo ++ _Run_Once
+echo +++++++++++++++++++++++++++++++++++++++++++
+SB_LOCATION="$1"
+echo SB_LOCATION=$SB_LOCATION
+
+echo "SDCARD_PATH is: $SDCARD_PATH"
+if [ -z "$SDCARD_PATH" ]; then
+	echo _Run_Once is ONLY for boot up!
+	exit 1
+fi
+
+###############################
+# Install Modules
+###############################
+
+# 20111013 added by mountain
+#insmod /lib/modules/touch_driver.ko
+
+insmod /lib/modules/key_driver.ko config=1 poweroff=5 wdt=2 wdtclose=0
+
+#if [ -f /system/bin/audiomixer.x ]; then
+#    /system/bin/audiomixer.x -r 48000 &
+#fi
+
+insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/ppu/gp_ppu_module.ko
+insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/spu/spu_module.ko
+#insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/vpad-debug/vpad-debug_module.ko
+insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/dac-jack/dac-jack_module.ko master_vol=27
+
+# if IOD27 is LOW then gsensor need rotate
+#if readio ch=D pin=27; then
+	insmod /lib/modules/common/gsensor_kxtf9.ko need_rotate=1
+#else
+#	insmod /lib/modules/common/gsensor_kxtf9.ko need_rotate=0
+#fi
+
+## init rotate key(IOA11) to input, pull-high
+readio ch=A pin=11
+
+###############################
+# Init PWM
+###############################
+#/system/app/pwm_init 600 100
+
+devmem 0x90005134 32 0x00FFF807
+
+###############################
+# Prepare and mount internal flash
+###############################
+wait_dev_up() {
+	local COUNTER=0
+	while [ $COUNTER -lt 30 ]; do
+		if [ ! -e "$1" ]; then
+			echo Waiting for device "$1" to up...
+			sleep 0.1
+			let COUNTER=COUNTER+1
+		else
+			echo Device "$1" found
+			break
+		fi 
+	done
+	if [ -e "$1" ]; then
+		true
+	else
+		false		
+	fi
+}
+mk_ubifs_vol () {
+local MTD_PART_NAME="$1"
+local UBI_DIR_NAME="$2"
+local UBI_MOUNT_POINT=/vp_mnt/$UBI_DIR_NAME
+if [ -d /etc/DEVELOPMENT_AND_PRODUCTION -a -f $SDCARD_PATH/FORCE_USE_SD_FOR_IF ]; then
+	rmdir $UBI_MOUNT_POINT
+	mkdir -p $SDCARD_PATH/_INTERNAL_FLASH/$UBI_DIR_NAME
+	ln -s $SDCARD_PATH/_INTERNAL_FLASH/$UBI_DIR_NAME $UBI_MOUNT_POINT
+	echo ========================================================
+	echo @ FORCE TO MOUNT $UBI_MOUNT_POINT to $SDCARD_PATH/_INTERNAL_FLASH/$UBI_DIR_NAME
+	echo ========================================================
+	sync
+else
+	local FORMAT_IF_ANYWAY="$3"
+
+	local ALL_MTD_NUM="0 1 2 3 4 5 6 7 8 9"
+	for MTD_NUM in $ALL_MTD_NUM ; do
+		local MTD_NAME=`cat /sys/class/mtd/mtd${MTD_NUM}/name 2> /dev/null`
+		case "$MTD_NAME" in
+			"$MTD_PART_NAME")
+				local UBI_D=$MTD_NUM
+				local UBI_M=$MTD_NUM
+				mkdir -p $UBI_MOUNT_POINT
+				ubiattach -d $UBI_D -m $UBI_M && \
+					wait_dev_up /dev/ubi$UBI_D && \
+					wait_dev_up /dev/ubi${UBI_D}_0 && \
+					mount -t ubifs -o "compr=$4" ubi${UBI_D}_0 $UBI_MOUNT_POINT
+				local ubi_result=$?
+				if [ $ubi_result -ne 0 -o $FORMAT_IF_ANYWAY -ne 0 ]; then
+					umount $UBI_MOUNT_POINT
+					ubidetach -d $UBI_D
+					#Erase and re-create flash content
+					flash_erase /dev/mtd$UBI_M 0 0
+					ubiattach -d $UBI_D -m $UBI_M && \
+						wait_dev_up /dev/ubi$UBI_D && \
+						ubimkvol /dev/ubi$UBI_D -m -N ubi_on_mtd$UBI_M -n 0 -t dynamic && \
+						wait_dev_up /dev/ubi${UBI_D}_0 && \
+						mount -t ubifs -o "compr=$4" ubi${UBI_D}_0 $UBI_MOUNT_POINT
+					ubi_result=$?
+				fi
+				if [ $ubi_result -ne 0 ]; then
+					if [ -d /etc/DEVELOPMENT_AND_PRODUCTION ]; then
+						rmdir $UBI_MOUNT_POINT
+						mkdir -p $SDCARD_PATH/_INTERNAL_FLASH/$UBI_DIR_NAME
+						ln -s $SDCARD_PATH/_INTERNAL_FLASH/$UBI_DIR_NAME $UBI_MOUNT_POINT
+						echo ========================================================
+						echo @ FAILED TO MOUNT ON INTERNAL NAND FLASH! 
+						echo @ Mount $UBI_MOUNT_POINT to $SDCARD_PATH/_INTERNAL_FLASH/$UBI_DIR_NAME
+						echo ========================================================
+					else
+						echo ========================================================
+						echo @ FAILED TO MOUNT ON INTERNAL NAND FLASH! 
+						echo ========================================================
+					fi
+				fi
+				break
+				;;
+			*)
+				;;	
+		esac
+	done 
+fi
+}
+
+FORMAT_INT_NAND_PARTITION=0
+if [ -d /etc/DEVELOPMENT_AND_PRODUCTION ]; then
+	if [ -f $SDCARD_PATH/FORCE_FORMAT_IF ]; then
+		FORMAT_INT_NAND_PARTITION=1
+		rm -f $SDCARD_PATH/FORCE_FORMAT_IF
+		sync
+	fi
+fi
+mk_ubifs_vol Inno_I_Storage0 if $FORMAT_INT_NAND_PARTITION lzo
+. /sbin/new_partition_util.sh
+__mk_if_dlg2011
+mtdctl -cif 0
+if [ $? -eq 0 ]; then
+	mk_ubifs_vol Inno_I_IF_DLG_2011 if_dlg2011 $FORMAT_INT_NAND_PARTITION none
+else
+	echo No end marker.  Destroy fast boot...
+	destroy_fastboot.x	
+fi	
+if [ -f $UBI_MOUNT_POINT/UniqueKey.bin ]; then
+	/system/lib/vtech/app_writer.x $UBI_MOUNT_POINT/UniqueKey.bin 7
+	rm -f $UBI_MOUNT_POINT/UniqueKey.bin
+fi
+sync
+
+
+###############################
+# Prepare and mount internal flash: bundle region
+###############################
+mkdir -p $BUNDLE_MOUNT_POINT
+
+ALL_MTD_NUM="0 1 2 3 4 5 6 7 8 9"
+for MTD_NUM in $ALL_MTD_NUM ; do
+	MTD_NAME=`cat /sys/class/mtd/mtd${MTD_NUM}/name 2> /dev/null`
+	case "$MTD_NAME" in
+		"$Bundle_Part_Name")
+			if mount -r -t squashfs /dev/mtdblock${MTD_NUM} $BUNDLE_MOUNT_POINT || \
+				mount -r -t vfat /dev/mtdblock${MTD_NUM} $BUNDLE_MOUNT_POINT ; then
+				#create LipSyncConfig folder
+				mkdir -p /mnt/nand1-2
+				ln -s $BUNDLE_MOUNT_POINT/LipSyncConfig /mnt/nand1-2/LipSyncConfig
+				echo Bundle title mounted successfully!
+			else
+				rmdir $BUNDLE_MOUNT_POINT
+				echo ========================================================
+				echo @ FAILED TO MOUNT ON INTERNAL NAND FLASH: BUNDLE REGION! 
+				echo ========================================================
+			fi
+			break
+			;;
+		*)
+			;;	
+	esac
+done  
+sync
+
+
+###############################
+# Create symbolic links 
+###############################
+mkdir -p /vp_mnt/if/appdata
+
+#create symbolic link for storio cart
+mkdir -p /mnt/nand1-2/CARTINFO
+touch /vp_mnt/if/PROFILE.SET
+ln -s /vp_mnt/if/PROFILE.SET /mnt/nand1-2/CARTINFO/BOOK_PROFILE1_0_0_1.SET
+ln -s /vp_mnt/if/PROFILE.SET /mnt/nand1-2/CARTINFO/BOOK_PROFILE1_0_0_2.SET
+touch /vp_mnt/if/USER_DATA.SET
+ln -s /vp_mnt/if/USER_DATA.SET /mnt/nand1-2/CARTINFO/USER_DATA1_0_0_1.SET
+
+#split book and game profiles
+/system/lib/vtech/split_profile
+
+sync
+
+###############################
+# Prepare for video playback
+###############################
+ln -s /system/flash/xse/cgi/services/video /var/video
+
+###############################
+# Prepare for flash player
+###############################
+ln -s /system/bin/MainEntry.swf /var/MainEntry.swf
+
+###############################
+# Prepare for lmaid and vmount
+###############################
+ln -s /system/bin/vtech/vmount /bin/vmount
+#ln -s /system/bin/vtech/lmaid_debug /bin/lmaid
+ln -s /system/bin/vtech/lmaid /bin/lmaid
+
+
+
+###############################
+# Check calibration key combinations
+###############################
+TOUCHCAL_FLAG=noexit
+GSENSORCAL_FLAG=noexit
+key_status=`keystatus`
+if expr "$key_status" : '.*HLP;.*HOM;.*VUP;.*' > /dev/null ; then
+	TOUCHCAL_FLAG=force
+fi
+# if expr "$key_status" : '.*HLP;.*HOM;.*VDN;.*' > /dev/null ; then
+# 	GSENSORCAL_FLAG=force
+# fi
+
+###############################
+# Touch panel calibration
+###############################
+if [ "$SB_LOCATION" = "POP" ]; then
+	echo "TouchCalibrate[SD]"
+	TouchCalibrate $TOUCHCAL_FLAG calfile=/vp_mnt/sd/pointercal boot=sd
+	ln -sf /vp_mnt/sd/pointercal /etc/pointercal
+else
+	echo "TouchCalibrate[NAND]"
+	TouchCalibrate $TOUCHCAL_FLAG calfile=/etc/pointercal boot=nand
+fi
+sync
+
+# if [ "$SB_LOCATION" = "POP" ]; then
+# 	echo "GsensorCalibrate[SD]"
+# 	GsensorCalibrate $GSENSORCAL_FLAG calfile=/vp_mnt/sd/gsensorcal 1face nosave
+# 	ln -sf /vp_mnt/sd/pointercal /etc/pointercal
+# else
+# 	echo "GsensorCalibrate[NAND]"
+# 	GsensorCalibrate $GSENSORCAL_FLAG calfile=/etc/gsensorcal 1face
+# fi
+# sync
+
+###############################
+# Run app here
+###############################
+if [ -d $SDCARD_PATH ]; then
+	echo "SD card exists!"
+else
+	echo "No SD card!"
+fi
+
+RUN_SD=no
+if [ -d /etc/DEVELOPMENT_AND_PRODUCTION -a -f $SDCARD_PATH/VTECH_DEBUG.RUN_SD ]; then
+	RUN_SD=yes
+fi
+
+if [ $RUN_SD != yes ]; then
+	if [ -f /vp_mnt/if/.__hijack__before__Bundle__ ]; then
+		. /vp_mnt/if/.__hijack__before__Bundle__
+	fi
+	desktopManager -RunBundle &
+elif [ $RUN_SD = yes  -a  -f $SDCARD_PATH/_SD_Run ]; then
+	desktopManager &
+	echo "+++ Run SD Card" 
+	cd $SDCARD_PATH
+	exec_newpgid ./_SD_Run &
+else
+	desktopManager &
+	echo "+++ Nothing to Run!!! :("
+fi

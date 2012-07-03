@@ -1,0 +1,44 @@
+env['BLT_RELAXED_ENV'] = env.Clone()
+LoadTool('gcc-generic', env['BLT_RELAXED_ENV'], gcc_strict=False, gcc_stop_on_warning=False)
+LoadTool('gcc-generic', env)
+
+env['ATX_SYSTEM_SOURCES']={'System/StdC':'*.c', 'System/Bsd':'*.c', 'System/Posix':'*.c'}
+env['ATX_EXTRA_LIBS']=['m']
+env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Bsd':'*.cpp', 'System/Posix':'*.cpp'}
+env['AP4_SYSTEM_SOURCES']={'System/StdC':'*.cpp'}
+#env['AP4_CPP_DEFINES']=['AP4_CONFIG_MINI_BUILD']
+env['BLT_PLUGINS'] = ['FileInput', 
+                      'NetworkInput',
+                      'WmsProtocol',
+                      'MpegAudioDecoder', 
+                      'StreamPacketizer', 
+                      'NullOutput',
+                      'FileOutput',
+                      'PacketStreamer',
+                      'TagParser',
+                      'DebugOutput',
+                      'WaveParser',
+                      'AiffParser',
+                      'Mp4Parser',
+                      'AdtsParser',
+                      'WaveFormatter',
+                      'SilenceRemover',
+                      'GainControlFilter',
+                      'PcmAdapter',
+                      'FlacDecoder',
+                      'AlacDecoder',
+                      'VorbisDecoder',
+                      'AacDecoder',
+                      'CddaInput',
+                      'AlsaOutput',
+                      'AlsaInput']
+
+env['BLT_PLUGINS_CDDA_DEVICE_TYPE'] = 'Linux'
+env['BLT_PLUGINS_VORBIS_LIBRARY']   = 'Tremor'
+env['BLT_DEFAULT_AUDIO_OUTPUT']     = 'alsa:default'
+#env['FLO_DECODER_ENGINE']      = 'FLO_DECODER_ENGINE_MPG123'
+#env['BLT_PLUGINS_AAC_LIBRARY'] = 'Helix'
+
+                                             
+
+

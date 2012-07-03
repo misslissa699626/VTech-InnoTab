@@ -1,0 +1,5 @@
+* Write method to update files with ID3
+* Better Windows support
+* Add compression pieces
+* Shrink memory footprint more
+* Make mmap() call optional

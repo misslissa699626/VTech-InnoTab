@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA7BB0690C8E28180084948C /* MeloDecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA7BB0680C8E28180084948C /* MeloDecode.cpp */; };
+		CA7BB0750C8E28470084948C /* libBento4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7BB0740C8E28390084948C /* libBento4.a */; };
+		CA7BB0B10C8E29D20084948C /* libMelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7BB0B00C8E299E0084948C /* libMelo.a */; };
+		CA7BB0B60C8E2A390084948C /* MeloDecode in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DD76F6C0486A84900D96B5E /* MeloDecode */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA7BB0730C8E28390084948C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA7BB06C0C8E28390084948C /* Bento4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = Bento4;
+		};
+		CA7BB0AF0C8E299E0084948C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA7BB0AB0C8E299E0084948C /* Melo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = Melo;
+		};
+		CA7BB0BA0C8E2B3D0084948C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA7BB06C0C8E28390084948C /* Bento4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Bento4;
+		};
+		CA7BB0BC0C8E2B420084948C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA7BB0AB0C8E299E0084948C /* Melo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Melo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				CA7BB0B60C8E2A390084948C /* MeloDecode in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8DD76F6C0486A84900D96B5E /* MeloDecode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MeloDecode; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7BB0680C8E28180084948C /* MeloDecode.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = MeloDecode.cpp; path = ../../../Apps/MeloDecode/MeloDecode.cpp; sourceTree = SOURCE_ROOT; };
+		CA7BB06C0C8E28390084948C /* Bento4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Bento4.xcodeproj; path = "../../../../Bento4/Build/Targets/universal-apple-macos/Bento4.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		CA7BB0AB0C8E299E0084948C /* Melo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Melo.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7BB0B10C8E29D20084948C /* libMelo.a in Frameworks */,
+				CA7BB0750C8E28470084948C /* libBento4.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* MeloDecode */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BB0AB0C8E299E0084948C /* Melo.xcodeproj */,
+				CA7BB06C0C8E28390084948C /* Bento4.xcodeproj */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = MeloDecode;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BB0680C8E28180084948C /* MeloDecode.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* MeloDecode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA7BB06D0C8E28390084948C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BB0740C8E28390084948C /* libBento4.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA7BB0AC0C8E299E0084948C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BB0B00C8E299E0084948C /* libMelo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* MeloDecode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "MeloDecode" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA7BB0BB0C8E2B3D0084948C /* PBXTargetDependency */,
+				CA7BB0BD0C8E2B420084948C /* PBXTargetDependency */,
+			);
+			name = MeloDecode;
+			productInstallPath = "$(HOME)/bin";
+			productName = MeloDecode;
+			productReference = 8DD76F6C0486A84900D96B5E /* MeloDecode */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "MeloDecode" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* MeloDecode */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CA7BB06D0C8E28390084948C /* Products */;
+					ProjectRef = CA7BB06C0C8E28390084948C /* Bento4.xcodeproj */;
+				},
+				{
+					ProductGroup = CA7BB0AC0C8E299E0084948C /* Products */;
+					ProjectRef = CA7BB0AB0C8E299E0084948C /* Melo.xcodeproj */;
+				},
+			);
+			targets = (
+				8DD76F620486A84900D96B5E /* MeloDecode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CA7BB0740C8E28390084948C /* libBento4.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBento4.a;
+			remoteRef = CA7BB0730C8E28390084948C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA7BB0B00C8E299E0084948C /* libMelo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMelo.a;
+			remoteRef = CA7BB0AF0C8E299E0084948C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7BB0690C8E28180084948C /* MeloDecode.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA7BB0BB0C8E2B3D0084948C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bento4;
+			targetProxy = CA7BB0BA0C8E2B3D0084948C /* PBXContainerItemProxy */;
+		};
+		CA7BB0BD0C8E2B420084948C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Melo;
+			targetProxy = CA7BB0BC0C8E2B420084948C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = MeloDecode;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = MeloDecode;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/** $(BENTO4_HOME)/Source/C++/**";
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/** $(BENTO4_HOME)/Source/C++/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "MeloDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "MeloDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

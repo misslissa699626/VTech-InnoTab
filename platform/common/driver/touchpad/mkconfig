@@ -1,0 +1,1 @@
+--------------------------------------- platform/common/driver/touchpad-------------------------------------touchpad = {	{ name = "tpd_dok_t6740b_module",         prompt = "tpd_dok_t6740b_module         - " },}

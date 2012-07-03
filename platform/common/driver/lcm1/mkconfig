@@ -1,0 +1,1 @@
+--------------------------------------- platform/common/driver/lcm-------------------------------------lcm1_panels = {	--{ name = "lcm_SPFD5420A_tft1",         prompt = "lcm_SPFD5420A_tft1         - " },}

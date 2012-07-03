@@ -1,0 +1,21 @@
+
+I) Setup build environment
+  (1)Download python2.5.4(or later)
+	cd to phthon2.5.4 folder
+	a) ./configure
+	b) make
+	c) make install
+  (2)Download scons-2.0.1(or later)
+        cd to scons-2.0.2 folder
+	a)python setup.py install
+
+II) Make binary/library
+  a)make -- for arm platform
+  b)make pc=1 --for pc platform
+
+output: 
+   ./output/TARGET/release/bin/btplay -- for command line test
+   ./output/TARGET/release/lib/* -- library for development
+   ./output/include/* -- header file
+          
+  

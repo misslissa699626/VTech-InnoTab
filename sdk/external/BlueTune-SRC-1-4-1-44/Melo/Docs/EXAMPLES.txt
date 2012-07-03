@@ -1,0 +1,14 @@
+Melo AAC Decoder SDK 
+  --- Examples ---
+---------------------
+
+1. Example Application
+
+An example application, MeloDecode, is included. It shows how to parse an
+MP4 file with AAC audio frames, use an MLO_Decoder object to decode the 
+AAC audio frames into PCM samples, and save them to a WAVE file.
+NOTE: this example application requires the Bento4 MP4 File Format parsing
+library that can be downloaded at http://bento4.sourceforge.net .
+In order to build this example application, the project files expect the 
+Bento4 directory to be located at the same level (in the same directory) as
+the Melo directory.

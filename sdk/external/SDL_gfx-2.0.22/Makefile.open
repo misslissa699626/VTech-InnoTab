@@ -1,0 +1,33 @@
+TOPDIR := ../../../
+include $(TOPDIR)sdk/build/core/config.mak
+
+
+.PHONY: all
+all:
+ifeq ($(SYSCONFIG_TARGET), linux-arm)
+	@$(MAKE) -f Makefile.open config_linux_arm
+else
+	@$(MAKE) -f Makefile.open config_linux_x86
+endif
+	@$(MAKE)
+	@$(MKDIR) -p $(OUT_SDK_DIR)
+	@$(MAKE) install
+
+
+.PHONY: clean
+clean:
+	@$(MAKE) clean
+
+
+.PHONY: config_linux_x86
+config_linux_x86:
+	./configure --prefix=$(OUT_SDK_DIR_FULL) --with-sdl-prefix=$(OUT_SDK_DIR_FULL) \
+	CC=$(TARGET_CC) AR=$(TARGET_AR) RANLIB=$(TARGET_RANLIB) STRIP=$(TARGET_STRIP) \
+	--disable-mmx
+
+.PHONY: config_linux_arm
+config_linux_arm:
+	./configure --prefix=$(OUT_SDK_DIR_FULL) --with-sdl-prefix=$(OUT_SDK_DIR_FULL) \
+	CC=$(TARGET_CC) AR=$(TARGET_AR) RANLIB=$(TARGET_RANLIB) STRIP=$(TARGET_STRIP) \
+	--host=arm-linux \
+	--disable-mmx

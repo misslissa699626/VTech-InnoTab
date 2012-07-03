@@ -1,0 +1,16 @@
+#!/bin/sh
+# BlueTune header copy
+
+INCDIR=$1
+INCBASE=$2
+shift
+shift
+while [ "$1" ]
+do
+  mkdir -p ${INCDIR}/${INCBASE}/$1
+  cp -p ${INCBASE}/Source/$1/*.h* ${INCDIR}/${INCBASE}/$1 || exit 1
+  echo "{$INCBASE}/$1 copied successfully"
+  shift
+done
+
+exit 0

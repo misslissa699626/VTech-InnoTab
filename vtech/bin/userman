@@ -1,0 +1,75 @@
+#!/bin/sh
+
+echo "===Multi-user tool==="
+
+if [ "$1" != "init"  -a  -z "$2" ]; then
+	echo 'userman select <user id>'
+	echo 'userman add <user id>'
+	echo 'userman del <user id>'
+	echo 'userman add-select <user id>'
+	exit 1
+fi
+
+CMD1=$1
+CMD2=
+if [ "$CMD1" = "add-select" ]; then
+	CMD1="add"
+	CMD2="select"
+fi
+
+##init
+if [ "$CMD1" = "init" -o "$CMD2" = "init" ]; then
+	if [ -z "$2"  -o  "$2" = "IT2011" ]; then
+		#migrate
+		if [ ! -d /vp_mnt/if/user.00000000 ]; then
+			userman add 00000000
+			mv PROFILE.SET /vp_mnt/if/user.00000000
+			mv PROFILE2.SET /vp_mnt/if/user.00000000
+			mv USER_DATA.SET /vp_mnt/if/user.00000000
+			mv theme.db /vp_mnt/if/user.00000000
+			mv appdata /vp_mnt/if/user.00000000
+		else
+			userman add 00000000
+		fi
+		userman select 00000000
+	else
+		rm -f /vp_mnt/if/user.current
+		ln -sfn /dev/null /vp_mnt/if/user.current
+		systemset -w user_id ""
+	fi
+fi
+
+##del
+if [ "$CMD1" = "del" -o "$CMD2" = "del" ]; then
+	rm -rf /vp_mnt/if/user.$2
+fi
+
+##add
+if [ "$CMD1" = "add" -o "$CMD2" = "add" ]; then
+	mkdir -p /vp_mnt/if/user.$2
+	touch /vp_mnt/if/user.$2/PROFILE.SET
+	touch /vp_mnt/if/user.$2/PROFILE2.SET
+	touch /vp_mnt/if/user.$2/USER_DATA.SET
+	mkdir -p /vp_mnt/if/user.$2/appdata
+fi
+
+##select
+if [ "$CMD1" = "select" -o "$CMD2" = "select" ]; then
+	if [ -d /vp_mnt/if/user.$2 ]; then
+		systemset -w user_id $2
+		ln -sfn /vp_mnt/if/user.$2 /vp_mnt/if/user.current
+		ln -sfn /vp_mnt/if/user.current/PROFILE.SET /vp_mnt/if/PROFILE.SET
+		ln -sfn /vp_mnt/if/user.current/PROFILE2.SET /vp_mnt/if/PROFILE2.SET
+		ln -sfn /vp_mnt/if/user.current/USER_DATA.SET /vp_mnt/if/USER_DATA.SET
+		ln -sfn /vp_mnt/if/user.current/theme.db /vp_mnt/if/theme.db
+		ln -sfn /vp_mnt/if/user.current/appdata /vp_mnt/if/appdata
+		#split book and game profiles
+		/system/lib/vtech/split_profile
+	else
+		systemset -w user_id ""
+		echo "No such user!"
+		exit 1
+	fi
+fi
+
+sync

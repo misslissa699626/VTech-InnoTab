@@ -1,0 +1,4 @@
+Pretty simple instructions. 
+Type "make install" and everything should work.
+
+By default all files will go in /usr/local.

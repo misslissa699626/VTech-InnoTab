@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EF79D129-5B03-4A18-9F1B-E081C3AC553E}</ProjectGuid>
+    <RootNamespace>BlueTune</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Release.props" />
+    <Import Project="..\Externals.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Debug.props" />
+    <Import Project="..\Externals.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\Source\BlueTune;..\..\..\..\Source\Core;..\..\..\..\Source\Decoder;..\..\..\..\Source\Player;..\..\..\..\Source\Fluo;..\..\..\..\Source\Plugins\Common;..\..\..\..\Source\Plugins\DynamicLoading;..\..\..\..\Source\Plugins\Adapters\PCM;..\..\..\..\Source\Plugins\Decoders\AAC;..\..\..\..\Source\Plugins\Decoders\ALAC;..\..\..\..\Source\Plugins\Decoders\FLAC;..\..\..\..\Source\Plugins\Decoders\MpegAudio;..\..\..\..\Source\Plugins\Decoders\Vorbis;..\..\..\..\Source\Plugins\Decoders\WMA;..\..\..\..\Source\Plugins\Filters\GainControl;..\..\..\..\Source\Plugins\Formatters\Wave;..\..\..\..\Source\Plugins\General\PacketStreamer;..\..\..\..\Source\Plugins\General\StreamPacketizer;..\..\..\..\Source\Plugins\General\SilenceRemover;..\..\..\..\Source\Plugins\Inputs\File;..\..\..\..\Source\Plugins\Inputs\Network;..\..\..\..\Source\Plugins\Inputs\Callback;..\..\..\..\Source\Plugins\Outputs\File;..\..\..\..\Source\Plugins\Outputs\Debug;..\..\..\..\Source\Plugins\Outputs\Null;..\..\..\..\Source\Plugins\Outputs\Win32;..\..\..\..\Source\Plugins\Outputs\Callback;..\..\..\..\Source\Plugins\Parsers\Aiff;..\..\..\..\Source\Plugins\Parsers\Mp4;..\..\..\..\Source\Plugins\Parsers\Adts;..\..\..\..\Source\Plugins\Parsers\Tags;..\..\..\..\Source\Plugins\Parsers\Wave;..\..\..\..\Source\Plugins\Parsers\Dcf;..\..\..\..\..\Atomix\Source\Core;..\..\..\..\..\Neptune\Source\Core;$(BLT_DDPLUS_PLUGIN_HOME)\Source\BlueTuneModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;ATX_CONFIG_ENABLE_LOGGING;NPT_CONFIG_ENABLE_LOGGING;BLT_CONFIG_VORBIS_USE_TREMOR;BLT_CONFIG_MODULES_DEFAULT_AUDIO_OUTPUT_NAME=wave:0;BLT_CONFIG_MODULES_DEFAULT_VIDEO_OUTPUT_NAME=dx9:0;BLT_CONFIG_MODULES_ENABLE_FILE_INPUT;BLT_CONFIG_MODULES_ENABLE_NETWORK_INPUT;BLT_CONFIG_MODULES_ENABLE_TAG_PARSER;BLT_CONFIG_MODULES_ENABLE_WAVE_PARSER;BLT_CONFIG_MODULES_ENABLE_AIFF_PARSER;BLT_CONFIG_MODULES_ENABLE_MP4_PARSER;BLT_CONFIG_MODULES_ENABLE_ADTS_PARSER;BLT_CONFIG_MODULES_ENABLE_DCF_PARSER;BLT_CONFIG_MODULES_ENABLE_WAVE_FORMATTER;BLT_CONFIG_MODULES_ENABLE_VORBIS_DECODER;BLT_CONFIG_MODULES_ENABLE_FLAC_DECODER;BLT_CONFIG_MODULES_ENABLE_ALAC_DECODER;BLT_CONFIG_MODULES_ENABLE_MPEG_AUDIO_DECODER;BLT_CONFIG_MODULES_ENABLE_AAC_DECODER;_BLT_CONFIG_MODULES_ENABLE_WMA_DECODER;BLT_CONFIG_MODULES_ENABLE_PACKET_STREAMER;BLT_CONFIG_MODULES_ENABLE_STREAM_PACKETIZER;BLT_CONFIG_MODULES_ENABLE_DEBUG_OUTPUT;BLT_CONFIG_MODULES_ENABLE_NULL_OUTPUT;BLT_CONFIG_MODULES_ENABLE_WIN32_AUDIO_OUTPUT;BLT_CONFIG_MODULES_ENABLE_FILE_OUTPUT;BLT_CONFIG_MODULES_ENABLE_GAIN_CONTROL_FILTER;BLT_CONFIG_MODULES_ENABLE_PCM_ADAPTER;_BLT_CONFIG_MODULES_ENABLE_FILTER_HOST;_BLT_CONFIG_MODULES_ENABLE_DDPLUS_PARSER;_BLT_CONFIG_MODULES_ENABLE_DDPLUS_DECODER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;$(BLT_DDPLUS_PLUGIN_LIB);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\..\BlueTuneExtras\WmaPlugin\Targets\x86-microsoft-win32\lib\$(Configuration);..\..\..\..\ThirdParty\FLAC\Targets\x86-microsoft-win32\lib\Debug;..\..\..\..\ThirdParty\Vorbis\Targets\x86-microsoft-win32\lib;$(BLT_DDPLUS_PLUGIN_HOME)\Build\Targets\x86-microsoft-win32-vs2005\$(Configuration);$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\Source\BlueTune;..\..\..\..\Source\Core;..\..\..\..\Source\Decoder;..\..\..\..\Source\Player;..\..\..\..\Source\Fluo;..\..\..\..\Source\Plugins\Common;..\..\..\..\Source\Plugins\DynamicLoading;..\..\..\..\Source\Plugins\Adapters\PCM;..\..\..\..\Source\Plugins\Decoders\AAC;..\..\..\..\Source\Plugins\Decoders\ALAC;..\..\..\..\Source\Plugins\Decoders\FLAC;..\..\..\..\Source\Plugins\Decoders\MpegAudio;..\..\..\..\Source\Plugins\Decoders\Vorbis;..\..\..\..\Source\Plugins\Decoders\WMA;..\..\..\..\Source\Plugins\Filters\GainControl;..\..\..\..\Source\Plugins\Formatters\Wave;..\..\..\..\Source\Plugins\General\PacketStreamer;..\..\..\..\Source\Plugins\General\StreamPacketizer;..\..\..\..\Source\Plugins\General\SilenceRemover;..\..\..\..\Source\Plugins\Inputs\File;..\..\..\..\Source\Plugins\Inputs\Network;..\..\..\..\Source\Plugins\Inputs\Callback;..\..\..\..\Source\Plugins\Outputs\File;..\..\..\..\Source\Plugins\Outputs\Debug;..\..\..\..\Source\Plugins\Outputs\Null;..\..\..\..\Source\Plugins\Outputs\Win32;..\..\..\..\Source\Plugins\Outputs\Callback;..\..\..\..\Source\Plugins\Parsers\Aiff;..\..\..\..\Source\Plugins\Parsers\Mp4;..\..\..\..\Source\Plugins\Parsers\Adts;..\..\..\..\Source\Plugins\Parsers\Tags;..\..\..\..\Source\Plugins\Parsers\Wave;..\..\..\..\Source\Plugins\Parsers\Dcf;..\..\..\..\..\Atomix\Source\Core;..\..\..\..\..\Neptune\Source\Core;$(BLT_DDPLUS_PLUGIN_HOME)\Source\BlueTuneModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;ATX_CONFIG_ENABLE_LOGGING;NPT_CONFIG_ENABLE_LOGGING;BLT_CONFIG_VORBIS_USE_TREMOR;BLT_CONFIG_MODULES_DEFAULT_AUDIO_OUTPUT_NAME=wave:0;BLT_CONFIG_MODULES_DEFAULT_VIDEO_OUTPUT_NAME=dx9:0;BLT_CONFIG_MODULES_ENABLE_FILE_INPUT;BLT_CONFIG_MODULES_ENABLE_NETWORK_INPUT;BLT_CONFIG_MODULES_ENABLE_TAG_PARSER;BLT_CONFIG_MODULES_ENABLE_WAVE_PARSER;BLT_CONFIG_MODULES_ENABLE_AIFF_PARSER;BLT_CONFIG_MODULES_ENABLE_MP4_PARSER;BLT_CONFIG_MODULES_ENABLE_ADTS_PARSER;BLT_CONFIG_MODULES_ENABLE_DCF_PARSER;BLT_CONFIG_MODULES_ENABLE_WAVE_FORMATTER;BLT_CONFIG_MODULES_ENABLE_VORBIS_DECODER;BLT_CONFIG_MODULES_ENABLE_FLAC_DECODER;BLT_CONFIG_MODULES_ENABLE_ALAC_DECODER;BLT_CONFIG_MODULES_ENABLE_MPEG_AUDIO_DECODER;BLT_CONFIG_MODULES_ENABLE_AAC_DECODER;_BLT_CONFIG_MODULES_ENABLE_WMA_DECODER;BLT_CONFIG_MODULES_ENABLE_PACKET_STREAMER;BLT_CONFIG_MODULES_ENABLE_STREAM_PACKETIZER;BLT_CONFIG_MODULES_ENABLE_DEBUG_OUTPUT;BLT_CONFIG_MODULES_ENABLE_NULL_OUTPUT;BLT_CONFIG_MODULES_ENABLE_WIN32_AUDIO_OUTPUT;BLT_CONFIG_MODULES_ENABLE_FILE_OUTPUT;_BLT_CONFIG_MODULES_ENABLE_DDPLUS_PARSER;_BLT_CONFIG_MODULES_ENABLE_DDPLUS_DECODER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;$(BLT_DDPLUS_PLUGIN_LIB);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\..\BlueTuneExtras\WmaPlugin\Targets\x86-microsoft-win32\lib\$(Configuration);..\..\..\..\ThirdParty\FLAC\Targets\x86-microsoft-win32\lib\Release;..\..\..\..\ThirdParty\Vorbis\Targets\x86-microsoft-win32\lib;$(BLT_DDPLUS_PLUGIN_HOME)\Build\Targets\x86-microsoft-win32-vs2005\$(Configuration);$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Source\Core\BltBitStream.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Common\BltBuiltins.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltCore.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Debug\BltDebugOutput.c" />
+    <ClCompile Include="..\..\..\..\Source\Decoder\BltDecoder.c" />
+    <ClCompile Include="..\..\..\..\Source\Player\BltDecoderClient.cpp" />
+    <ClCompile Include="..\..\..\..\Source\Player\BltDecoderServer.cpp" />
+    <ClCompile Include="..\..\..\..\Source\Decoder\BltDecoderX.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltErrors.cpp" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltInterfaces.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltMedia.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltMediaNode.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltMediaPacket.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltMediaPort.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltModule.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltPcm.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltPixels.c" />
+    <ClCompile Include="..\..\..\..\Source\Player\BltPlayer.cpp" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltRegistry.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Common\BltReplayGain.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltStream.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\BltTime.c" />
+    <ClCompile Include="..\..\..\..\..\Bento4\Source\C++\Adapters\Ap4AtomixAdapters.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\Bento4\Source\C++\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\Bento4\Source\C++\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\AAC\BltAacDecoder.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\Melo\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\Melo\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Adts\BltAdtsParser.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Aiff\BltAiffParser.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\ALAC\BltAlacDecoder.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltApeParser.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Callback\BltCallbackInput.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Callback\BltCallbackOutput.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Dcf\BltDcfParser.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\Bento4\Source\C++\Core;..\..\..\..\..\Bento4\Source\C++\MetaData;..\..\..\..\..\Bento4\Source\C++\Adapters;..\..\..\..\..\Bento4\Source\C++\Crypto;..\..\..\..\..\Bento4\Source\C++\Codecs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\Bento4\Source\C++\Core;..\..\..\..\..\Bento4\Source\C++\MetaData;..\..\..\..\..\Bento4\Source\C++\Adapters;..\..\..\..\..\Bento4\Source\C++\Crypto;..\..\..\..\..\Bento4\Source\C++\Codecs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\DynamicLoading\BltDynamicPlugins.cpp" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\File\BltFileInput.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\File\BltFileOutput.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Composite\FilterHost\BltFilterHost.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\FLAC\BltFlacDecoder.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\ThirdParty\FLAC\Targets\x86-microsoft-win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FLAC__NO_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\ThirdParty\FLAC\Targets\x86-microsoft-win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FLAC__NO_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Filters\GainControl\BltGainControlFilter.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltHttpNetworkStream.cpp" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltId3Parser.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Mp4\BltMp4Parser.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\Bento4\Source\C++\Core;..\..\..\..\..\Bento4\Source\C++\MetaData;..\..\..\..\..\Bento4\Source\C++\Adapters;..\..\..\..\..\Bento4\Source\C++\Codecs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\Bento4\Source\C++\Core;..\..\..\..\..\Bento4\Source\C++\MetaData;..\..\..\..\..\Bento4\Source\C++\Adapters;..\..\..\..\..\Bento4\Source\C++\Codecs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\MpegAudio\BltMpegAudioDecoder.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\BlueTune\Source\Fluo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\BlueTune\Source\Fluo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInput.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInputSource.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkStream.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Null\BltNullOutput.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\General\PacketStreamer\BltPacketStreamer.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Adapters\PCM\BltPcmAdapter.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\General\SilenceRemover\BltSilenceRemover.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\General\StreamPacketizer\BltStreamPacketizer.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltTagParser.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltTcpNetworkStream.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\Vorbis\BltVorbisDecoder.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\ThirdParty\Vorbis\Distributions\Tremor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\ThirdParty\Vorbis\Distributions\Tremor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Formatters\Wave\BltWaveFormatter.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Wave\BltWaveParser.c" />
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Win32\BltWin32AudioOutput.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Source\Core\BltBuiltins.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltByteStreamProvider.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltByteStreamUser.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltConfig.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltCore.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltCorePriv.h" />
+    <ClInclude Include="..\..\..\..\Source\Decoder\BltDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Player\BltDecoderClient.h" />
+    <ClInclude Include="..\..\..\..\Source\Player\BltDecoderServer.h" />
+    <ClInclude Include="..\..\..\..\Source\Decoder\BltDecoderX.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltDefs.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltErrors.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltEvent.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltEventListener.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Common\BltKeyManager.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltMedia.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaNode.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaPacket.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaPacketPriv.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaPort.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltModule.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltOutputNode.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltPacketConsumer.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltPacketProducer.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltPcm.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltPixels.h" />
+    <ClInclude Include="..\..\..\..\Source\Player\BltPlayer.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltRegistry.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltRegistryPriv.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltStream.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltStreamPriv.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltTime.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\BltTypes.h" />
+    <ClInclude Include="..\..\..\..\Source\BlueTune\BlueTune.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\AAC\BltAacDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Aiff\BltAiffParser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\ALAC\BltAlacDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltApeParser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Callback\BltCallbackInput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Callback\BltCallbackOutput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Dcf\BltDcfParser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Debug\BltDebugOutput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\File\BltFileInput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\File\BltFileOutput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Composite\FilterHost\BltFilterHost.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\FLAC\BltFlacDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Filters\GainControl\BltGainControlFilter.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltHttpNetworkStream.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltId3Parser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Mp4\BltMp4Parser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\MpegAudio\BltMpegAudioDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInputSource.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkStream.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Null\BltNullOutput.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\General\PacketStreamer\BltPacketStreamer.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Adapters\PCM\BltPcmAdapter.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Common\BltReplayGain.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\General\SilenceRemover\BltSilenceRemover.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\General\StreamPacketizer\BltStreamPacketizer.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltTagParser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltTcpNetworkStream.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\Vorbis\BltVorbisDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Formatters\Wave\BltWaveFormatter.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Wave\BltWaveParser.h" />
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Win32\BltWin32Output.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Atomix\Build\Targets\x86-microsoft-win32-vs2010\Atomix\Atomix.vcxproj">
+      <Project>{ab4d6e4d-790b-4851-8e5f-129aa6d7e56f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Bento4\Build\Targets\x86-microsoft-win32-vs2010\Bento4\Bento4.vcxproj">
+      <Project>{a714aa1c-45a9-403d-a6e1-020e520119a2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Melo\Build\Targets\x86-microsoft-win32-vs2010\Melo\Melo.vcxproj">
+      <Project>{a5592f6f-c86e-40eb-8791-734c170942eb}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Neptune\Build\Targets\x86-microsoft-win32-vs2010\Neptune\Neptune.vcxproj">
+      <Project>{12aff2e5-6d95-4809-9728-9551677c078a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FLAC\FLAC.vcxproj">
+      <Project>{3ca63d6c-c2cd-4db0-a979-c007da7cc60b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Fluo\Fluo.vcxproj">
+      <Project>{54c7fb91-6551-457c-9413-b67a77460310}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Tremor\Tremor.vcxproj">
+      <Project>{5c6b5e82-f74a-4213-bfdb-d86bb430e51b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

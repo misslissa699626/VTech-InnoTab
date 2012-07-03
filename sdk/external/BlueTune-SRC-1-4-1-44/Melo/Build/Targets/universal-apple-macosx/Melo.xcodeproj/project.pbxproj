@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA504DCE0C5E8D100060E6FE /* Melo.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D870C5E8D100060E6FE /* Melo.h */; };
+		CA504DD00C5E8D100060E6FE /* MloAdtsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D890C5E8D100060E6FE /* MloAdtsParser.h */; };
+		CA504DD10C5E8D100060E6FE /* MloBitStream.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D8A0C5E8D100060E6FE /* MloBitStream.c */; };
+		CA504DD20C5E8D100060E6FE /* MloBitStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D8B0C5E8D100060E6FE /* MloBitStream.h */; };
+		CA504DD30C5E8D100060E6FE /* MloConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D8C0C5E8D100060E6FE /* MloConfig.h */; };
+		CA504DD40C5E8D100060E6FE /* MloDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D8D0C5E8D100060E6FE /* MloDebug.h */; };
+		CA504DD50C5E8D100060E6FE /* MloDecoder.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D8E0C5E8D100060E6FE /* MloDecoder.c */; };
+		CA504DD60C5E8D100060E6FE /* MloDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D8F0C5E8D100060E6FE /* MloDecoder.h */; };
+		CA504DD70C5E8D100060E6FE /* MloDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D900C5E8D100060E6FE /* MloDefs.h */; };
+		CA504DD80C5E8D100060E6FE /* MloElementCce.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D910C5E8D100060E6FE /* MloElementCce.c */; };
+		CA504DD90C5E8D100060E6FE /* MloElementCce.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D920C5E8D100060E6FE /* MloElementCce.h */; };
+		CA504DDA0C5E8D100060E6FE /* MloElementCpe.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D930C5E8D100060E6FE /* MloElementCpe.c */; };
+		CA504DDB0C5E8D100060E6FE /* MloElementCpe.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D940C5E8D100060E6FE /* MloElementCpe.h */; };
+		CA504DDC0C5E8D100060E6FE /* MloElementDse.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D950C5E8D100060E6FE /* MloElementDse.c */; };
+		CA504DDD0C5E8D100060E6FE /* MloElementDse.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D960C5E8D100060E6FE /* MloElementDse.h */; };
+		CA504DDE0C5E8D100060E6FE /* MloElementFil.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D970C5E8D100060E6FE /* MloElementFil.c */; };
+		CA504DDF0C5E8D100060E6FE /* MloElementFil.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D980C5E8D100060E6FE /* MloElementFil.h */; };
+		CA504DE00C5E8D100060E6FE /* MloElementPce.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D990C5E8D100060E6FE /* MloElementPce.c */; };
+		CA504DE10C5E8D100060E6FE /* MloElementPce.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D9A0C5E8D100060E6FE /* MloElementPce.h */; };
+		CA504DE20C5E8D100060E6FE /* MloElementSceLfe.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D9B0C5E8D100060E6FE /* MloElementSceLfe.c */; };
+		CA504DE30C5E8D100060E6FE /* MloElementSceLfe.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D9C0C5E8D100060E6FE /* MloElementSceLfe.h */; };
+		CA504DE40C5E8D100060E6FE /* MloFft.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D9D0C5E8D100060E6FE /* MloFft.c */; };
+		CA504DE50C5E8D100060E6FE /* MloFft.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504D9E0C5E8D100060E6FE /* MloFft.h */; };
+		CA504DE60C5E8D100060E6FE /* MloFilterBank.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504D9F0C5E8D100060E6FE /* MloFilterBank.c */; };
+		CA504DE70C5E8D100060E6FE /* MloFilterBank.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA00C5E8D100060E6FE /* MloFilterBank.h */; };
+		CA504DE80C5E8D100060E6FE /* MloFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA10C5E8D100060E6FE /* MloFloat.h */; };
+		CA504DE90C5E8D100060E6FE /* MloFloatFix.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA20C5E8D100060E6FE /* MloFloatFix.h */; };
+		CA504DEA0C5E8D100060E6FE /* MloFloatFpu.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA30C5E8D100060E6FE /* MloFloatFpu.h */; };
+		CA504DEB0C5E8D100060E6FE /* MloFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA40C5E8D100060E6FE /* MloFrame.h */; };
+		CA504DEC0C5E8D100060E6FE /* MloHcb.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA50C5E8D100060E6FE /* MloHcb.h */; };
+		CA504DED0C5E8D100060E6FE /* MloHcbPair.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DA60C5E8D100060E6FE /* MloHcbPair.c */; };
+		CA504DEE0C5E8D100060E6FE /* MloHcbPair.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA70C5E8D100060E6FE /* MloHcbPair.h */; };
+		CA504DEF0C5E8D100060E6FE /* MloHcbQuad.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DA80C5E8D100060E6FE /* MloHcbQuad.c */; };
+		CA504DF00C5E8D100060E6FE /* MloHcbQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DA90C5E8D100060E6FE /* MloHcbQuad.h */; };
+		CA504DF10C5E8D100060E6FE /* MloHcbScaleFactor.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DAA0C5E8D100060E6FE /* MloHcbScaleFactor.c */; };
+		CA504DF20C5E8D100060E6FE /* MloHcbScaleFactor.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DAB0C5E8D100060E6FE /* MloHcbScaleFactor.h */; };
+		CA504DF30C5E8D100060E6FE /* MloHuffman.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DAC0C5E8D100060E6FE /* MloHuffman.c */; };
+		CA504DF40C5E8D100060E6FE /* MloHuffman.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DAD0C5E8D100060E6FE /* MloHuffman.h */; };
+		CA504DF50C5E8D100060E6FE /* MloIcsInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DAE0C5E8D100060E6FE /* MloIcsInfo.c */; };
+		CA504DF60C5E8D100060E6FE /* MloIcsInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DAF0C5E8D100060E6FE /* MloIcsInfo.h */; };
+		CA504DF70C5E8D100060E6FE /* MloImdct.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DB00C5E8D100060E6FE /* MloImdct.c */; };
+		CA504DF80C5E8D100060E6FE /* MloImdct.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DB10C5E8D100060E6FE /* MloImdct.h */; };
+		CA504DF90C5E8D100060E6FE /* MloIndivChnPool.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DB20C5E8D100060E6FE /* MloIndivChnPool.c */; };
+		CA504DFA0C5E8D100060E6FE /* MloIndivChnPool.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DB30C5E8D100060E6FE /* MloIndivChnPool.h */; };
+		CA504DFB0C5E8D100060E6FE /* MloIndivChnStream.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DB40C5E8D100060E6FE /* MloIndivChnStream.c */; };
+		CA504DFC0C5E8D100060E6FE /* MloIndivChnStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DB50C5E8D100060E6FE /* MloIndivChnStream.h */; };
+		CA504DFD0C5E8D100060E6FE /* MloInvQuant.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DB60C5E8D100060E6FE /* MloInvQuant.c */; };
+		CA504DFE0C5E8D100060E6FE /* MloInvQuant.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DB70C5E8D100060E6FE /* MloInvQuant.h */; };
+		CA504DFF0C5E8D100060E6FE /* MloIs.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DB80C5E8D100060E6FE /* MloIs.c */; };
+		CA504E000C5E8D100060E6FE /* MloIs.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DB90C5E8D100060E6FE /* MloIs.h */; };
+		CA504E010C5E8D100060E6FE /* MloMs.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DBA0C5E8D100060E6FE /* MloMs.c */; };
+		CA504E020C5E8D100060E6FE /* MloMs.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DBB0C5E8D100060E6FE /* MloMs.h */; };
+		CA504E030C5E8D100060E6FE /* MloPns.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DBC0C5E8D100060E6FE /* MloPns.c */; };
+		CA504E040C5E8D100060E6FE /* MloPns.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DBD0C5E8D100060E6FE /* MloPns.h */; };
+		CA504E050C5E8D100060E6FE /* MloResults.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DBE0C5E8D100060E6FE /* MloResults.h */; };
+		CA504E060C5E8D100060E6FE /* MloSampleBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DBF0C5E8D100060E6FE /* MloSampleBuffer.c */; };
+		CA504E070C5E8D100060E6FE /* MloSampleBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DC00C5E8D100060E6FE /* MloSampleBuffer.h */; };
+		CA504E080C5E8D100060E6FE /* MloSamplingFreq.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DC10C5E8D100060E6FE /* MloSamplingFreq.c */; };
+		CA504E090C5E8D100060E6FE /* MloSamplingFreq.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DC20C5E8D100060E6FE /* MloSamplingFreq.h */; };
+		CA504E0A0C5E8D100060E6FE /* MloScaleFactor.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DC30C5E8D100060E6FE /* MloScaleFactor.c */; };
+		CA504E0B0C5E8D100060E6FE /* MloScaleFactor.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DC40C5E8D100060E6FE /* MloScaleFactor.h */; };
+		CA504E0C0C5E8D100060E6FE /* MloSectionData.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DC50C5E8D100060E6FE /* MloSectionData.c */; };
+		CA504E0D0C5E8D100060E6FE /* MloSectionData.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DC60C5E8D100060E6FE /* MloSectionData.h */; };
+		CA504E0E0C5E8D100060E6FE /* MloSyntacticElements.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DC70C5E8D100060E6FE /* MloSyntacticElements.c */; };
+		CA504E0F0C5E8D100060E6FE /* MloSyntacticElements.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DC80C5E8D100060E6FE /* MloSyntacticElements.h */; };
+		CA504E100C5E8D100060E6FE /* MloTns.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DC90C5E8D100060E6FE /* MloTns.c */; };
+		CA504E110C5E8D100060E6FE /* MloTns.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DCA0C5E8D100060E6FE /* MloTns.h */; };
+		CA504E120C5E8D100060E6FE /* MloTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DCB0C5E8D100060E6FE /* MloTypes.h */; };
+		CA504E130C5E8D100060E6FE /* MloUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = CA504DCC0C5E8D100060E6FE /* MloUtils.c */; };
+		CA504E140C5E8D100060E6FE /* MloUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CA504DCD0C5E8D100060E6FE /* MloUtils.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA504D870C5E8D100060E6FE /* Melo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Melo.h; path = ../../../Source/Melo.h; sourceTree = SOURCE_ROOT; };
+		CA504D880C5E8D100060E6FE /* MloAdtsParser.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloAdtsParser.c; path = ../../../Source/MloAdtsParser.c; sourceTree = SOURCE_ROOT; };
+		CA504D890C5E8D100060E6FE /* MloAdtsParser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloAdtsParser.h; path = ../../../Source/MloAdtsParser.h; sourceTree = SOURCE_ROOT; };
+		CA504D8A0C5E8D100060E6FE /* MloBitStream.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloBitStream.c; path = ../../../Source/MloBitStream.c; sourceTree = SOURCE_ROOT; };
+		CA504D8B0C5E8D100060E6FE /* MloBitStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloBitStream.h; path = ../../../Source/MloBitStream.h; sourceTree = SOURCE_ROOT; };
+		CA504D8C0C5E8D100060E6FE /* MloConfig.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloConfig.h; path = ../../../Source/MloConfig.h; sourceTree = SOURCE_ROOT; };
+		CA504D8D0C5E8D100060E6FE /* MloDebug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloDebug.h; path = ../../../Source/MloDebug.h; sourceTree = SOURCE_ROOT; };
+		CA504D8E0C5E8D100060E6FE /* MloDecoder.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloDecoder.c; path = ../../../Source/MloDecoder.c; sourceTree = SOURCE_ROOT; };
+		CA504D8F0C5E8D100060E6FE /* MloDecoder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloDecoder.h; path = ../../../Source/MloDecoder.h; sourceTree = SOURCE_ROOT; };
+		CA504D900C5E8D100060E6FE /* MloDefs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloDefs.h; path = ../../../Source/MloDefs.h; sourceTree = SOURCE_ROOT; };
+		CA504D910C5E8D100060E6FE /* MloElementCce.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloElementCce.c; path = ../../../Source/MloElementCce.c; sourceTree = SOURCE_ROOT; };
+		CA504D920C5E8D100060E6FE /* MloElementCce.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloElementCce.h; path = ../../../Source/MloElementCce.h; sourceTree = SOURCE_ROOT; };
+		CA504D930C5E8D100060E6FE /* MloElementCpe.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloElementCpe.c; path = ../../../Source/MloElementCpe.c; sourceTree = SOURCE_ROOT; };
+		CA504D940C5E8D100060E6FE /* MloElementCpe.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloElementCpe.h; path = ../../../Source/MloElementCpe.h; sourceTree = SOURCE_ROOT; };
+		CA504D950C5E8D100060E6FE /* MloElementDse.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloElementDse.c; path = ../../../Source/MloElementDse.c; sourceTree = SOURCE_ROOT; };
+		CA504D960C5E8D100060E6FE /* MloElementDse.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloElementDse.h; path = ../../../Source/MloElementDse.h; sourceTree = SOURCE_ROOT; };
+		CA504D970C5E8D100060E6FE /* MloElementFil.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloElementFil.c; path = ../../../Source/MloElementFil.c; sourceTree = SOURCE_ROOT; };
+		CA504D980C5E8D100060E6FE /* MloElementFil.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloElementFil.h; path = ../../../Source/MloElementFil.h; sourceTree = SOURCE_ROOT; };
+		CA504D990C5E8D100060E6FE /* MloElementPce.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloElementPce.c; path = ../../../Source/MloElementPce.c; sourceTree = SOURCE_ROOT; };
+		CA504D9A0C5E8D100060E6FE /* MloElementPce.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloElementPce.h; path = ../../../Source/MloElementPce.h; sourceTree = SOURCE_ROOT; };
+		CA504D9B0C5E8D100060E6FE /* MloElementSceLfe.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloElementSceLfe.c; path = ../../../Source/MloElementSceLfe.c; sourceTree = SOURCE_ROOT; };
+		CA504D9C0C5E8D100060E6FE /* MloElementSceLfe.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloElementSceLfe.h; path = ../../../Source/MloElementSceLfe.h; sourceTree = SOURCE_ROOT; };
+		CA504D9D0C5E8D100060E6FE /* MloFft.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloFft.c; path = ../../../Source/MloFft.c; sourceTree = SOURCE_ROOT; };
+		CA504D9E0C5E8D100060E6FE /* MloFft.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloFft.h; path = ../../../Source/MloFft.h; sourceTree = SOURCE_ROOT; };
+		CA504D9F0C5E8D100060E6FE /* MloFilterBank.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloFilterBank.c; path = ../../../Source/MloFilterBank.c; sourceTree = SOURCE_ROOT; };
+		CA504DA00C5E8D100060E6FE /* MloFilterBank.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloFilterBank.h; path = ../../../Source/MloFilterBank.h; sourceTree = SOURCE_ROOT; };
+		CA504DA10C5E8D100060E6FE /* MloFloat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloFloat.h; path = ../../../Source/MloFloat.h; sourceTree = SOURCE_ROOT; };
+		CA504DA20C5E8D100060E6FE /* MloFloatFix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloFloatFix.h; path = ../../../Source/MloFloatFix.h; sourceTree = SOURCE_ROOT; };
+		CA504DA30C5E8D100060E6FE /* MloFloatFpu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloFloatFpu.h; path = ../../../Source/MloFloatFpu.h; sourceTree = SOURCE_ROOT; };
+		CA504DA40C5E8D100060E6FE /* MloFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloFrame.h; path = ../../../Source/MloFrame.h; sourceTree = SOURCE_ROOT; };
+		CA504DA50C5E8D100060E6FE /* MloHcb.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloHcb.h; path = ../../../Source/MloHcb.h; sourceTree = SOURCE_ROOT; };
+		CA504DA60C5E8D100060E6FE /* MloHcbPair.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloHcbPair.c; path = ../../../Source/MloHcbPair.c; sourceTree = SOURCE_ROOT; };
+		CA504DA70C5E8D100060E6FE /* MloHcbPair.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloHcbPair.h; path = ../../../Source/MloHcbPair.h; sourceTree = SOURCE_ROOT; };
+		CA504DA80C5E8D100060E6FE /* MloHcbQuad.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloHcbQuad.c; path = ../../../Source/MloHcbQuad.c; sourceTree = SOURCE_ROOT; };
+		CA504DA90C5E8D100060E6FE /* MloHcbQuad.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloHcbQuad.h; path = ../../../Source/MloHcbQuad.h; sourceTree = SOURCE_ROOT; };
+		CA504DAA0C5E8D100060E6FE /* MloHcbScaleFactor.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloHcbScaleFactor.c; path = ../../../Source/MloHcbScaleFactor.c; sourceTree = SOURCE_ROOT; };
+		CA504DAB0C5E8D100060E6FE /* MloHcbScaleFactor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloHcbScaleFactor.h; path = ../../../Source/MloHcbScaleFactor.h; sourceTree = SOURCE_ROOT; };
+		CA504DAC0C5E8D100060E6FE /* MloHuffman.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloHuffman.c; path = ../../../Source/MloHuffman.c; sourceTree = SOURCE_ROOT; };
+		CA504DAD0C5E8D100060E6FE /* MloHuffman.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloHuffman.h; path = ../../../Source/MloHuffman.h; sourceTree = SOURCE_ROOT; };
+		CA504DAE0C5E8D100060E6FE /* MloIcsInfo.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloIcsInfo.c; path = ../../../Source/MloIcsInfo.c; sourceTree = SOURCE_ROOT; };
+		CA504DAF0C5E8D100060E6FE /* MloIcsInfo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloIcsInfo.h; path = ../../../Source/MloIcsInfo.h; sourceTree = SOURCE_ROOT; };
+		CA504DB00C5E8D100060E6FE /* MloImdct.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloImdct.c; path = ../../../Source/MloImdct.c; sourceTree = SOURCE_ROOT; };
+		CA504DB10C5E8D100060E6FE /* MloImdct.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloImdct.h; path = ../../../Source/MloImdct.h; sourceTree = SOURCE_ROOT; };
+		CA504DB20C5E8D100060E6FE /* MloIndivChnPool.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloIndivChnPool.c; path = ../../../Source/MloIndivChnPool.c; sourceTree = SOURCE_ROOT; };
+		CA504DB30C5E8D100060E6FE /* MloIndivChnPool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloIndivChnPool.h; path = ../../../Source/MloIndivChnPool.h; sourceTree = SOURCE_ROOT; };
+		CA504DB40C5E8D100060E6FE /* MloIndivChnStream.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloIndivChnStream.c; path = ../../../Source/MloIndivChnStream.c; sourceTree = SOURCE_ROOT; };
+		CA504DB50C5E8D100060E6FE /* MloIndivChnStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloIndivChnStream.h; path = ../../../Source/MloIndivChnStream.h; sourceTree = SOURCE_ROOT; };
+		CA504DB60C5E8D100060E6FE /* MloInvQuant.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloInvQuant.c; path = ../../../Source/MloInvQuant.c; sourceTree = SOURCE_ROOT; };
+		CA504DB70C5E8D100060E6FE /* MloInvQuant.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloInvQuant.h; path = ../../../Source/MloInvQuant.h; sourceTree = SOURCE_ROOT; };
+		CA504DB80C5E8D100060E6FE /* MloIs.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloIs.c; path = ../../../Source/MloIs.c; sourceTree = SOURCE_ROOT; };
+		CA504DB90C5E8D100060E6FE /* MloIs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloIs.h; path = ../../../Source/MloIs.h; sourceTree = SOURCE_ROOT; };
+		CA504DBA0C5E8D100060E6FE /* MloMs.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloMs.c; path = ../../../Source/MloMs.c; sourceTree = SOURCE_ROOT; };
+		CA504DBB0C5E8D100060E6FE /* MloMs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloMs.h; path = ../../../Source/MloMs.h; sourceTree = SOURCE_ROOT; };
+		CA504DBC0C5E8D100060E6FE /* MloPns.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloPns.c; path = ../../../Source/MloPns.c; sourceTree = SOURCE_ROOT; };
+		CA504DBD0C5E8D100060E6FE /* MloPns.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloPns.h; path = ../../../Source/MloPns.h; sourceTree = SOURCE_ROOT; };
+		CA504DBE0C5E8D100060E6FE /* MloResults.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloResults.h; path = ../../../Source/MloResults.h; sourceTree = SOURCE_ROOT; };
+		CA504DBF0C5E8D100060E6FE /* MloSampleBuffer.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloSampleBuffer.c; path = ../../../Source/MloSampleBuffer.c; sourceTree = SOURCE_ROOT; };
+		CA504DC00C5E8D100060E6FE /* MloSampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloSampleBuffer.h; path = ../../../Source/MloSampleBuffer.h; sourceTree = SOURCE_ROOT; };
+		CA504DC10C5E8D100060E6FE /* MloSamplingFreq.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloSamplingFreq.c; path = ../../../Source/MloSamplingFreq.c; sourceTree = SOURCE_ROOT; };
+		CA504DC20C5E8D100060E6FE /* MloSamplingFreq.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloSamplingFreq.h; path = ../../../Source/MloSamplingFreq.h; sourceTree = SOURCE_ROOT; };
+		CA504DC30C5E8D100060E6FE /* MloScaleFactor.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloScaleFactor.c; path = ../../../Source/MloScaleFactor.c; sourceTree = SOURCE_ROOT; };
+		CA504DC40C5E8D100060E6FE /* MloScaleFactor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloScaleFactor.h; path = ../../../Source/MloScaleFactor.h; sourceTree = SOURCE_ROOT; };
+		CA504DC50C5E8D100060E6FE /* MloSectionData.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloSectionData.c; path = ../../../Source/MloSectionData.c; sourceTree = SOURCE_ROOT; };
+		CA504DC60C5E8D100060E6FE /* MloSectionData.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloSectionData.h; path = ../../../Source/MloSectionData.h; sourceTree = SOURCE_ROOT; };
+		CA504DC70C5E8D100060E6FE /* MloSyntacticElements.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloSyntacticElements.c; path = ../../../Source/MloSyntacticElements.c; sourceTree = SOURCE_ROOT; };
+		CA504DC80C5E8D100060E6FE /* MloSyntacticElements.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloSyntacticElements.h; path = ../../../Source/MloSyntacticElements.h; sourceTree = SOURCE_ROOT; };
+		CA504DC90C5E8D100060E6FE /* MloTns.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloTns.c; path = ../../../Source/MloTns.c; sourceTree = SOURCE_ROOT; };
+		CA504DCA0C5E8D100060E6FE /* MloTns.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloTns.h; path = ../../../Source/MloTns.h; sourceTree = SOURCE_ROOT; };
+		CA504DCB0C5E8D100060E6FE /* MloTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloTypes.h; path = ../../../Source/MloTypes.h; sourceTree = SOURCE_ROOT; };
+		CA504DCC0C5E8D100060E6FE /* MloUtils.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MloUtils.c; path = ../../../Source/MloUtils.c; sourceTree = SOURCE_ROOT; };
+		CA504DCD0C5E8D100060E6FE /* MloUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MloUtils.h; path = ../../../Source/MloUtils.h; sourceTree = SOURCE_ROOT; };
+		D2AAC046055464E500DB518D /* libMelo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMelo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Melo */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = Melo;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CA504D870C5E8D100060E6FE /* Melo.h */,
+				CA504D880C5E8D100060E6FE /* MloAdtsParser.c */,
+				CA504D890C5E8D100060E6FE /* MloAdtsParser.h */,
+				CA504D8A0C5E8D100060E6FE /* MloBitStream.c */,
+				CA504D8B0C5E8D100060E6FE /* MloBitStream.h */,
+				CA504D8C0C5E8D100060E6FE /* MloConfig.h */,
+				CA504D8D0C5E8D100060E6FE /* MloDebug.h */,
+				CA504D8E0C5E8D100060E6FE /* MloDecoder.c */,
+				CA504D8F0C5E8D100060E6FE /* MloDecoder.h */,
+				CA504D900C5E8D100060E6FE /* MloDefs.h */,
+				CA504D910C5E8D100060E6FE /* MloElementCce.c */,
+				CA504D920C5E8D100060E6FE /* MloElementCce.h */,
+				CA504D930C5E8D100060E6FE /* MloElementCpe.c */,
+				CA504D940C5E8D100060E6FE /* MloElementCpe.h */,
+				CA504D950C5E8D100060E6FE /* MloElementDse.c */,
+				CA504D960C5E8D100060E6FE /* MloElementDse.h */,
+				CA504D970C5E8D100060E6FE /* MloElementFil.c */,
+				CA504D980C5E8D100060E6FE /* MloElementFil.h */,
+				CA504D990C5E8D100060E6FE /* MloElementPce.c */,
+				CA504D9A0C5E8D100060E6FE /* MloElementPce.h */,
+				CA504D9B0C5E8D100060E6FE /* MloElementSceLfe.c */,
+				CA504D9C0C5E8D100060E6FE /* MloElementSceLfe.h */,
+				CA504D9D0C5E8D100060E6FE /* MloFft.c */,
+				CA504D9E0C5E8D100060E6FE /* MloFft.h */,
+				CA504D9F0C5E8D100060E6FE /* MloFilterBank.c */,
+				CA504DA00C5E8D100060E6FE /* MloFilterBank.h */,
+				CA504DA10C5E8D100060E6FE /* MloFloat.h */,
+				CA504DA20C5E8D100060E6FE /* MloFloatFix.h */,
+				CA504DA30C5E8D100060E6FE /* MloFloatFpu.h */,
+				CA504DA40C5E8D100060E6FE /* MloFrame.h */,
+				CA504DA50C5E8D100060E6FE /* MloHcb.h */,
+				CA504DA60C5E8D100060E6FE /* MloHcbPair.c */,
+				CA504DA70C5E8D100060E6FE /* MloHcbPair.h */,
+				CA504DA80C5E8D100060E6FE /* MloHcbQuad.c */,
+				CA504DA90C5E8D100060E6FE /* MloHcbQuad.h */,
+				CA504DAA0C5E8D100060E6FE /* MloHcbScaleFactor.c */,
+				CA504DAB0C5E8D100060E6FE /* MloHcbScaleFactor.h */,
+				CA504DAC0C5E8D100060E6FE /* MloHuffman.c */,
+				CA504DAD0C5E8D100060E6FE /* MloHuffman.h */,
+				CA504DAE0C5E8D100060E6FE /* MloIcsInfo.c */,
+				CA504DAF0C5E8D100060E6FE /* MloIcsInfo.h */,
+				CA504DB00C5E8D100060E6FE /* MloImdct.c */,
+				CA504DB10C5E8D100060E6FE /* MloImdct.h */,
+				CA504DB20C5E8D100060E6FE /* MloIndivChnPool.c */,
+				CA504DB30C5E8D100060E6FE /* MloIndivChnPool.h */,
+				CA504DB40C5E8D100060E6FE /* MloIndivChnStream.c */,
+				CA504DB50C5E8D100060E6FE /* MloIndivChnStream.h */,
+				CA504DB60C5E8D100060E6FE /* MloInvQuant.c */,
+				CA504DB70C5E8D100060E6FE /* MloInvQuant.h */,
+				CA504DB80C5E8D100060E6FE /* MloIs.c */,
+				CA504DB90C5E8D100060E6FE /* MloIs.h */,
+				CA504DBA0C5E8D100060E6FE /* MloMs.c */,
+				CA504DBB0C5E8D100060E6FE /* MloMs.h */,
+				CA504DBC0C5E8D100060E6FE /* MloPns.c */,
+				CA504DBD0C5E8D100060E6FE /* MloPns.h */,
+				CA504DBE0C5E8D100060E6FE /* MloResults.h */,
+				CA504DBF0C5E8D100060E6FE /* MloSampleBuffer.c */,
+				CA504DC00C5E8D100060E6FE /* MloSampleBuffer.h */,
+				CA504DC10C5E8D100060E6FE /* MloSamplingFreq.c */,
+				CA504DC20C5E8D100060E6FE /* MloSamplingFreq.h */,
+				CA504DC30C5E8D100060E6FE /* MloScaleFactor.c */,
+				CA504DC40C5E8D100060E6FE /* MloScaleFactor.h */,
+				CA504DC50C5E8D100060E6FE /* MloSectionData.c */,
+				CA504DC60C5E8D100060E6FE /* MloSectionData.h */,
+				CA504DC70C5E8D100060E6FE /* MloSyntacticElements.c */,
+				CA504DC80C5E8D100060E6FE /* MloSyntacticElements.h */,
+				CA504DC90C5E8D100060E6FE /* MloTns.c */,
+				CA504DCA0C5E8D100060E6FE /* MloTns.h */,
+				CA504DCB0C5E8D100060E6FE /* MloTypes.h */,
+				CA504DCC0C5E8D100060E6FE /* MloUtils.c */,
+				CA504DCD0C5E8D100060E6FE /* MloUtils.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libMelo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA504DCE0C5E8D100060E6FE /* Melo.h in Headers */,
+				CA504DD00C5E8D100060E6FE /* MloAdtsParser.h in Headers */,
+				CA504DD20C5E8D100060E6FE /* MloBitStream.h in Headers */,
+				CA504DD30C5E8D100060E6FE /* MloConfig.h in Headers */,
+				CA504DD40C5E8D100060E6FE /* MloDebug.h in Headers */,
+				CA504DD60C5E8D100060E6FE /* MloDecoder.h in Headers */,
+				CA504DD70C5E8D100060E6FE /* MloDefs.h in Headers */,
+				CA504DD90C5E8D100060E6FE /* MloElementCce.h in Headers */,
+				CA504DDB0C5E8D100060E6FE /* MloElementCpe.h in Headers */,
+				CA504DDD0C5E8D100060E6FE /* MloElementDse.h in Headers */,
+				CA504DDF0C5E8D100060E6FE /* MloElementFil.h in Headers */,
+				CA504DE10C5E8D100060E6FE /* MloElementPce.h in Headers */,
+				CA504DE30C5E8D100060E6FE /* MloElementSceLfe.h in Headers */,
+				CA504DE50C5E8D100060E6FE /* MloFft.h in Headers */,
+				CA504DE70C5E8D100060E6FE /* MloFilterBank.h in Headers */,
+				CA504DE80C5E8D100060E6FE /* MloFloat.h in Headers */,
+				CA504DE90C5E8D100060E6FE /* MloFloatFix.h in Headers */,
+				CA504DEA0C5E8D100060E6FE /* MloFloatFpu.h in Headers */,
+				CA504DEB0C5E8D100060E6FE /* MloFrame.h in Headers */,
+				CA504DEC0C5E8D100060E6FE /* MloHcb.h in Headers */,
+				CA504DEE0C5E8D100060E6FE /* MloHcbPair.h in Headers */,
+				CA504DF00C5E8D100060E6FE /* MloHcbQuad.h in Headers */,
+				CA504DF20C5E8D100060E6FE /* MloHcbScaleFactor.h in Headers */,
+				CA504DF40C5E8D100060E6FE /* MloHuffman.h in Headers */,
+				CA504DF60C5E8D100060E6FE /* MloIcsInfo.h in Headers */,
+				CA504DF80C5E8D100060E6FE /* MloImdct.h in Headers */,
+				CA504DFA0C5E8D100060E6FE /* MloIndivChnPool.h in Headers */,
+				CA504DFC0C5E8D100060E6FE /* MloIndivChnStream.h in Headers */,
+				CA504DFE0C5E8D100060E6FE /* MloInvQuant.h in Headers */,
+				CA504E000C5E8D100060E6FE /* MloIs.h in Headers */,
+				CA504E020C5E8D100060E6FE /* MloMs.h in Headers */,
+				CA504E040C5E8D100060E6FE /* MloPns.h in Headers */,
+				CA504E050C5E8D100060E6FE /* MloResults.h in Headers */,
+				CA504E070C5E8D100060E6FE /* MloSampleBuffer.h in Headers */,
+				CA504E090C5E8D100060E6FE /* MloSamplingFreq.h in Headers */,
+				CA504E0B0C5E8D100060E6FE /* MloScaleFactor.h in Headers */,
+				CA504E0D0C5E8D100060E6FE /* MloSectionData.h in Headers */,
+				CA504E0F0C5E8D100060E6FE /* MloSyntacticElements.h in Headers */,
+				CA504E110C5E8D100060E6FE /* MloTns.h in Headers */,
+				CA504E120C5E8D100060E6FE /* MloTypes.h in Headers */,
+				CA504E140C5E8D100060E6FE /* MloUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* Melo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "Melo" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Melo;
+			productName = Melo;
+			productReference = D2AAC046055464E500DB518D /* libMelo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Melo" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Melo */;
+			projectDirPath = "";
+			projectRoot = ../../..;
+			targets = (
+				D2AAC045055464E500DB518D /* Melo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA504DD10C5E8D100060E6FE /* MloBitStream.c in Sources */,
+				CA504DD50C5E8D100060E6FE /* MloDecoder.c in Sources */,
+				CA504DD80C5E8D100060E6FE /* MloElementCce.c in Sources */,
+				CA504DDA0C5E8D100060E6FE /* MloElementCpe.c in Sources */,
+				CA504DDC0C5E8D100060E6FE /* MloElementDse.c in Sources */,
+				CA504DDE0C5E8D100060E6FE /* MloElementFil.c in Sources */,
+				CA504DE00C5E8D100060E6FE /* MloElementPce.c in Sources */,
+				CA504DE20C5E8D100060E6FE /* MloElementSceLfe.c in Sources */,
+				CA504DE40C5E8D100060E6FE /* MloFft.c in Sources */,
+				CA504DE60C5E8D100060E6FE /* MloFilterBank.c in Sources */,
+				CA504DED0C5E8D100060E6FE /* MloHcbPair.c in Sources */,
+				CA504DEF0C5E8D100060E6FE /* MloHcbQuad.c in Sources */,
+				CA504DF10C5E8D100060E6FE /* MloHcbScaleFactor.c in Sources */,
+				CA504DF30C5E8D100060E6FE /* MloHuffman.c in Sources */,
+				CA504DF50C5E8D100060E6FE /* MloIcsInfo.c in Sources */,
+				CA504DF70C5E8D100060E6FE /* MloImdct.c in Sources */,
+				CA504DF90C5E8D100060E6FE /* MloIndivChnPool.c in Sources */,
+				CA504DFB0C5E8D100060E6FE /* MloIndivChnStream.c in Sources */,
+				CA504DFD0C5E8D100060E6FE /* MloInvQuant.c in Sources */,
+				CA504DFF0C5E8D100060E6FE /* MloIs.c in Sources */,
+				CA504E010C5E8D100060E6FE /* MloMs.c in Sources */,
+				CA504E030C5E8D100060E6FE /* MloPns.c in Sources */,
+				CA504E060C5E8D100060E6FE /* MloSampleBuffer.c in Sources */,
+				CA504E080C5E8D100060E6FE /* MloSamplingFreq.c in Sources */,
+				CA504E0A0C5E8D100060E6FE /* MloScaleFactor.c in Sources */,
+				CA504E0C0C5E8D100060E6FE /* MloSectionData.c in Sources */,
+				CA504E0E0C5E8D100060E6FE /* MloSyntacticElements.c in Sources */,
+				CA504E100C5E8D100060E6FE /* MloTns.c in Sources */,
+				CA504E130C5E8D100060E6FE /* MloUtils.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Melo;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Melo;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc x86_64 armv6 armv7";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-long-long",
+				);
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc x86_64 armv6 armv7";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "Melo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Melo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

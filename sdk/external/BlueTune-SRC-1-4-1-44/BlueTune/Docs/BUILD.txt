@@ -1,0 +1,73 @@
+BlueTune Media Framework 
+   --- Building  ---
+------------------------
+
+1. Building BlueTune
+
+1.1. Getting the Build Tools
+
+1.1.1 Windows 2000/XP/Vista
+Building on Windows requires Visual Studio 2005. The solution file for 
+visual studio is Build/Targets/x86-microsoft-win32-vs2005/BlueTune.sln
+
+1.1.2 Windows CE
+Building for Windows CE requires Visual Studio 2005 and the appropriate
+target SDK for your target device. Included in the project files are
+existing configurations for Smartphone 2003 and Pocket PC 2003, 
+Windows Mobile 5.0 Smartphone and Windows Mobile 5.0 Pocket PC. Other
+targets should work as well, provided you have a platform SDK for it.
+The solution file is Build\Targets\arm-microsoft-wince-vs2005\BlueTune.sln
+
+1.1.3 Unix and other systems
+Building BlueTune is done with SCons. SCons is a python-based build system that 
+runs on all platforms that can run python 1.5.2 or above.
+You can download SCons from www.scons.org
+Bu sure to install version 0.96.91 or above, as version 0.96.1 is too old and 
+has a bug that will prevent it from building BlueTune.
+To download 0.96.91 or above, you can follow the instructions at www.scons.org
+or go directly to http://sourceforge.net/project/showfiles.php?group_id=30337
+
+There is a build directory for each supported target system. Each target has a
+name of the form cpu-vendor-os, such as x86-unknown-linux or arm-microsoft-wince.
+The build directory for a target <target> is:
+Build/Targets/<target>
+
+To build the BlueTune engine and sample applications, go to the target
+directory for your build target (either your native host platform or a 
+cross-compiled target), and use the following command:
+>>> scons -u
+This will build the default modules, in Debug mode.
+You can pass options to SCons to select a different build target, build 
+optional modules, etc...
+the command: 
+>>> scons -u -c
+ will show you a list of possible options'
+
+The build output is located under a sub-directory of the build directory.
+'Debug' for debug builds, and 'Release' for release builds.
+
+1.2 Optional modules
+Not all modules can be built on all platforms. The configuration files for
+each platform selects the default modules that will be built. It is always
+possible to change the default to add or remove modules from the build.
+Also, some sample applications can only be built on some systems, because
+they require operating system support and/or additional libraries. 
+For example, the GTK UI example for Linux is not part of all the Linux target, 
+because not all Linux systems have GTK. To build that sample application, you
+need to build it explicitely, by passing its name on the 'scons' command line:
+>>> scons -u BtGtk
+
+1.2.1 WMA Support
+If you have licensed the non-GPL version of BlueTune and the WMA Plugin option,
+you will have received a BlueTuneExtras distribution with a WmaPlugin directory
+containing the WMA plugin object code. If you do not have this optional plugin, 
+the WMA decoder plugin will not be available.
+
+1.2.1.1 Windows Build
+On Windows, all you need to do is to ensure that you have placed the BlueTuneExtras
+directory in the BlueTuneKit directory, at the same level as Atomix, Neptune and
+BlueTune.
+
+1.2.1.2 Scons Build
+You need to set the environment variable BLT_WMA_PLUGIN_HOME to the absolute path 
+of the BlueTuneExtras/WmaPlugin directory.

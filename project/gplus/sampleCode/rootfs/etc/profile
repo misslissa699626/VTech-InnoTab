@@ -1,0 +1,12 @@
+
+export PATH="/sbin:/usr/sbin:/bin:/usr/bin:/system/sbin:/system/bin/vtech:/system/bin"
+
+export LD_LIBRARY_PATH="/lib:/usr/lib:/system/lib/vtech:/system/lib"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/system/lib/pulseaudio:/system/lib/pulseaudio/pulse-0.9.22/modules"
+
+export TSLIB_TSDEVICE="/dev/event0"
+export TSLIB_CONFFILE="/etc/ts.conf"
+
+if [ -f /system/lib/vtech/system.profile ]; then
+	. /system/lib/vtech/system.profile
+fi

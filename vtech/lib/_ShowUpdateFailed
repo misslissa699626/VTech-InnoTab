@@ -1,0 +1,3 @@
+#!/bin/sh
+ShowPic /system/lib/vtech/Update_Failed.565 -delay=-1 &
+echo $! > /var/run/Bundle.pid

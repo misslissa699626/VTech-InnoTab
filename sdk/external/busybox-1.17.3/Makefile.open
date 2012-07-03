@@ -1,0 +1,17 @@
+
+
+.PHONY: all
+all:
+	make CROSS_COMPILE=arm-none-linux-gnueabi-
+	make install CROSS_COMPILE=arm-none-linux-gnueabi-
+
+	sudo mkdir _install/dev
+	sudo mknod _install/dev/console c 5 1
+	sudo mknod _install/dev/null c 1 3
+
+	cd _install; \
+	ln -s bin/busybox init; \
+	find . | cpio -H newc -o --owner root:root -F ../base.cpio
+
+	sudo rm -rf _install/dev
+

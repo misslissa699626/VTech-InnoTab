@@ -1,0 +1,69 @@
+<outline type="audio" text="Ando MP3 with WMA in ASX" URL="http://stream.radiotime.com/sample1.asx"/>
+<outline type="audio" text="Ando MP3 with MP3 in M3U" URL="http://stream.radiotime.com/sample2.m3u"/>
+<outline type="audio" text="Ando MP3 with MP3 in PLS" URL="http://stream.radiotime.com/sample3.pls"/>
+<outline type="audio" text="Direct MP3 File (Progressive)" URL="http://stream.radiotime.com/sample.mp3"/>
+<outline type="audio" text="Redirect to MP3 via M3U" URL="http://stream.radiotime.com/sample5.m3u"/>
+<outline type="audio" text="MP3 Stream in ASX" URL="http://stream.radiotime.com/sample6.asx"/>
+<outline type="audio" text="WMA Stream in M3U" URL="http://stream.radiotime.com/sample7.m3u"/>
+<outline type="audio" text="WMA Stream in PLS" URL="http://stream.radiotime.com/sample8.pls"/>
+<outline type="audio" text="Radio Paradise M3U" URL="http://stream.radiotime.com/sample9.m3u"/>
+<outline type="audio" text="Radio Paradise Direct" URL="http://www.radioparadise.com/musiclinks/rp_64rt.m3u"/>
+<outline type="audio" text="Shoutcast MP3 Direct (Soma FM)" URL="http://voxsc1.somafm.com:8004/"/>
+<outline type="audio" text="Non-Shoutcast MP3 Direct" URL="http://pubint.ic.llnwd.net/stream/pubint_kera"/>
+<outline type="audio" text="Direct MP3 File (Fresh Air Topic)" URL="http://public.npr.org/anon.npr-mp3/npr/fa/2009/10/20091002_fa_01.mp3?sc=16&amp;orgId=1&amp;forsearch=0&amp;topicId=1105"/>
+<outline type="audio" text="BBC FastStart" URL="http://stream.radiotime.com/sample14.asx"/>
+<outline type="audio" text="Managed: Windows|HTTP|None" URL="http://66.165.172.171/mxlos40p"/>
+<outline type="audio" text="Managed: Windows|HTTP|None" URL="mms://wms10.iviplanet.com/sonora"/>
+<outline type="audio" text="Managed: Windows|HTTP|None" URL="http://s1.104mfonline.com.hk/Encoder4"/>
+<outline type="audio" text="Managed: Windows|HTTP|ASX" URL="http://tx.sharp-stream.com/tune.php?c=planetrock&amp;.wax"/>
+<outline type="audio" text="Managed: Windows|HTTP|ASX" URL="http://mediaweb.musicradio.com/show.asx?StreamID=58"/>
+<outline type="audio" text="Managed: Windows|HTTP|ASX" URL="http://utv-talksportUK.wm.llnwd.net/utv_talksportUK"/>
+<outline type="audio" text="Managed: Windows|RTSP|None" URL="mms://193.218.160.20/buzzasia"/>
+<outline type="audio" text="Managed: Windows|RTSP|None" URL="mms://193.218.160.20/kismat"/>
+<outline type="audio" text="Managed: Windows|RTSP|None" URL="mms://38.96.148.74/QuranRD"/>
+<outline type="audio" text="Managed: Windows|RTSP|ASX" URL="http://www2.irib.ir/live/farhang.asx"/>
+<outline type="audio" text="Managed: Windows|RTSP|ASX" URL="http://dynamic.rte.ie/av/live/radio/radio1.asx"/>
+<outline type="audio" text="Managed: Windows|RTSP|ASX" URL="http://www.kcdx.com/kcdxstream.asx"/>
+<outline type="audio" text="Managed: Windows|MMS|None" URL="mms://www.barakastreaming.com:8088/QuranRadio"/>
+<outline type="audio" text="Managed: Windows|MMS|None" URL="mms://audioserver.gua.net/atmosfera"/>
+<outline type="audio" text="Managed: Windows|MMS|None" URL="mms://mslive05.881903.com/cr1"/>
+<outline type="audio" text="Managed: Windows|MMS|ASX" URL="http://radio.mcot.gtis.co.th/live/fm_99.asx"/>
+<outline type="audio" text="Managed: Windows|MMS|ASX" URL="http://www.christiannetcast.com/listen/dynamicasx.asp?station=kcbi-fm"/>
+<outline type="audio" text="Managed: Windows|MMS|ASX" URL="http://www2.irib.ir/live/payamradio.asx"/>
+<outline type="audio" text="Managed: MP3|HTTP|None" URL="http://somafm.com/lush.pls"/>
+<outline type="audio" text="Managed: MP3|HTTP|None" URL="http://d.liveatc.net/kjfk_dep.m3u"/>
+<outline type="audio" text="Managed: MP3|HTTP|None" URL="http://68.33.138.204:88/broadwave.mp3?src=1&amp;rate=1&amp;ref="/>
+<outline type="audio" text="Managed: MP3|HTTP|M3U" URL="http://flaix.stream.flumotion.com/flaix/FLAIXfm.mp3.m3u"/>
+<outline type="audio" text="Managed: MP3|HTTP|M3U" URL="http://canalsurradio.rtva.stream.flumotion.com/rtva/canalsurradio_master.mp3.m3u"/>
+<outline type="audio" text="Managed: MP3|HTTP|M3U" URL="http://flaix.stream.flumotion.com/flaix/flaixbac.mp3.m3u"/>
+<outline type="audio" text="Managed: MP3|HTTP|PLS" URL="http://provisioning.streamtheworld.com/pls/WTPTFM.pls"/>
+<outline type="audio" text="Managed: MP3|HTTP|PLS" URL="http://pri.kts-af.net/redir/index.pls?esid=1ad63b08c1eadfc23b10047230090d32&amp;url_no=1&amp;client_id=7&amp;uid=68efed4d03ec7e45fd3978262c107180&amp;clicksrc=xml"/>
+<outline type="audio" text="Managed: MP3|HTTP|PLS" URL="http://www.paris-one.com/pls/radio_dance.pls"/>
+<outline type="audio" text="Managed: MP3|ICY|None" URL="http://streaming.promomedios.com:8004"/>
+<outline type="audio" text="Managed: MP3|ICY|None" URL="http://vipicecast.yacast.net/europe1"/>
+<outline type="audio" text="Managed: MP3|ICY|None" URL="http://208.53.158.48:8362"/>
+<outline type="audio" text="Managed: MP3|ICY|M3U" URL="http://media-ice.musicradio.com/HeartLondonMP3.m3u"/>
+<outline type="audio" text="Managed: MP3|ICY|M3U" URL="http://media-ice.musicradio.com/XFMMP3.m3u"/>
+<outline type="audio" text="Managed: MP3|ICY|M3U" URL="http://media-ice.musicradio.com/ClassicFMMP3.m3u"/>
+<outline type="audio" text="Managed: MP3|ICY|PLS" URL="http://www.bassdrive.com/v2/streams/BassDrive.pls"/>
+<outline type="audio" text="Managed: MP3|ICY|PLS" URL="http://www.powerhitz.com/ph.pls"/>
+<outline type="audio" text="Managed: MP3|ICY|PLS" URL="http://www.bbc.co.uk/worldservice/meta/tx/nb/live/eneuk.pls"/>
+<outline type="audio" text="Managed: AAC|HTTP|None" URL="http://208.92.52.40:80/AL_KHALEEJIAAAC"/>
+<outline type="audio" text="Managed: AAC|HTTP|None" URL="http://stations.loudcity.com/18/sne48k.pls"/>
+<outline type="audio" text="Managed: AAC|HTTP|None" URL="http://shoutcast1.mni.pl:9000/"/>
+<outline type="audio" text="Managed: AAC|HTTP|M3U" URL="http://api.orpanc.net/listen/soft.m3u"/>
+<outline type="audio" text="Managed: AAC|HTTP|M3U" URL="http://recordradio.spb.ru/m3u/64kbps-aac.m3u"/>
+<outline type="audio" text="Managed: AAC|HTTP|PLS" URL="http://www.discovertrance.com/DiscoverTrance-low.pls"/>
+<outline type="audio" text="Managed: AAC|HTTP|PLS" URL="http://gratorun.streamhost.pl:8536/listen.pls"/>
+<outline type="audio" text="Managed: AAC|HTTP|PLS" URL="http://wccx.cc.edu:8010/listen.pls"/>
+<outline type="audio" text="Managed: AAC|ICY|None" URL="http://shoutcast.bcnonline.com:8585"/>
+<outline type="audio" text="Managed: AAC|ICY|None" URL="http://216.246.37.52:8058"/>
+<outline type="audio" text="Managed: AAC|ICY|None" URL="http://s2.viastreaming.net:7100"/>
+<outline type="audio" text="Managed: AAC|ICY|M3U" URL="http://www.superfm.com.tr/index.m3u"/>
+<outline type="audio" text="Managed: AAC|ICY|M3U" URL="http://www.europafm.ro/&amp;files/live.m3u"/>
+<outline type="audio" text="Managed: AAC|ICY|M3U" URL="http://media-ice.musicradio.com/LBC973.m3u"/>
+<outline type="audio" text="Managed: AAC|ICY|PLS" URL="http://85.159.184.46/listen.pls"/>
+<outline type="audio" text="Managed: AAC|ICY|PLS" URL="http://sc.mel.triplem.com.au/listen.pls"/>
+<outline type="audio" text="Managed: AAC|ICY|PLS" URL="http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.pls"/>
+<outline type="audio" text="Dead Stream (404)" URL="http://stream.radiotime.com/sample/unknown.txt"/>
+<outline type="audio" text="Dead Stream (Empty)" URL="http://stream.radiotime.com/sample/unknown.asx"/>

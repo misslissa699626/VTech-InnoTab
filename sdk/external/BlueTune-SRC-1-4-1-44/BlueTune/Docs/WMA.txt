@@ -1,0 +1,44 @@
+=== Windows Media Audio Plugin for BlueTune ===
+
+The WMA plugin for BlueTune is an optional module that can be licensed separately.
+The implementation of the WMA Audio Decoder used in the plugin is based on the reference code licensed from Microsoft. The reference code has been adapted to compile on all supported platforms, and be callable from within a BlueTune media player.
+The plugin is typically available in binary form only, because the license granted to Axiomatic Systems by Microsoft does not allow redistribution of the source code to unlicensed third parties. However, if you are yourself a licensee of the Microsoft reference code, we can make the code available so that it can be rebuilt.
+Please refer to http://www.microsoft.com/windows/windowsmedia/licensing/interim.aspx
+
+NOTE: use of the WMA technology in a product is normally subject to a royalty fee due to Microsoft Corporation. Axiomatic is not responsible for paying those royalties. Please refer to  http://www.microsoft.com/windows/windowsmedia/licensing/final.aspx for details.
+
+1 === Using the WMA plugin in your application
+An application can choose to use the WMA plugin as a dynamically loaded plugin, or a statically linked plugin.
+
+1.1 == As a statically linked plugin
+You can include the WMA plugin as one of the statically linked modules either by making it part of the built-in modules, or by explicitly registering the module. 
+
+1.1.1 = As a built-in
+When used as a built-in module, the plugin is registered for you when you call BLT_Decoder_RegisterBuiltins() with the BLT_Decoder API, or automatically upon initialization when using the BLT_Player API.
+
+1.1.1.1 Using Visual Studio or Xcode
+Define the preprocessor symbol BLT_CONFIG_MODULES_ENABLE_WMA_DECODER by editing the C Preprocessor definitions for the BlueTune library project/target.
+
+1.1.1.2 Using scons
+You can either edit the Config.scons for your target and add the string 'WmaDecoder' to the list env['BLT_PLUGINS'], or you can add the plugin on the scons command line by adding the option 'extra_plugins=WmaDecoder' to the normal scons build options. (ex: scons -u target=x86-unknown-linux build_config=Release extra_plugins=WmaDecoder).
+In order for scons to find the location of the precompiled plugin binary, you must set the environment variable BLT_WMA_PLUGIN_HOME to the directory where you have saved the WMA Plugin binary distribution (this directory should be called WmaPlugin and contain a 'Targets' subdirectory with one or more target subdirectories, each with an 'include', 'lib' and 'bin' subdirectory).
+
+
+1.1.2 = By registering the module from the application code
+You can obtain a pointer to the BLT_Module instance for the plugin by calling BLT_WmaDecoderModule_GetModuleObject(). Then you register the module by calling BLT_Decoder_RegisterModule() if you're using the BLT_Decoder API, or BLT_Player::RegisterModule() if you're using the BLT_Player API.
+
+
+2 == As a dynamically linked plugin
+If you use the BLT_Decoder API, you can register the dynamically loaded plugin by calling BLT_Decoder_LoadPlugin or BLT_Decoder_LoadPlugins.
+If you use the BLT_Player API, you can register the dynamically loaded plugin by calling BLT_Player::LoadPlugin or BLT_Player::LoadPlugins.
+
+3 === Building the WMA plugin from source
+If you have received the WMA plugin as source code you can rebuild the WMA plugin for your target:
+
+3.1 == Building with scons
+3.2 == Building with Visual Studio
+
+4 === Testing the plugin
+You can check if the plugin is including in the statically linked built-in modules using the '--list-modules' options of the 'btplay' program.
+To check the dynamic loading of the plugin, use the '--load-plugin' option of 'btplay' in addition to the '--list-modules', like this:
+btplay --load-module=BltWmaDecoder.plugin --list-modules

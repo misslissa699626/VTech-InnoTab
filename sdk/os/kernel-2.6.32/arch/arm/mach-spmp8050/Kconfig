@@ -1,0 +1,27 @@
+if ARCH_SPMP8050
+
+menu "SPMP8050 Options"
+
+config MACH_SPMP8050
+	bool "spmp8050 (Platform)"
+	select CPU_ARM926T
+
+config SERIAL_SPMP8050
+	bool "SPMP8050 serial port support"
+	depends on ARM && ARCH_SPMP8050
+	select SERIAL_CORE
+	help
+	  ABCDEF
+
+config SERIAL_SPMP8050_CONSOLE
+	bool "Console on SPMP serial port"
+	depends on SERIAL_SPMP8050
+	select SERIAL_CORE_CONSOLE
+	help
+    ABCDE
+
+config DEFCONFIG_SPMP8050
+	string "Kernel defconfig file"
+
+endmenu
+endif

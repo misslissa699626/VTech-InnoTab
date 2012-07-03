@@ -1,0 +1,1 @@
+./configure --cross-prefix=arm-linux- --cpu=armv4l --disable-mmx --disable-altivec --disable-audio-oss --disable-dv1394 --disable-audio-beos --disable-network --disable-zlib --disable-a52 --disable-pp --disable-vhook --disable-ffserver --disable-risky 

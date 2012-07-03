@@ -1,0 +1,30 @@
+#!/bin/sh
+
+export PATH="$PATH:/system/sbin:/system/bin"
+export LD_LIBRARY_PATH="/lib:/usr/lib:/system/lib"
+
+# proc filesystem
+mkdir -p /proc
+/bin/mount -t proc proc /proc 
+
+# sys filesystem
+mkdir -p /sys
+/bin/mount -t sysfs sysfs /sys 
+
+# dev filesystem
+mkdir -p /dev
+mount -t tmpfs -o size=64k,mode=0755 tmpfs /dev
+#mount -t tmpfs tmpfs /dev
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts
+
+
+# link /etc/mtab
+ln -s /proc/mounts /etc/mtab
+
+mkdir -p /var/run
+mkdir /tmp
+
+mknod /dev/null c 1 3
+/sysinit version
+/init.project.rc &

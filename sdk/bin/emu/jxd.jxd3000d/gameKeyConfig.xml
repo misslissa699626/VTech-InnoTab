@@ -1,0 +1,67 @@
+<root>
+	<keypad1>
+		<state id="1" devpath="/dev/event0">
+			<KeyUP value="38" />
+			<KeyDOWN value="40" />
+			<KeyLEFT value="37" />
+			<KeyRIGHT value="39" />
+			<KeySELECT value="13" />
+			<KeySTART value="32" />
+			<KeyA value="65" />
+			<KeyB value="66" />
+			<KeyC value="88" />
+			<KeyX value="89" />
+			<KeyY value="76" />
+			<KeyZ value="82" />
+		</state>
+	</keypad1>
+	<keypad2>
+		<state id="0" devpath="/dev/event0">
+			<KeyUP value="38" />
+			<KeyDOWN value="40" />
+			<KeyLEFT value="37" />
+			<KeyRIGHT value="39" />
+			<KeySELECT value="13" />
+			<KeySTART value="32" />
+			<KeyA value="65" />
+			<KeyB value="66" />
+			<KeyC value="88" />
+			<KeyX value="89" />
+			<KeyY value="76" />
+			<KeyZ value="82" />
+		</state>
+	</keypad2>
+	
+	<joystick1>
+		<state id="0" devpath="/dev/event1">
+			<KeyUP value="38" />
+			<KeyDOWN value="40" />
+			<KeyLEFT value="37" />
+			<KeyRIGHT value="39" />
+			<KeySELECT value="13" />
+			<KeySTART value="32" />
+			<KeyA value="65" />
+			<KeyB value="66" />
+			<KeyC value="76" />
+			<KeyX value="88" />
+			<KeyY value="89" />
+			<KeyZ value="82" />
+		</state>	
+	</joystick1>
+	<joystick2>
+		<state id="0" devpath="/dev/event1">
+			<KeyUP value="38" />
+			<KeyDOWN value="40" />
+			<KeyLEFT value="37" />
+			<KeyRIGHT value="39" />
+			<KeySELECT value="13" />
+			<KeySTART value="32" />
+			<KeyA value="65" />
+			<KeyB value="66" />
+			<KeyC value="76" />
+			<KeyX value="88" />
+			<KeyY value="89" />
+			<KeyZ value="82" />
+		</state>	
+	</joystick2>
+</root>

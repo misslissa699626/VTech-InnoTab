@@ -1,0 +1,1 @@
+--------------------------------------- platform/common/driver/lcm-------------------------------------ps2_uart_mouse = {	{ name = "gp_ps2_uart_mouse_module",         prompt = "gp_ps2_uart_mouse_module         - " },}

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AB4D6E4D-790B-4851-8E5F-129AA6D7E56F}</ProjectGuid>
+    <RootNamespace>Atomix</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\..\..\source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;ATX_DEBUG;ATX_CONFIG_ENABLE_LOGGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Atomix.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\..\..\source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Atomix.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Source\System\Bsd\AtxBsdSockets.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxConsole.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxDataBuffer.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxDebug.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxDestroyable.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxFile.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxHttp.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxInterfaces.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxJson.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxList.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxLogging.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxMap.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxProperties.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxRingBuffer.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxSockets.c" />
+    <ClCompile Include="..\..\..\..\Source\System\StdC\AtxStdcEnvironment.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxStreams.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxString.c" />
+    <ClCompile Include="..\..\..\..\Source\Core\AtxUtils.c" />
+    <ClCompile Include="..\..\..\..\Source\System\Win32\AtxWin32Console.c" />
+    <ClCompile Include="..\..\..\..\Source\System\Win32\AtxWin32Debug.c" />
+    <ClCompile Include="..\..\..\..\Source\System\Win32\AtxWin32File.c" />
+    <ClCompile Include="..\..\..\..\Source\System\Win32\AtxWin32System.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Source\Core\Atomix.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxConfig.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxConsole.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxDataBuffer.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxDebug.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxDefs.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxDestroyable.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxFile.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxHttp.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxInterfaces.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxIterator.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxJson.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxList.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxLogging.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxMap.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxModule.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxProperties.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxReferenceable.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxResults.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxRingBuffer.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxSockets.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxStreams.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxString.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxTypes.h" />
+    <ClInclude Include="..\..\..\..\Source\Core\AtxUtils.h" />
+    <ClInclude Include="..\..\..\..\Source\Atomix\AtxVersion.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

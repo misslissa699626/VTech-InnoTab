@@ -1,0 +1,1 @@
+--------------------------------------- platform/common/driver/lcd-------------------------------------usb_wifi = {	{ name = "8192cu",      prompt = "RealTek_8192CU" },	{ name = "AR9271",      prompt = "Atheros_AR9271" },}

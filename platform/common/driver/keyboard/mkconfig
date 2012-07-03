@@ -1,0 +1,1 @@
+--------------------------------------- platform/common/driver/keyboard-------------------------------------keyboard = {	{ name = "gpba02a_module",         prompt = "gpba02a_module         - " },}

@@ -1,0 +1,4 @@
+The SDL_image lib has already test the formats of picture:jpeg,bmp,tiff,bng,ico,gif
+
+Notice:1. displaying tiff picture need to depend on libz and libjpeg
+	   2. displaying png picture need to should depend on libz

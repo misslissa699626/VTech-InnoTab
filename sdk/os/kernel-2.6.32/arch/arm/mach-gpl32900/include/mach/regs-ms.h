@@ -1,0 +1,12 @@
+
+#define TX_TRI                       (3<<16)
+#define RX_TRI                       (3<<18)
+#define PARALLEL_4BIT_MODE           (1<<20)
+#define TX_TRI_L1                    (0<<16)
+#define TX_TRI_L2                    (1<<16)
+#define TX_TRI_L4                    (2<<16)
+#define TX_TRI_L8                    (3<<16)
+#define RX_TRI_L1                    (0<<18)
+#define RX_TRI_L2                    (1<<18)
+#define RX_TRI_L4                    (2<<18)
+#define RX_TRI_L8                    (3<<18)

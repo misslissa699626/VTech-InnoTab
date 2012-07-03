@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ -z "$FLASHPLAYER_VOL" ]; then
+	FLASHPLAYER_VOL=145
+fi
+if [ "$FLASHPLAYER_RENDERER" = "sw" ]; then
+	FLASHPLAYER_OPT="-sw"
+else
+	FLASHPLAYER_OPT="-noimageaa -q 0"
+fi
+
+/system/bin/flashplayer -volume $FLASHPLAYER_VOL $FLASHPLAYER_OPT -layer 0 -nocursor -smem 18 $* 
+

@@ -1,0 +1,6 @@
+#
+# Makefile for the sdio
+#
+
+obj-m += gp_sdio.o
+gp_sdio-objs := gp_sdio.lib

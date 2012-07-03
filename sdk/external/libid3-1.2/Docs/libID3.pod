@@ -1,0 +1,205 @@
+#!/usr/bin/perl -w
+# run this document through perl to check its syntax
+use Pod::Checker;
+podchecker(\*DATA);
+__END__
+
+=pod
+
+=head1 NAME
+
+libID3 - ID3 Parsing Library
+
+=head1 SYNOPSIS
+
+Library for parsing ID3 tags from files or sections of memory.
+
+=head1 DESCRIPTION
+
+MP3 files contain information such as Artist, Title, and other attributes. This library can extract those tags. For more information see http://id3.org.
+
+=head1 Where do I get it from?
+
+You can get it from http://software.tangent.org/download/ via the web.
+
+=head1 What sort of license does it have?
+
+You are pretty much free to use it as you please. Check out the License file with the distribution for more details.  (Its very BSD like)
+
+=head1 How can I make suggestions for it?
+
+Send email to brian@tangent.org
+
+=head1 How do I install it?
+
+ Read the INSTALL file that comes along with the module. 
+
+=head1 So what are the directives?
+
+=over 4
+
+=item ID3 * create_ID3(ID3 *);
+
+This will create an ID3 structure to be used with other methods.
+
+=item int destroy_ID3(ID3 *blob);
+
+Cleans up the memory allocation of an ID3 structure.
+
+=item int parse_file_ID3(ID3 *info, unsigned char *filename);
+
+Pass in a filename with a created ID3 structure. This function will then fill the ID3 structure for you.
+
+=item int parse_blob_ID3(ID3 *info, unsigned char *blob, size_t blob_length);
+
+Pass in a blobk with a created ID3 structure. This function will then fill the ID3 structure for you.
+
+=item void set_memory_ID3(ID3 *info, const char *ptr, size_t size);
+
+Provide your own memory buffer for the ID3 tag.
+
+=item void set_flags_ID3(ID3 *info, id3flags mask);
+
+Set which tags you want to have parsed. See the tags section later in this document to see which tags you can use.
+
+=item int ID3_to_file(unsigned char *filename, unsigned char *newfile);
+
+Pass in a filename to a file with an ID3 tag, and a new filename. The file created will have just the ID3 information in it.
+
+=back
+
+
+=head1 ID3Flags
+
+You can use the following flags to control what is parsed. ALL_TAG is used by default.
+
+=over 4
+
+=item TITLE_TAG
+
+Title of the track
+
+=item ARTIST_TAG 
+
+Performing Artist
+
+=item ALBUM_TAG
+
+Album Title
+
+=item YEAR_TAG
+
+Year the track was published
+
+=item COMMENT_TAG
+
+Comment for the track.
+
+=item TRACK_TAG
+
+Track on the album
+
+=item GENRE_TAG
+
+Music genre.
+
+=item ENCODER_TAG
+
+Encoder used for the track.
+
+=item VERSION_TAG
+
+Track's version
+
+=item VERSION1_TAG
+
+Handy TAG for just pulling all of the version one tags (TITLE_TAG|ARTIST_TAG|ALBUM_TAG|YEAR_TAG|COMMENT_TAG|TRACK_TAG|GENRE_TAG)
+
+=item ALL_TAG 
+
+Default mask used, fills all tags.
+
+=back
+
+=head1 Structure of ID3.
+
+What follows is the public members of the ID3 tag.
+
+struct ID3 {
+
+	char version[VERSION_SIZE]; //It will never be this large!
+	
+	char *title;
+	
+	size_t title_size;
+	
+	char *artist;
+	
+	size_t artist_size;
+	
+	char *album;
+	
+	size_t album_size;
+	
+	char *year;
+	
+	size_t year_size;
+	
+	char *comment;
+	
+	size_t comment_size;
+	
+	char *track;
+	
+	size_t track_size;
+	
+	char *genre;
+	
+	size_t genre_size;
+	
+	char *encoder;
+	
+	size_t encoder_size;
+	
+	char *buffer;
+	
+	void (*processor)(ID3 *info, const char *name, const char *ptr, size_t length);
+	
+	void *passable;        // Void pointer you can use in your processor() callback function
+	
+	size_t tag_length;     // Length of the actual tag
+	
+	id3flags mask;
+	
+	id3flags mask_found;
+};
+
+=head1 Call back
+
+By default an internal function is used to handle data from the tag (it places the data in the ID3 structure). You can though supply your own function to do this work. See test.c for an example of this. This prototype for this is:
+
+void (*processor)(ID3 *info, const char *name, const char *ptr, size_t length);
+
+=head1 Additional Tags
+
+So you want to extract tags that are not found in the ID3 structure? Use the callback function feature described above.
+
+=head1 RETURN VALUES
+
+All create and parse messages return values other then zero as an error. These are not currently defined.
+
+=head1 SEE ALSO
+
+test.c in the distribution, tagpuller(1)
+
+=head1 AUTHOR
+
+Brian Aker, E<lt>brian@tangent.orgE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2004 by Brian Aker
+
+Please see the license file for information (if you need a different license please contact the author).
+
+=cut

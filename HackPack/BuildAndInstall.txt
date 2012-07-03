@@ -1,0 +1,67 @@
+Date: 2012-06-28
+
+This document describes how to build and install a custom kernel to 
+vtech InnoTab (126800).
+
+
+This package contains:
+	a) instruction document, i.e. this document.
+	b) sources of modified Linux kernel (sdk/os/kernel-2.6.32/),
+	c) sources of Busybox and other programs (sdk/external/),
+	d) binaries of proprietary programs,
+	e) scripts and makefiles for compile and build,
+	f) tools to pack the kernel and install it to InnoTab hardware,
+
+
+
+!!!!!!!!!!!!!
+!! Warning !!
+!!!!!!!!!!!!!
+1. Do NOT cut the power supply when installing the kernel file(s) to InnoTab
+hardware, otherwise it may corrupt the InnoTab hardware that cannot power up 
+again.
+2. Once you installed custom kernel file(s), even without any modification, 
+all vtech provided services for InnoTab may not work.
+
+
+
+Prerequisitions
+---------------
+1. A x86 Ubuntu 10.04 Desktop Edition Linux workstation, 
+2. Install "Sourcery G++ Lite 2010q1-202 for ARM GNU/Linux", 
+	http://www.codesourcery.com/sgpp/lite/arm/portal/release1293
+3. A Windows XP (SP3) PC is needed for installing the built kernel to InnoTab 
+	hardware.
+4. The Windows PC shall be able to access the Linux workstation thru SAMBA in 
+	order to run pack tool, or you may copy the built files to your Windows PC.
+
+Kernel build and install
+------------------------
+1. Obtain this package.
+2. Extract this package (*.tar.gz) to a specific folder, in this document, I 
+	use "/home/innotab" as an example.
+3. Set working directory to "/home/innotab", i.e. cd /home/innotab
+4. Run "./mk", it should compiles the kernel and necessary modules.
+5. After successfully build, kernel_rel.bin and system_rel.bin should be created
+	at /home/innotab.
+6. Assume your Windows PC can access /home/innotab as X:, run "AfterBuild.bat" 
+	at X:\HackPack, a file inno_kb255_sb255.ugd is generated.
+7. Turn on the InnoTab hardware, connect it to the Windows PC.
+8. Run "HackInst.exe inno_kb255_sb255.ugd" at X:\HackPack, it installs the built
+	kernel to InnoTab hardware.
+9. Unplug the USB cable when HackInst.exe finishes, InnoTab hardware shall power
+	off itself.
+10. Turn on InnoTab hardware again, it is now running the installed kernel.
+
+
+Busybox build
+-------------
+1. cd to sdk/external/busybox-1.17.3
+2. make -f Makefile.open
+3. Follow instructions "Kernel build and install" from step 4.
+
+MTD tools build
+---------------
+Read the file "how_to_build.txt" in 
+	HackPack/mtd-utils-f0cc488.open_source.20120628.tar.gz
+

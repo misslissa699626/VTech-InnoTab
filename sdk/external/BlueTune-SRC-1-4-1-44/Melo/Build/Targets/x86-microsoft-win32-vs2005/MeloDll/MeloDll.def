@@ -1,0 +1,17 @@
+LIBRARY  Melo.dll
+EXPORTS
+;
+; Melo exports
+;
+MLO_DecoderConfig_Parse             @1
+MLO_DecoderConfig_GetSampleRate     @2
+MLO_DecoderConfig_GetChannelCount   @3
+MLO_Decoder_Create                  @4
+MLO_Decoder_Destroy                 @5
+MLO_Decoder_Reset                   @6
+MLO_Decoder_DecodeFrame             @7
+MLO_Decoder_GetStatus               @8
+MLO_SampleBuffer_GetSamples         @9
+MLO_SampleBuffer_GetSampleCount     @11
+MLO_SampleBuffer_GetSize            @13
+MLO_SampleBuffer_GetFormat          @14

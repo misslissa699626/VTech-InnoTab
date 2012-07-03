@@ -1,0 +1,16 @@
+#!/bin/sh
+echo ---
+echo +++++++++++++++++++++++++++++++++++++++++++
+echo ++ _Run_Bundle
+echo +++++++++++++++++++++++++++++++++++++++++++
+. /sbin/nand_ev.sh
+
+if [ -f $BUNDLE_MOUNT_POINT/_Run ]; then
+	echo "+++ Run Bundle"
+	cd $BUNDLE_MOUNT_POINT
+	exec_newpgid ./_Run $* &
+else
+	echo "Bundle does not exist... show Update Fail screen"
+	cd /system/lib/vtech
+	exec_newpgid ./_ShowUpdateFailed &
+fi

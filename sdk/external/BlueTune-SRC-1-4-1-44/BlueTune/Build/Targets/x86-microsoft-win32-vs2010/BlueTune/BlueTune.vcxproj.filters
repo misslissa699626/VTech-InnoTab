@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{d5152cce-d7cd-4257-937f-be532953f1dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plugins">
+      <UniqueIdentifier>{cd7eed6f-2aed-4a9d-8fd6-fb008ed2b84d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{0f45a8d7-5a25-4a90-b854-c17e5a1bb205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Plugins">
+      <UniqueIdentifier>{1c98d185-55c7-4d08-bbab-f05941a27cc2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Source\Core\BltBitStream.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Common\BltBuiltins.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltCore.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Debug\BltDebugOutput.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Decoder\BltDecoder.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Player\BltDecoderClient.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Player\BltDecoderServer.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Decoder\BltDecoderX.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltErrors.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltInterfaces.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltMedia.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltMediaNode.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltMediaPacket.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltMediaPort.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltModule.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltPcm.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltPixels.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Player\BltPlayer.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltRegistry.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Common\BltReplayGain.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltStream.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\BltTime.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Bento4\Source\C++\Adapters\Ap4AtomixAdapters.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\AAC\BltAacDecoder.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Adts\BltAdtsParser.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Aiff\BltAiffParser.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\ALAC\BltAlacDecoder.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltApeParser.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Callback\BltCallbackInput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Callback\BltCallbackOutput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Dcf\BltDcfParser.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\DynamicLoading\BltDynamicPlugins.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\File\BltFileInput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\File\BltFileOutput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Composite\FilterHost\BltFilterHost.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\FLAC\BltFlacDecoder.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Filters\GainControl\BltGainControlFilter.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltHttpNetworkStream.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltId3Parser.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Mp4\BltMp4Parser.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\MpegAudio\BltMpegAudioDecoder.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInputSource.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkStream.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Null\BltNullOutput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\General\PacketStreamer\BltPacketStreamer.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Adapters\PCM\BltPcmAdapter.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\General\SilenceRemover\BltSilenceRemover.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\General\StreamPacketizer\BltStreamPacketizer.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltTagParser.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Inputs\Network\BltTcpNetworkStream.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Decoders\Vorbis\BltVorbisDecoder.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Formatters\Wave\BltWaveFormatter.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Parsers\Wave\BltWaveParser.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Plugins\Outputs\Win32\BltWin32AudioOutput.c">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Source\Core\BltBuiltins.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltByteStreamProvider.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltByteStreamUser.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltConfig.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltCore.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltCorePriv.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Decoder\BltDecoder.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Player\BltDecoderClient.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Player\BltDecoderServer.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Decoder\BltDecoderX.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltDefs.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltErrors.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltEvent.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltEventListener.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Common\BltKeyManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltMedia.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaNode.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaPacket.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaPacketPriv.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltMediaPort.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltModule.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltOutputNode.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltPacketConsumer.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltPacketProducer.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltPcm.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltPixels.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Player\BltPlayer.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltRegistry.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltRegistryPriv.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltStream.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltStreamPriv.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltTime.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\BltTypes.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\BlueTune\BlueTune.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\AAC\BltAacDecoder.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Aiff\BltAiffParser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\ALAC\BltAlacDecoder.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltApeParser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Callback\BltCallbackInput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Callback\BltCallbackOutput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Dcf\BltDcfParser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Debug\BltDebugOutput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\File\BltFileInput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\File\BltFileOutput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Composite\FilterHost\BltFilterHost.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\FLAC\BltFlacDecoder.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Filters\GainControl\BltGainControlFilter.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltHttpNetworkStream.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltId3Parser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Mp4\BltMp4Parser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\MpegAudio\BltMpegAudioDecoder.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkInputSource.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltNetworkStream.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Null\BltNullOutput.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\General\PacketStreamer\BltPacketStreamer.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Adapters\PCM\BltPcmAdapter.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Common\BltReplayGain.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\General\SilenceRemover\BltSilenceRemover.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\General\StreamPacketizer\BltStreamPacketizer.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Tags\BltTagParser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Inputs\Network\BltTcpNetworkStream.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Decoders\Vorbis\BltVorbisDecoder.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Formatters\Wave\BltWaveFormatter.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Parsers\Wave\BltWaveParser.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Plugins\Outputs\Win32\BltWin32Output.h">
+      <Filter>Header Files\Plugins</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

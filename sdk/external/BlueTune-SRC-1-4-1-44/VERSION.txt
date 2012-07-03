@@ -1,0 +1,10 @@
+BlueTune Kit Version 1.4
+------------------------
+
+This kit is composed of modules with the following SVN repository versions:
+
+BlueTune: 243
+Atomix:   129
+Neptune:  217
+Melo:     37
+Bento4:   396

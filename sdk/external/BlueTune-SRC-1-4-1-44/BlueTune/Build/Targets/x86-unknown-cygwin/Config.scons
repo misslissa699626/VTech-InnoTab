@@ -1,0 +1,29 @@
+env['BLT_RELAXED_ENV'] = env.Clone() 
+LoadTool('gcc-generic', env['BLT_RELAXED_ENV'], gcc_strict=False, gcc_stop_on_warning=False)  
+LoadTool('gcc-generic', env)
+
+env['ATX_SYSTEM_SOURCES']={'System/StdC':'*.c', 'System/Bsd':'*.c', 'System/Posix':'*.c'}
+env['ATX_EXTRA_LIBS']=['m']
+env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Bsd':'*.cpp', 'System/Posix':'*.cpp'}
+env['AP4_SYSTEM_SOURCES']={'System/StdC':'*.cpp'}
+env['BLT_PLUGINS'] = ['FileInput', 
+                      'NetworkInput',
+                      'MpegAudioDecoder', 
+                      'AacDecoder',
+                      'StreamPacketizer', 
+                      'NullOutput',
+                      'FileOutput',
+                      'PacketStreamer',
+                      'TagParser',
+                      'DebugOutput',
+                      'WaveParser',
+                      'AiffParser',
+                      'Mp4Parser',
+                      'WaveFormatter',
+                      'SilenceRemover',
+                      'GainControlFilter',
+                      'PcmAdapter',
+                      'OssOutput']
+env['BLT_PLUGINS_CDDA_TYPE'] = 'Linux'
+env['BLT_DEFAULT_OUTPUT']    = 'oss:0'
+         

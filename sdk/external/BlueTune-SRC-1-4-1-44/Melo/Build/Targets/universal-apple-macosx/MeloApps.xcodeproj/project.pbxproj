@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA18AD500C93287600A5FE6D /* libMelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA18AD400C9327F000A5FE6D /* libMelo.a */; };
+		CA18AD650C9328C800A5FE6D /* FloatTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA18AD480C93282800A5FE6D /* FloatTest.c */; };
+		CA18ADA80C93319700A5FE6D /* libMelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA18AD400C9327F000A5FE6D /* libMelo.a */; };
+		CA18ADAE0C9331B400A5FE6D /* ImdctTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA18AD4A0C93282800A5FE6D /* ImdctTest.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA18AD3F0C9327F000A5FE6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA18AD3B0C9327F000A5FE6D /* Melo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = Melo;
+		};
+		CA18AD530C93288100A5FE6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA18AD3B0C9327F000A5FE6D /* Melo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Melo;
+		};
+		CA18ADAB0C9331A900A5FE6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA18AD3B0C9327F000A5FE6D /* Melo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Melo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA18AD3B0C9327F000A5FE6D /* Melo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Melo.xcodeproj; sourceTree = "<group>"; };
+		CA18AD440C93282800A5FE6D /* BitStreamTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = BitStreamTest.c; sourceTree = "<group>"; };
+		CA18AD460C93282800A5FE6D /* DecoderTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DecoderTest.c; sourceTree = "<group>"; };
+		CA18AD480C93282800A5FE6D /* FloatTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = FloatTest.c; sourceTree = "<group>"; };
+		CA18AD4A0C93282800A5FE6D /* ImdctTest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = ImdctTest.c; sourceTree = "<group>"; };
+		CA18AD4E0C93286A00A5FE6D /* FloatTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FloatTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA18ADA60C93318600A5FE6D /* ImdctTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImdctTest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA18AD4C0C93286A00A5FE6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA18AD500C93287600A5FE6D /* libMelo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA18ADA40C93318600A5FE6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA18ADA80C93319700A5FE6D /* libMelo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* MeloApps */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD3B0C9327F000A5FE6D /* Melo.xcodeproj */,
+				CA18AD420C93282800A5FE6D /* Tests */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = MeloApps;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD4E0C93286A00A5FE6D /* FloatTest */,
+				CA18ADA60C93318600A5FE6D /* ImdctTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA18AD3C0C9327F000A5FE6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD400C9327F000A5FE6D /* libMelo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA18AD420C93282800A5FE6D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD430C93282800A5FE6D /* BitStreamTest */,
+				CA18AD450C93282800A5FE6D /* DecoderTest */,
+				CA18AD470C93282800A5FE6D /* FloatTest */,
+				CA18AD490C93282800A5FE6D /* ImdctTest */,
+			);
+			name = Tests;
+			path = ../../../Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		CA18AD430C93282800A5FE6D /* BitStreamTest */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD440C93282800A5FE6D /* BitStreamTest.c */,
+			);
+			path = BitStreamTest;
+			sourceTree = "<group>";
+		};
+		CA18AD450C93282800A5FE6D /* DecoderTest */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD460C93282800A5FE6D /* DecoderTest.c */,
+			);
+			path = DecoderTest;
+			sourceTree = "<group>";
+		};
+		CA18AD470C93282800A5FE6D /* FloatTest */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD480C93282800A5FE6D /* FloatTest.c */,
+			);
+			path = FloatTest;
+			sourceTree = "<group>";
+		};
+		CA18AD490C93282800A5FE6D /* ImdctTest */ = {
+			isa = PBXGroup;
+			children = (
+				CA18AD4A0C93282800A5FE6D /* ImdctTest.c */,
+			);
+			path = ImdctTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA18AD4D0C93286A00A5FE6D /* FloatTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA18AD600C93289F00A5FE6D /* Build configuration list for PBXNativeTarget "FloatTest" */;
+			buildPhases = (
+				CA18AD4B0C93286A00A5FE6D /* Sources */,
+				CA18AD4C0C93286A00A5FE6D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA18AD540C93288100A5FE6D /* PBXTargetDependency */,
+			);
+			name = FloatTest;
+			productName = FloatTest;
+			productReference = CA18AD4E0C93286A00A5FE6D /* FloatTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA18ADA50C93318600A5FE6D /* ImdctTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA18ADB00C9331F200A5FE6D /* Build configuration list for PBXNativeTarget "ImdctTest" */;
+			buildPhases = (
+				CA18ADA30C93318600A5FE6D /* Sources */,
+				CA18ADA40C93318600A5FE6D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA18ADAC0C9331A900A5FE6D /* PBXTargetDependency */,
+			);
+			name = ImdctTest;
+			productName = ImdctTest;
+			productReference = CA18ADA60C93318600A5FE6D /* ImdctTest */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "MeloApps" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* MeloApps */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CA18AD3C0C9327F000A5FE6D /* Products */;
+					ProjectRef = CA18AD3B0C9327F000A5FE6D /* Melo.xcodeproj */;
+				},
+			);
+			projectRoot = ../../..;
+			targets = (
+				CA18AD4D0C93286A00A5FE6D /* FloatTest */,
+				CA18ADA50C93318600A5FE6D /* ImdctTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CA18AD400C9327F000A5FE6D /* libMelo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMelo.a;
+			remoteRef = CA18AD3F0C9327F000A5FE6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA18AD4B0C93286A00A5FE6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA18AD650C9328C800A5FE6D /* FloatTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA18ADA30C93318600A5FE6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA18ADAE0C9331B400A5FE6D /* ImdctTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA18AD540C93288100A5FE6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Melo;
+			targetProxy = CA18AD530C93288100A5FE6D /* PBXContainerItemProxy */;
+		};
+		CA18ADAC0C9331A900A5FE6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Melo;
+			targetProxy = CA18ADAB0C9331A900A5FE6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = MLO_CONFIG_FIXED;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/**";
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = MLO_CONFIG_FIXED;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Source/**";
+			};
+			name = Release;
+		};
+		CA18AD610C93289F00A5FE6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = FloatTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA18AD620C93289F00A5FE6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = FloatTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA18ADB10C9331F200A5FE6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ImdctTest;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		CA18ADB20C9331F200A5FE6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ImdctTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "MeloApps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA18AD600C93289F00A5FE6D /* Build configuration list for PBXNativeTarget "FloatTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA18AD610C93289F00A5FE6D /* Debug */,
+				CA18AD620C93289F00A5FE6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA18ADB00C9331F200A5FE6D /* Build configuration list for PBXNativeTarget "ImdctTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA18ADB10C9331F200A5FE6D /* Debug */,
+				CA18ADB20C9331F200A5FE6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

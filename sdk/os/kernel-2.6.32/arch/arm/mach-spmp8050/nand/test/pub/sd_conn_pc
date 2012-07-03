@@ -1,0 +1,3 @@
+#insmod /pub/g_spmp_storage.ko file=/dev/mmcblk0p4 stall=0 removable=1
+modprobe g_spmp_storage file=/dev/sdcarda4 stall=0 removable=1
+

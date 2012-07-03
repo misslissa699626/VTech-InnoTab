@@ -1,0 +1,9 @@
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_auo_A043FL01.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_innolux_AT070TN83.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_innolux_AT070TN92.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_hannstar_HSD070IDW1.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_hannstar_HSD070IDW1_RGB666.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_tpo_TD070WGCB2.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_hannstar_HSD089IFW1.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_adl_A070SWN01A0.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcd/lcd_innolux_YT70F10_RGB666.ko

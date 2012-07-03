@@ -1,0 +1,21 @@
+
+auto lo
+iface lo inet loopback
+
+iface ra0 inet manual
+  up ifconfig $IFACE 0.0.0.0 up
+  up echo ">>ifconfig up"
+  up wpa_supplicant -B -ira0 -c/etc/wpa_supplicant.conf
+  up echo ">>wpa_supplicant"
+  up udhcpc -i ra0 -s /etc/udhcp/default.script
+  up echo ">>uphcpc"
+  down killall udhcpc
+  down killall wpa_supplicant
+  down ifconfig $IFACE down
+
+iface eth0 inet manual
+  up ifconfig $IFACE 0.0.0.0 up
+  up udhcpc -i $IFACE -s /etc/udhcp/default.script
+  down killall udhcpc
+  down ifconfig $IFACE down
+

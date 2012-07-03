@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54C7FB91-6551-457C-9413-B67A77460310}</ProjectGuid>
+    <RootNamespace>Fluo</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\Source\Fluo;..\..\..\..\ThirdParty\mpg123\mpglib;..\..\..\..\..\Atomix\Source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\Source\Fluo;..\..\..\..\ThirdParty\mpg123\mpglib;..\..\..\..\..\Atomix\Source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloBitStream.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloByteStream.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloDecoder.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloEngine.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloFilter.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloFrame.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloHeaders.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloHuffman.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloLayerI.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloLayerII.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloLayerIII.c" />
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloTables.c">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Fluo\FloVbr.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloBitStream.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloByteStream.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloConfig.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloDecoder.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloEngine.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloErrors.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloFilter.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloFrame.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloHeaders.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloHuffman.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloLayerI.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloLayerII.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloLayerIII.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloMath.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloSyntax.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloTables.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloTypes.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloUtils.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\FloVbr.h" />
+    <ClInclude Include="..\..\..\..\Source\Fluo\Fluo.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

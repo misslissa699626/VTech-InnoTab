@@ -1,0 +1,5 @@
+LoadTool('gcc-generic', env)
+
+### Atomix System Files
+env['ATX_SYSTEM_SOURCES']={'System/StdC':'*.c', 'System/Bsd':'*.c', 'System/Posix':'*.c'}
+env['ATX_EXTRA_LIBS']='m'

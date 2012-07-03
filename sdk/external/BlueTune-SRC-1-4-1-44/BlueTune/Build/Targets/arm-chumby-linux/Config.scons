@@ -1,0 +1,43 @@
+env['BLT_RELAXED_ENV'] = env.Clone()
+GCC_ARM_OPTIONS='-mcpu=arm9e -fdollars-in-identifiers -I/usr/arm-linux/include -L/usr/arm-linux/lib'
+LoadTool('gcc-generic', env['BLT_RELAXED_ENV'], gcc_cross_prefix='arm-linux', gcc_strict=False, gcc_stop_on_warning=False, gcc_extra_options=GCC_ARM_OPTIONS)
+LoadTool('gcc-generic', env, gcc_cross_prefix='arm-linux', gcc_extra_options=GCC_ARM_OPTIONS)
+
+
+env['BLT_CPU_CONFIG_NO_FLOAT'] = True
+env['ATX_SYSTEM_SOURCES']={'System/StdC':'*.c', 'System/Bsd':'*.c', 'System/Posix':'*.c'}
+env['ATX_EXTRA_LIBS']=['m']
+env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Bsd':'*.cpp', 'System/Posix':'*.cpp'}
+env['NPT_EXTRA_LIBS']=['pthread', 'dl']
+env['AP4_SYSTEM_SOURCES']={'System/StdC':'*.cpp'}
+env['AP4_CPP_DEFINES']=[('AP4_PLATFORM_BYTE_ORDER','AP4_PLATFORM_BYTE_ORDER_LITTLE_ENDIAN')]
+env['BLT_PLUGINS'] = ['FileInput', 
+                      'NetworkInput',
+                      'WmsProtocol',
+                      'MpegAudioDecoder', 
+                      'FlacDecoder',
+                      'AlacDecoder',
+                      'AacDecoder',
+                      'StreamPacketizer', 
+                      'NullOutput',
+                      'FileOutput',
+                      'PacketStreamer',
+                      'TagParser',
+                      'DebugOutput',
+                      'WaveParser',
+                      'AiffParser',
+                      'Mp4Parser',
+                      'AdtsParser',
+                      'WaveFormatter',
+                      'SilenceRemover',
+                      'GainControlFilter',
+                      'PcmAdapter',
+                      'AlsaOutput',
+                      'VorbisDecoder']
+
+env['BLT_PLUGINS_CDDA_DEVICE_TYPE']  = 'Linux'
+env['BLT_DEFAULT_AUDIO_OUTPUT']      = 'alsa:default'
+env['BLT_PLUGINS_VORBIS_LIBRARY']    = 'Tremor'
+env['BLT_PLUGINS_AAC_LIBRARY']       = 'Helix'
+env['BLT_PLUGINS_HELIX_AAC_ASM_DIR'] = ['real/asm/armgcc']
+env['BLT_WMA_DECODER_MODE']          = 'Integer'                                   

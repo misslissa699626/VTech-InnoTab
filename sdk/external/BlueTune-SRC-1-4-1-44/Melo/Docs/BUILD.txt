@@ -1,0 +1,47 @@
+Melo AAC Decoder SDK 
+  --- Building  ---
+--------------------
+
+1. Building Melo
+
+1.1 Windows 2000/XP/Vista
+Building on Windows requires Visual Studio 2005. The solution file for 
+visual studio is Build/Targets/x86-microsoft-win32-vs2005/Melo.sln for
+the SDK runtime, and Build/Targets/x86-microsoft-win32-vs2005/MeloDecode.sln
+for the runtime plus sample application.
+
+1.2 Windows CE
+Building for Windows CE requires Visual Studio 2005 and the appropriate
+target SDK for your target device. Included in the project files are
+existing configurations for Smartphone 2003 and Pocket PC 2003, 
+Windows Mobile 5.0 Smartphone and Windows Mobile 5.0 Pocket PC. Other
+targets should work as well, provided you have a platform SDK for it.
+The solution file is Build\Targets\arm-microsoft-wince-vs2005\Melo.sln
+
+1.3 Unix and other systems
+Building Melo is done with SCons. SCons is a python-based build system that 
+runs on all platforms that can run python 1.5.2 or above.
+You can download SCons from www.scons.org
+Bu sure to install version 0.96.91 or above, as version 0.96.1 is too old and 
+has a bug that will prevent it from building correctly.
+To download 0.96.91 or above, you can follow the instructions at www.scons.org
+or go directly to http://sourceforge.net/project/showfiles.php?group_id=30337
+
+There is a build directory for each supported target system. Each target has a
+name of the form cpu-vendor-os, such as x86-unknown-linux or arm-microsoft-wince.
+The build directory for a target <target> is:
+Build/Targets/<target>
+
+To build the Melo runtime and sample applications, go to the target
+directory for your build target (either your native host platform or a 
+cross-compiled target), and use the following command:
+>>> scons -u
+This will build the default modules, in Debug mode.
+You can pass options to SCons to select a different build target, build 
+optional modules, etc...
+the command: 
+>>> scons -u -c
+ will show you a list of possible options'
+
+The build output is located under a sub-directory of the build directory.
+'Debug' for debug builds, and 'Release' for release builds.

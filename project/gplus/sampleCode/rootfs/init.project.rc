@@ -1,0 +1,339 @@
+#!/bin/sh
+
+UNLOAD_MTD_BEFORE_SNAPSHOT=NO
+
+# mount points
+mkdir -p /media
+
+/sysinit core
+
+#ifup lo
+ifconfig lo up 127.0.0.1
+
+# show logo
+#/showlogo &
+
+#enable panel backlight
+/sysinit backlight_enable
+
+# udev (mdev)
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+
+IOPIN_D26=`readio ch=D pin=26` ; echo IOD26: "$IOPIN_D26"
+IOPIN_D27=`readio ch=D pin=27` ; echo IOD27: "$IOPIN_D27"
+MAINUNIT_VER=$IOPIN_D27$IOPIN_D26
+case "$MAINUNIT_VER" in
+	"01") #IT2011
+		export INTERNAL_NAND_VERSION=0
+		echo IT2011 > /etc/MAINUNIT_VER
+		;;
+	"11") #IT2012
+		export INTERNAL_NAND_VERSION=1
+		echo IT2012 > /etc/MAINUNIT_VER
+		;;
+	*)
+		export INTERNAL_NAND_VERSION=UNKNOWN
+		echo UNKNOWN > /etc/MAINUNIT_VER
+		;;
+esac
+
+
+echo "======================================="
+#modprobe nand
+#echo modprobe nand.  Result: $?
+insmod /lib/modules/2.6.32.94/kernel/drivers/mtd/nand/nand_ecc.ko
+echo insmod nand_ecc.  Result: $?
+insmod /lib/modules/2.6.32.94/kernel/drivers/mtd/nand/nand.ko
+echo insmod nand.  Result: $?
+echo "======================================="
+
+#Check if patch up is needed
+while [ ! -e /dev/vmtd0 ]; do
+	echo Wait for the VMTD device to up...
+done
+echo VMTD device found
+FIND_IF_DLG2011_RESULT=NO
+mtdctl -cif 0
+if [ $? -eq 0 ]; then
+	FIND_IF_DLG2011_RESULT=YES
+fi
+
+# check if system exist
+if [ ! -d /system ]
+then
+	# mount system
+	mkdir -p /system
+	modprobe cramfs
+	#mount -t cramfs /dev/nanda1 /system
+fi
+
+mkdir -p /vp_mnt
+
+POPSYSTEM_PATH=/media/sdcarda2
+DOSNAPSHOT=dosnapshot
+SB_LOCATION=NAND
+
+#Note: Must have "/etc/DEVELOPMENT_AND_PRODUCTION" for POP
+if [ -d /etc/DEVELOPMENT_AND_PRODUCTION ]; then
+	# mount main storage
+	#/sysinit main_storage
+	#wait sd card detection
+	if [ ! -e /etc/DEVELOPMENT_AND_PRODUCTION/SD_AT_FULL_SPEED ]; then
+		insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/sd/gp_sd.ko clock=20
+	else
+		insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/sd/gp_sd.ko
+	fi
+	sleep 4
+	export SDCARD_PATH=/vp_mnt/sd
+	if [ ! -e $SDCARD_PATH ]; then
+		ln -sfn /dev/null $SDCARD_PATH
+		DOSNAPSHOT=
+	elif [ -d $SDCARD_PATH ]; then
+		if [ -f $POPSYSTEM_PATH/system.bin ]; then
+			echo POP version activated...
+			#mount POP system.bin in /media/sdcarda2
+			SB_LOCATION=POP
+		else
+			DOSNAPSHOT=
+			if [ -f /etc/DEVELOPMENT_AND_PRODUCTION/SD_BOOT_SCRIPT.sh ]; then
+				echo Production tools activated...
+				EXIT_AFTER_SB_BOOT_SCRIPT=1
+				. /etc/DEVELOPMENT_AND_PRODUCTION/SD_BOOT_SCRIPT.sh
+				if [ $EXIT_AFTER_SB_BOOT_SCRIPT -ne 0 ]; then
+					echo SB_BOOT_SCRIPT Result: $?
+					echo Quit now...
+					exit 0
+				fi
+			fi
+			if [ -f $SDCARD_PATH/VTECH_DEBUG.USE_SB_ON_SD ]; then
+				#mount SD's system.bin
+				echo Use system.bin on SD card...
+				SB_LOCATION=SD
+			fi
+		fi
+	fi
+fi
+
+if [ "$SB_LOCATION" = NAND ]; then
+
+	/sbin/SystemPartSelect.x
+	SYS_BIN_NUM=$?
+	echo "======================================="
+	echo SystemPartSelect selects $SYS_BIN_NUM
+	echo "======================================="
+	MTDBLKDEV_NAME=
+
+	# Skip mtd0, which is always for the APP area...
+	NUMBERS="1 2 3 4 5 6 7 8 9"
+	for MTD_NUM in $NUMBERS ; do
+		if [ -d /sys/class/mtd/mtd${MTD_NUM} ]; then 
+			MTD_NAME=`cat /sys/class/mtd/mtd${MTD_NUM}/name`
+			case "$MTD_NAME" in
+				Inno_I_SysBin0)
+					if [ $SYS_BIN_NUM -eq 0 ]; then
+						MTDBLKDEV_NAME=/dev/mtdblock${MTD_NUM}
+						break
+					fi
+					;;				
+				Inno_I_SysBin1)
+					if [ $SYS_BIN_NUM -eq 1 ]; then
+						MTDBLKDEV_NAME=/dev/mtdblock${MTD_NUM}
+						break
+					fi
+					;;				
+				*)
+					;;	
+			esac
+		fi
+	done
+	
+	while [ ! -e $MTDBLKDEV_NAME ]
+	do
+		echo "Waiting for the $MTDBLKDEV_NAME to up..."
+		sleep 0.1
+	done
+	echo "MTD block device found!"
+
+	if [ -z "$MTDBLKDEV_NAME" ]; then
+	    false
+	else
+	    mount -r -t cramfs $MTDBLKDEV_NAME /system
+	fi
+	
+	if [ $? -eq 0 ]; then
+		echo "======================================="
+	    echo "System.bin mount on $MTDBLKDEV_NAME    "
+		echo "======================================="
+	else
+		echo "======================================="
+	    echo "System.bin mount on internal NAND failed!"
+		echo "======================================="
+	    exit 1
+	fi
+elif [ "$SB_LOCATION" = SD ]; then
+	#wait sd card mount
+	if [ -d $SDCARD_PATH -a -f $SDCARD_PATH/system.bin ]; then
+		mount -t cramfs -o loop,utf8 $SDCARD_PATH/system.bin /system
+	fi
+elif [ "$SB_LOCATION" = POP ]; then
+	#wait sd card mount
+	if [ -f $POPSYSTEM_PATH/system.bin ]; then
+		mount -t cramfs -o loop,utf8 $POPSYSTEM_PATH/system.bin /system
+	fi
+
+fi
+
+# sym link
+#rm -rf /lib/modules
+mv /lib/modules /lib/modules.boot
+ln -s /system/lib/modules /lib
+ln -s /system/lib/image /lib
+
+# sysInit
+/sysinit
+insmod /lib/modules/touch_driver.ko
+
+if [ "$SB_LOCATION" = POP ]; then
+	insmod lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/snapshot_sd.ko
+else
+	insmod lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/snapshot_nand.ko
+fi 
+
+echo "======================================="
+rm /lib/modules
+rm /lib/image
+mv /lib/modules.boot /lib/modules
+echo Unmount system.bin ...
+if [ "$SB_LOCATION" = NAND ]; then
+	umount /system
+fi
+if [ "$UNLOAD_MTD_BEFORE_SNAPSHOT" = YES ]; then
+
+	rmmod nand
+	echo rmmod nand.  Result: $?
+	echo "======================================="
+
+else
+
+	echo rmmod nand skipped!
+	echo "======================================="
+
+fi
+
+#'eject' SD card
+
+#Disable SnapShot if further processing of internal NAND is expected
+if [ $FIND_IF_DLG2011_RESULT = NO ]; then
+	echo "======================================"
+	echo IF_DLG2011 marker not found
+	#echo NAND init problem.  Snapshot disabled
+	echo "======================================" 
+	#DOSNAPSHOT=
+else
+	echo "======================================"
+	echo NAND init successful
+	echo "======================================"
+fi
+
+echo "==============================="
+echo "=====   Snapshot Start   ======"
+echo "==============================="
+#DOSNAPSHOT=
+echo DOSNAPSHOT=$DOSNAPSHOT
+
+InnoLogo $DOSNAPSHOT runaudiomixer vollcm
+echo InnoLogo Result: $?
+
+echo "==============================="
+echo "=====   Snapshot End     ======"
+echo "==============================="
+
+
+#Turn off disp1: 
+#	according to Ge+ (2012-01-05), disp1 is turned on by bootloader 
+#	0x93020188 bit13 -> 0 
+#	0x93020140 all ?-> 0
+#	0x93007018 bit26 -> 0 
+let "n = `devmem 0x93020188` & ~(1 << 13)"
+devmem 0x93020188 32 `printf "0x%X" $n`
+devmem 0x93020140 32 0
+let "n = `devmem 0x93007018` & ~(1 << 26)"
+devmem 0x93007018 32 `printf "0x%X" $n`
+
+
+if [ "$UNLOAD_MTD_BEFORE_SNAPSHOT" = YES ]; then
+
+	echo "======================================="
+	echo Reload NAND module...
+	#modprobe nand
+	#echo modprobe nand again.  Result: $?
+	insmod /lib/modules/2.6.32.94/kernel/drivers/mtd/nand/nand_ecc.ko
+	echo insmod nand_ecc.  Result: $?
+	insmod /lib/modules/2.6.32.94/kernel/drivers/mtd/nand/nand.ko
+	echo insmod nand.  Result: $?
+	echo "======================================="
+
+else
+
+	echo "======================================="
+	echo Reload nand unnecessary!
+	echo "======================================="
+
+fi
+
+if [ "$SB_LOCATION" = NAND ]; then
+
+	echo "======================================="
+	echo Remount system.bin
+
+	while [ ! -e $MTDBLKDEV_NAME ]
+	do
+		echo "Waiting for the $MTDBLKDEV_NAME to up..."
+		sleep 0.1
+	done
+	echo "MTD block device found!"
+
+	mount -r -t cramfs $MTDBLKDEV_NAME /system
+
+	if [ $? -eq 0 ]; then
+		echo "System.bin mount on $MTDBLKDEV_NAME	 "
+	else
+		echo "System.bin mount on internal NAND failed!"
+		exit 1
+	fi
+
+	echo "======================================="
+
+fi
+
+#wait sd card detection
+if [ ! -d /etc/DEVELOPMENT_AND_PRODUCTION ]; then
+	#/sysinit main_storage
+	insmod /lib/modules/2.6.32.94/kernel/arch/arm/mach-gpl32900/sd/gp_sd.ko
+
+	#sleep 4
+	export SDCARD_PATH=/vp_mnt/sd
+	if [ ! -e $SDCARD_PATH ]; then
+		ln -sfn /dev/null $SDCARD_PATH
+	fi
+fi
+
+rm -rf /lib/modules
+ln -s /system/lib/modules /lib
+ln -s /system/lib/image /lib
+
+#rm /sbin/audiomixer.x
+rm /sbin/InnoLogo
+
+hwclock -s
+
+#sequencing hotplug
+echo > /dev/mdev.seq
+
+if [ -f "/system/lib/vtech/_Run_Once" ]; then
+	/system/bin/vtech/exec_newpgid /system/lib/vtech/_Run_Once "$SB_LOCATION"
+else
+	echo "Can not find _Run_Once!"
+fi
+

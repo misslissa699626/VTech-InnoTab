@@ -1,0 +1,119 @@
+TOPDIR := ../../../
+include $(TOPDIR)sdk/build/core/config.mak
+
+GOAL := $(OUT_SDK_DIR)/lib/libSDL.a
+
+.PHONY: all
+all: $(GOAL)
+
+
+$(GOAL): ./build/.libs/libSDL.a
+	$(CP) -f -u ./build/.libs/libSDL.a $(GOAL)
+
+./build/.libs/libSDL.a:
+ifeq ($(SYSCONFIG_TARGET), linux-arm)
+	@$(MAKE) -f Makefile.open config_linux_arm
+else
+	@$(MAKE) -f Makefile.open config_linux_x86
+endif
+	@$(MAKE)
+	@$(MKDIR) -p $(OUT_SDK_DIR)
+	@$(MAKE) install
+
+
+.PHONY: clean
+clean:
+	@$(MAKE) clean
+
+
+.PHONY: config_linux_x86
+config_linux_x86:
+	./configure --prefix=$(OUT_SDK_DIR_FULL) \
+	CC=$(TARGET_CC) AR=$(TARGET_AR) RANLIB=$(TARGET_RANLIB) STRIP=$(TARGET_STRIP) \
+	--disable-video-fbcon \
+	--enable-video-x11 \
+	\
+	--enable-oss \
+	--disable-alsa \
+	\
+	--disable-cdrom \
+	--disable-esd \
+	--disable-pulseaudio \
+	--disable-arts \
+	--disable-nas \
+	--disable-diskaudio \
+	--enable-dummyaudio \
+	--disable-mintaudio \
+	--disable-nasm \
+	--disable-altivec \
+	--disable-ipod \
+	--disable-video-nanox \
+	--disable-dga \
+	--disable-video-x11-vm \
+	--disable-video-x11-xv \
+	--disable-video-x11-xinerama \
+	--disable-video-x11-xme \
+	--disable-video-photon \
+	--disable-video-cocoa \
+	--disable-video-directfb \
+	--disable-video-ps2gs \
+	--disable-video-svga \
+	--disable-video-vgl \
+	--disable-video-wscons \
+	--enable-video-dummy \
+	--disable-video-opengl \
+	--disable-osmesa-shared \
+	--disable-screensaver \
+	--disable-pth \
+	--disable-input-tslib \
+	--disable-stdio-redirect \
+	--disable-directx \
+	--disable-atari-ldg \
+	--disable-rpath
+
+
+.PHONY: config_linux_arm
+config_linux_arm:
+	./configure --prefix=$(OUT_SDK_DIR_FULL) \
+	CC=$(TARGET_CC) AR=$(TARGET_AR) RANLIB=$(TARGET_RANLIB) STRIP=$(TARGET_STRIP) \
+	--host=arm-linux \
+	--enable-video-fbcon \
+	--disable-video-x11 \
+	\
+	--enable-oss \
+	--disable-alsa \
+	\
+	--disable-cdrom \
+	--disable-esd \
+	--disable-pulseaudio \
+	--disable-arts \
+	--disable-nas \
+	--disable-diskaudio \
+	--enable-dummyaudio \
+	--disable-mintaudio \
+	--disable-nasm \
+	--disable-altivec \
+	--disable-ipod \
+	--disable-video-nanox \
+	--disable-dga \
+	--disable-video-x11-vm \
+	--disable-video-x11-xv \
+	--disable-video-x11-xinerama \
+	--disable-video-x11-xme \
+	--disable-video-photon \
+	--disable-video-cocoa \
+	--disable-video-directfb \
+	--disable-video-ps2gs \
+	--disable-video-svga \
+	--disable-video-vgl \
+	--disable-video-wscons \
+	--enable-video-dummy \
+	--disable-video-opengl \
+	--disable-osmesa-shared \
+	--disable-screensaver \
+	--disable-pth \
+	--disable-input-tslib \
+	--disable-stdio-redirect \
+	--disable-directx \
+	--disable-atari-ldg \
+	--disable-rpath

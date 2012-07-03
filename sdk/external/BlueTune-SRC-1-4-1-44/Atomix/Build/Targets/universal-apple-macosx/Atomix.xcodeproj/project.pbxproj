@@ -1,0 +1,1609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		CA0C9A370D15D1A700E23496 /* Tests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CA0C9AA40D15D1F700E23496 /* Build configuration list for PBXAggregateTarget "Tests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				CAE3A9301064D21400EBAD97 /* PBXTargetDependency */,
+				CAA3D5A90F97CD7E00BAE44C /* PBXTargetDependency */,
+				CA0C9A3C0D15D1B100E23496 /* PBXTargetDependency */,
+				CA0C9A3E0D15D1B100E23496 /* PBXTargetDependency */,
+				CA0C9A400D15D1B100E23496 /* PBXTargetDependency */,
+				CA0C9A420D15D1B100E23496 /* PBXTargetDependency */,
+				CA0C9A440D15D1B100E23496 /* PBXTargetDependency */,
+				CA0C9A460D15D1B100E23496 /* PBXTargetDependency */,
+				CA0C9A480D15D1B100E23496 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+		};
+		CA0C9A490D15D1C600E23496 /* Apps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CA0C9AA50D15D1F700E23496 /* Build configuration list for PBXAggregateTarget "Apps" */;
+			buildPhases = (
+			);
+			dependencies = (
+				CA0C9A4E0D15D1CC00E23496 /* PBXTargetDependency */,
+			);
+			name = Apps;
+			productName = Apps;
+		};
+		CAAA4C660E35183B00783AE4 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CAAA4C940E35186200783AE4 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				CAAA4C6C0E35184400783AE4 /* PBXTargetDependency */,
+				CAAA4C6A0E35184200783AE4 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		CA0C99290D15C31600E23496 /* AtxSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E50D15C2C400E23496 /* AtxSystem.h */; };
+		CA0C992A0D15C31600E23496 /* AtxUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98E80D15C2C400E23496 /* AtxUtils.c */; };
+		CA0C992B0D15C31700E23496 /* AtxUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E90D15C2C400E23496 /* AtxUtils.h */; };
+		CA0C992C0D15C31800E23496 /* AtxDestroyable.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98CA0D15C2C300E23496 /* AtxDestroyable.h */; };
+		CA0C992D0D15C31900E23496 /* AtxSockets.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E00D15C2C400E23496 /* AtxSockets.h */; };
+		CA0C992E0D15C31A00E23496 /* AtxStreams.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E20D15C2C400E23496 /* AtxStreams.h */; };
+		CA0C992F0D15C31B00E23496 /* AtxDataBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98C40D15C2C300E23496 /* AtxDataBuffer.c */; };
+		CA0C99300D15C31C00E23496 /* AtxInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98D00D15C2C300E23496 /* AtxInterfaces.h */; };
+		CA0C99310D15C31C00E23496 /* AtxDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98C70D15C2C300E23496 /* AtxDebug.h */; };
+		CA0C99320D15C31D00E23496 /* AtxList.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98D30D15C2C400E23496 /* AtxList.h */; };
+		CA0C99330D15C31E00E23496 /* AtxFile.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98CC0D15C2C300E23496 /* AtxFile.h */; };
+		CA0C99340D15C31E00E23496 /* AtxConsole.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98C30D15C2C300E23496 /* AtxConsole.h */; };
+		CA0C99350D15C31F00E23496 /* AtxHttp.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98CD0D15C2C300E23496 /* AtxHttp.c */; };
+		CA0C99360D15C32000E23496 /* AtxDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98C80D15C2C300E23496 /* AtxDefs.h */; };
+		CA0C99370D15C32100E23496 /* AtxResults.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98DC0D15C2C400E23496 /* AtxResults.h */; };
+		CA0C99380D15C32200E23496 /* AtxModule.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98D80D15C2C400E23496 /* AtxModule.h */; };
+		CA0C99390D15C32300E23496 /* AtxTime.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E60D15C2C400E23496 /* AtxTime.h */; };
+		CA0C993A0D15C32300E23496 /* AtxSockets.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98DF0D15C2C400E23496 /* AtxSockets.c */; };
+		CA0C993B0D15C32400E23496 /* AtxDataBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98C50D15C2C300E23496 /* AtxDataBuffer.h */; };
+		CA0C993C0D15C32600E23496 /* AtxProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98DA0D15C2C400E23496 /* AtxProperties.h */; };
+		CA0C993D0D15C32600E23496 /* AtxInterfaces.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98CF0D15C2C300E23496 /* AtxInterfaces.c */; };
+		CA0C993E0D15C32800E23496 /* AtxLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98D40D15C2C400E23496 /* AtxLogging.c */; };
+		CA0C993F0D15C32900E23496 /* AtxDestroyable.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98C90D15C2C300E23496 /* AtxDestroyable.c */; };
+		CA0C99400D15C32A00E23496 /* AtxLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98D50D15C2C400E23496 /* AtxLogging.h */; };
+		CA0C99410D15C32A00E23496 /* AtxString.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98E30D15C2C400E23496 /* AtxString.c */; };
+		CA0C99420D15C32B00E23496 /* AtxStreams.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98E10D15C2C400E23496 /* AtxStreams.c */; };
+		CA0C99430D15C32C00E23496 /* AtxHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98CE0D15C2C300E23496 /* AtxHttp.h */; };
+		CA0C99440D15C32D00E23496 /* AtxRingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98DE0D15C2C400E23496 /* AtxRingBuffer.h */; };
+		CA0C99450D15C32D00E23496 /* AtxReferenceable.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98DB0D15C2C400E23496 /* AtxReferenceable.h */; };
+		CA0C99460D15C32E00E23496 /* AtxIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98D10D15C2C400E23496 /* AtxIterator.h */; };
+		CA0C99470D15C32F00E23496 /* AtxRingBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98DD0D15C2C400E23496 /* AtxRingBuffer.c */; };
+		CA0C99480D15C32F00E23496 /* AtxList.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98D20D15C2C400E23496 /* AtxList.c */; };
+		CA0C99490D15C33000E23496 /* AtxProperties.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98D90D15C2C400E23496 /* AtxProperties.c */; };
+		CA0C994A0D15C33100E23496 /* AtxMap.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98D60D15C2C400E23496 /* AtxMap.c */; };
+		CA0C994B0D15C33200E23496 /* AtxDebug.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98C60D15C2C300E23496 /* AtxDebug.c */; };
+		CA0C994C0D15C33200E23496 /* AtxConsole.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98C20D15C2C300E23496 /* AtxConsole.c */; };
+		CA0C994D0D15C33300E23496 /* Atomix.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98C00D15C2C300E23496 /* Atomix.h */; };
+		CA0C994E0D15C33400E23496 /* AtxConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98C10D15C2C300E23496 /* AtxConfig.h */; };
+		CA0C994F0D15C33500E23496 /* AtxString.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E40D15C2C400E23496 /* AtxString.h */; };
+		CA0C99500D15C33700E23496 /* AtxVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98EA0D15C2C400E23496 /* AtxVersion.h */; };
+		CA0C99510D15C33800E23496 /* AtxTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98E70D15C2C400E23496 /* AtxTypes.h */; };
+		CA0C99520D15C33900E23496 /* AtxMap.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0C98D70D15C2C400E23496 /* AtxMap.h */; };
+		CA0C99530D15C33A00E23496 /* AtxFile.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98CB0D15C2C300E23496 /* AtxFile.c */; };
+		CA0C99540D15C34E00E23496 /* AtxStdcConsole.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98F60D15C2C400E23496 /* AtxStdcConsole.c */; };
+		CA0C99550D15C34F00E23496 /* AtxBsdSockets.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98F00D15C2C400E23496 /* AtxBsdSockets.c */; };
+		CA0C99560D15C35000E23496 /* AtxStdcEnvironment.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98F80D15C2C400E23496 /* AtxStdcEnvironment.c */; };
+		CA0C99570D15C35000E23496 /* AtxStdcDebug.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98F70D15C2C400E23496 /* AtxStdcDebug.c */; };
+		CA0C99580D15C35100E23496 /* AtxPosixSystem.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98F20D15C2C400E23496 /* AtxPosixSystem.c */; };
+		CA0C99590D15C35200E23496 /* AtxStdcFile.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98F90D15C2C400E23496 /* AtxStdcFile.c */; };
+		CA0C995B0D15C35F00E23496 /* PropertiesTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C99140D15C2C400E23496 /* PropertiesTest.c */; };
+		CA0C997D0D15CEA200E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C99A90D15CFCA00E23496 /* ContainersTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C990C0D15C2C400E23496 /* ContainersTest.c */; };
+		CA0C99AA0D15CFD200E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C99C60D15D04900E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C99D40D15D07300E23496 /* HttpTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C990E0D15C2C400E23496 /* HttpTest.c */; };
+		CA0C99D50D15D07900E23496 /* RingBufferTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C99160D15C2C400E23496 /* RingBufferTest.c */; };
+		CA0C99D60D15D08000E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C99F20D15D0BB00E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C99F30D15D0C900E23496 /* StringsTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C99180D15C2C400E23496 /* StringsTest.c */; };
+		CA0C9A060D15D0F900E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C9A070D15D10100E23496 /* MiscTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C99120D15C2C400E23496 /* MiscTest.c */; };
+		CA0C9A1B0D15D13100E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CA0C9A1C0D15D13B00E23496 /* LoggingTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C99100D15C2C400E23496 /* LoggingTest.c */; };
+		CA0C9A2F0D15D17D00E23496 /* NetPump.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0C98BE0D15C2C300E23496 /* NetPump.c */; };
+		CA0C9A300D15D18300E23496 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CAA3D5A70F97CD6F00BAE44C /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CAA3D5AC0F97CD9300BAE44C /* FilesTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CAA3D5AB0F97CD9300BAE44C /* FilesTest.c */; };
+		CAE3A9231064D1CD00EBAD97 /* AtxJson.c in Sources */ = {isa = PBXBuildFile; fileRef = CAE3A9211064D1CD00EBAD97 /* AtxJson.c */; };
+		CAE3A9241064D1CD00EBAD97 /* AtxJson.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE3A9221064D1CD00EBAD97 /* AtxJson.h */; };
+		CAE3A92E1064D20400EBAD97 /* libAtomix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libAtomix.a */; };
+		CAE3A9331064D22F00EBAD97 /* JsonTest.c in Sources */ = {isa = PBXBuildFile; fileRef = CAE3A9321064D22F00EBAD97 /* JsonTest.c */; };
+		CAF9556C1268EA390063F480 /* AtxThreads.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF9556B1268EA390063F480 /* AtxThreads.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA0C995D0D15C36C00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C99B80D15D01E00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C99C40D15D03A00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C99D20D15D06500E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C99F00D15D0B000E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C9A040D15D0EE00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C9A190D15D12700E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C9A2D0D15D17100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CA0C9A3B0D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C98AF0D15C14800E23496;
+			remoteInfo = PropertiesTest;
+		};
+		CA0C9A3D0D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C99A10D15CFBB00E23496;
+			remoteInfo = ContainersTest;
+		};
+		CA0C9A3F0D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C99BC0D15D03500E23496;
+			remoteInfo = HttpTest;
+		};
+		CA0C9A410D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C99CA0D15D06000E23496;
+			remoteInfo = RingBufferTest;
+		};
+		CA0C9A430D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C99E80D15D0AA00E23496;
+			remoteInfo = StringsTest;
+		};
+		CA0C9A450D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C99FC0D15D0E900E23496;
+			remoteInfo = MiscTest;
+		};
+		CA0C9A470D15D1B100E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C9A110D15D12100E23496;
+			remoteInfo = LoggingTest;
+		};
+		CA0C9A4D0D15D1CC00E23496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C9A250D15D16C00E23496;
+			remoteInfo = NetPump;
+		};
+		CAA3D5A50F97CD6A00BAE44C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CAA3D5A80F97CD7E00BAE44C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAA3D5A00F97CD6500BAE44C;
+			remoteInfo = FilesTest;
+		};
+		CAAA4C690E35184200783AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C9A490D15D1C600E23496;
+			remoteInfo = Apps;
+		};
+		CAAA4C6B0E35184400783AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA0C9A370D15D1A700E23496;
+			remoteInfo = Tests;
+		};
+		CAE3A92C1064D1FF00EBAD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = Atomix;
+		};
+		CAE3A92F1064D21400EBAD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAE3A9271064D1F900EBAD97;
+			remoteInfo = JsonTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA0C98B00D15C14800E23496 /* PropertiesTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PropertiesTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C98BE0D15C2C300E23496 /* NetPump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NetPump.c; sourceTree = "<group>"; };
+		CA0C98C00D15C2C300E23496 /* Atomix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atomix.h; sourceTree = "<group>"; };
+		CA0C98C10D15C2C300E23496 /* AtxConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxConfig.h; sourceTree = "<group>"; };
+		CA0C98C20D15C2C300E23496 /* AtxConsole.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxConsole.c; sourceTree = "<group>"; };
+		CA0C98C30D15C2C300E23496 /* AtxConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxConsole.h; sourceTree = "<group>"; };
+		CA0C98C40D15C2C300E23496 /* AtxDataBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxDataBuffer.c; sourceTree = "<group>"; };
+		CA0C98C50D15C2C300E23496 /* AtxDataBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxDataBuffer.h; sourceTree = "<group>"; };
+		CA0C98C60D15C2C300E23496 /* AtxDebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxDebug.c; sourceTree = "<group>"; };
+		CA0C98C70D15C2C300E23496 /* AtxDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxDebug.h; sourceTree = "<group>"; };
+		CA0C98C80D15C2C300E23496 /* AtxDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxDefs.h; sourceTree = "<group>"; };
+		CA0C98C90D15C2C300E23496 /* AtxDestroyable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxDestroyable.c; sourceTree = "<group>"; };
+		CA0C98CA0D15C2C300E23496 /* AtxDestroyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxDestroyable.h; sourceTree = "<group>"; };
+		CA0C98CB0D15C2C300E23496 /* AtxFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxFile.c; sourceTree = "<group>"; };
+		CA0C98CC0D15C2C300E23496 /* AtxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxFile.h; sourceTree = "<group>"; };
+		CA0C98CD0D15C2C300E23496 /* AtxHttp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxHttp.c; sourceTree = "<group>"; };
+		CA0C98CE0D15C2C300E23496 /* AtxHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxHttp.h; sourceTree = "<group>"; };
+		CA0C98CF0D15C2C300E23496 /* AtxInterfaces.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxInterfaces.c; sourceTree = "<group>"; };
+		CA0C98D00D15C2C300E23496 /* AtxInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxInterfaces.h; sourceTree = "<group>"; };
+		CA0C98D10D15C2C400E23496 /* AtxIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxIterator.h; sourceTree = "<group>"; };
+		CA0C98D20D15C2C400E23496 /* AtxList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxList.c; sourceTree = "<group>"; };
+		CA0C98D30D15C2C400E23496 /* AtxList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxList.h; sourceTree = "<group>"; };
+		CA0C98D40D15C2C400E23496 /* AtxLogging.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxLogging.c; sourceTree = "<group>"; };
+		CA0C98D50D15C2C400E23496 /* AtxLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxLogging.h; sourceTree = "<group>"; };
+		CA0C98D60D15C2C400E23496 /* AtxMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxMap.c; sourceTree = "<group>"; };
+		CA0C98D70D15C2C400E23496 /* AtxMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxMap.h; sourceTree = "<group>"; };
+		CA0C98D80D15C2C400E23496 /* AtxModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxModule.h; sourceTree = "<group>"; };
+		CA0C98D90D15C2C400E23496 /* AtxProperties.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxProperties.c; sourceTree = "<group>"; };
+		CA0C98DA0D15C2C400E23496 /* AtxProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxProperties.h; sourceTree = "<group>"; };
+		CA0C98DB0D15C2C400E23496 /* AtxReferenceable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxReferenceable.h; sourceTree = "<group>"; };
+		CA0C98DC0D15C2C400E23496 /* AtxResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxResults.h; sourceTree = "<group>"; };
+		CA0C98DD0D15C2C400E23496 /* AtxRingBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxRingBuffer.c; sourceTree = "<group>"; };
+		CA0C98DE0D15C2C400E23496 /* AtxRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxRingBuffer.h; sourceTree = "<group>"; };
+		CA0C98DF0D15C2C400E23496 /* AtxSockets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxSockets.c; sourceTree = "<group>"; };
+		CA0C98E00D15C2C400E23496 /* AtxSockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxSockets.h; sourceTree = "<group>"; };
+		CA0C98E10D15C2C400E23496 /* AtxStreams.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxStreams.c; sourceTree = "<group>"; };
+		CA0C98E20D15C2C400E23496 /* AtxStreams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxStreams.h; sourceTree = "<group>"; };
+		CA0C98E30D15C2C400E23496 /* AtxString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxString.c; sourceTree = "<group>"; };
+		CA0C98E40D15C2C400E23496 /* AtxString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxString.h; sourceTree = "<group>"; };
+		CA0C98E50D15C2C400E23496 /* AtxSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxSystem.h; sourceTree = "<group>"; };
+		CA0C98E60D15C2C400E23496 /* AtxTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxTime.h; sourceTree = "<group>"; };
+		CA0C98E70D15C2C400E23496 /* AtxTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxTypes.h; sourceTree = "<group>"; };
+		CA0C98E80D15C2C400E23496 /* AtxUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxUtils.c; sourceTree = "<group>"; };
+		CA0C98E90D15C2C400E23496 /* AtxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxUtils.h; sourceTree = "<group>"; };
+		CA0C98EA0D15C2C400E23496 /* AtxVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxVersion.h; sourceTree = "<group>"; };
+		CA0C98ED0D15C2C400E23496 /* InterfacesExample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = InterfacesExample.c; sourceTree = "<group>"; };
+		CA0C98F00D15C2C400E23496 /* AtxBsdSockets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxBsdSockets.c; sourceTree = "<group>"; };
+		CA0C98F20D15C2C400E23496 /* AtxPosixSystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxPosixSystem.c; sourceTree = "<group>"; };
+		CA0C98F60D15C2C400E23496 /* AtxStdcConsole.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxStdcConsole.c; sourceTree = "<group>"; };
+		CA0C98F70D15C2C400E23496 /* AtxStdcDebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxStdcDebug.c; sourceTree = "<group>"; };
+		CA0C98F80D15C2C400E23496 /* AtxStdcEnvironment.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxStdcEnvironment.c; sourceTree = "<group>"; };
+		CA0C98F90D15C2C400E23496 /* AtxStdcFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxStdcFile.c; sourceTree = "<group>"; };
+		CA0C990C0D15C2C400E23496 /* ContainersTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ContainersTest.c; sourceTree = "<group>"; };
+		CA0C990E0D15C2C400E23496 /* HttpTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HttpTest.c; sourceTree = "<group>"; };
+		CA0C99100D15C2C400E23496 /* LoggingTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LoggingTest.c; sourceTree = "<group>"; };
+		CA0C99120D15C2C400E23496 /* MiscTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MiscTest.c; sourceTree = "<group>"; };
+		CA0C99140D15C2C400E23496 /* PropertiesTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PropertiesTest.c; sourceTree = "<group>"; };
+		CA0C99160D15C2C400E23496 /* RingBufferTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RingBufferTest.c; sourceTree = "<group>"; };
+		CA0C99180D15C2C400E23496 /* StringsTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = StringsTest.c; sourceTree = "<group>"; };
+		CA0C99A20D15CFBB00E23496 /* ContainersTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContainersTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C99BD0D15D03500E23496 /* HttpTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HttpTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C99CB0D15D06000E23496 /* RingBufferTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RingBufferTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C99E90D15D0AA00E23496 /* StringsTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringsTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C99FD0D15D0E900E23496 /* MiscTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MiscTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C9A120D15D12100E23496 /* LoggingTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LoggingTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C9A260D15D16C00E23496 /* NetPump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetPump; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA3D5A10F97CD6500BAE44C /* FilesTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FilesTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA3D5AB0F97CD9300BAE44C /* FilesTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FilesTest.c; sourceTree = "<group>"; };
+		CAE3A9211064D1CD00EBAD97 /* AtxJson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtxJson.c; sourceTree = "<group>"; };
+		CAE3A9221064D1CD00EBAD97 /* AtxJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxJson.h; sourceTree = "<group>"; };
+		CAE3A9281064D1F900EBAD97 /* JsonTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JsonTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE3A9321064D22F00EBAD97 /* JsonTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JsonTest.c; sourceTree = "<group>"; };
+		CAF9556B1268EA390063F480 /* AtxThreads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtxThreads.h; sourceTree = "<group>"; };
+		D2AAC046055464E500DB518D /* libAtomix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAtomix.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA0C98AE0D15C14800E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C997D0D15CEA200E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99A00D15CFBB00E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99AA0D15CFD200E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99BB0D15D03500E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99C60D15D04900E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99C90D15D06000E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99D60D15D08000E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99E70D15D0AA00E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99F20D15D0BB00E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99FB0D15D0E900E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C9A060D15D0F900E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C9A100D15D12100E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C9A1B0D15D13100E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C9A240D15D16C00E23496 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C9A300D15D18300E23496 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA3D59F0F97CD6500BAE44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA3D5A70F97CD6F00BAE44C /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAE3A9261064D1F900EBAD97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE3A92E1064D20400EBAD97 /* libAtomix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Atomix */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98BB0D15C2C300E23496 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = Atomix;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libAtomix.a */,
+				CA0C98B00D15C14800E23496 /* PropertiesTest */,
+				CA0C99A20D15CFBB00E23496 /* ContainersTest */,
+				CA0C99BD0D15D03500E23496 /* HttpTest */,
+				CA0C99CB0D15D06000E23496 /* RingBufferTest */,
+				CA0C99E90D15D0AA00E23496 /* StringsTest */,
+				CA0C99FD0D15D0E900E23496 /* MiscTest */,
+				CA0C9A120D15D12100E23496 /* LoggingTest */,
+				CA0C9A260D15D16C00E23496 /* NetPump */,
+				CAA3D5A10F97CD6500BAE44C /* FilesTest */,
+				CAE3A9281064D1F900EBAD97 /* JsonTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		CA0C98BB0D15C2C300E23496 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98BC0D15C2C300E23496 /* Apps */,
+				CA0C98BF0D15C2C300E23496 /* Core */,
+				CA0C98EB0D15C2C400E23496 /* Examples */,
+				CA0C98EE0D15C2C400E23496 /* System */,
+				CA0C990A0D15C2C400E23496 /* Tests */,
+			);
+			name = Source;
+			path = ../../../Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		CA0C98BC0D15C2C300E23496 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98BD0D15C2C300E23496 /* NetPump */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		CA0C98BD0D15C2C300E23496 /* NetPump */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98BE0D15C2C300E23496 /* NetPump.c */,
+			);
+			path = NetPump;
+			sourceTree = "<group>";
+		};
+		CA0C98BF0D15C2C300E23496 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CAF9556B1268EA390063F480 /* AtxThreads.h */,
+				CAE3A9211064D1CD00EBAD97 /* AtxJson.c */,
+				CAE3A9221064D1CD00EBAD97 /* AtxJson.h */,
+				CA0C98C00D15C2C300E23496 /* Atomix.h */,
+				CA0C98C10D15C2C300E23496 /* AtxConfig.h */,
+				CA0C98C20D15C2C300E23496 /* AtxConsole.c */,
+				CA0C98C30D15C2C300E23496 /* AtxConsole.h */,
+				CA0C98C40D15C2C300E23496 /* AtxDataBuffer.c */,
+				CA0C98C50D15C2C300E23496 /* AtxDataBuffer.h */,
+				CA0C98C60D15C2C300E23496 /* AtxDebug.c */,
+				CA0C98C70D15C2C300E23496 /* AtxDebug.h */,
+				CA0C98C80D15C2C300E23496 /* AtxDefs.h */,
+				CA0C98C90D15C2C300E23496 /* AtxDestroyable.c */,
+				CA0C98CA0D15C2C300E23496 /* AtxDestroyable.h */,
+				CA0C98CB0D15C2C300E23496 /* AtxFile.c */,
+				CA0C98CC0D15C2C300E23496 /* AtxFile.h */,
+				CA0C98CD0D15C2C300E23496 /* AtxHttp.c */,
+				CA0C98CE0D15C2C300E23496 /* AtxHttp.h */,
+				CA0C98CF0D15C2C300E23496 /* AtxInterfaces.c */,
+				CA0C98D00D15C2C300E23496 /* AtxInterfaces.h */,
+				CA0C98D10D15C2C400E23496 /* AtxIterator.h */,
+				CA0C98D20D15C2C400E23496 /* AtxList.c */,
+				CA0C98D30D15C2C400E23496 /* AtxList.h */,
+				CA0C98D40D15C2C400E23496 /* AtxLogging.c */,
+				CA0C98D50D15C2C400E23496 /* AtxLogging.h */,
+				CA0C98D60D15C2C400E23496 /* AtxMap.c */,
+				CA0C98D70D15C2C400E23496 /* AtxMap.h */,
+				CA0C98D80D15C2C400E23496 /* AtxModule.h */,
+				CA0C98D90D15C2C400E23496 /* AtxProperties.c */,
+				CA0C98DA0D15C2C400E23496 /* AtxProperties.h */,
+				CA0C98DB0D15C2C400E23496 /* AtxReferenceable.h */,
+				CA0C98DC0D15C2C400E23496 /* AtxResults.h */,
+				CA0C98DD0D15C2C400E23496 /* AtxRingBuffer.c */,
+				CA0C98DE0D15C2C400E23496 /* AtxRingBuffer.h */,
+				CA0C98DF0D15C2C400E23496 /* AtxSockets.c */,
+				CA0C98E00D15C2C400E23496 /* AtxSockets.h */,
+				CA0C98E10D15C2C400E23496 /* AtxStreams.c */,
+				CA0C98E20D15C2C400E23496 /* AtxStreams.h */,
+				CA0C98E30D15C2C400E23496 /* AtxString.c */,
+				CA0C98E40D15C2C400E23496 /* AtxString.h */,
+				CA0C98E50D15C2C400E23496 /* AtxSystem.h */,
+				CA0C98E60D15C2C400E23496 /* AtxTime.h */,
+				CA0C98E70D15C2C400E23496 /* AtxTypes.h */,
+				CA0C98E80D15C2C400E23496 /* AtxUtils.c */,
+				CA0C98E90D15C2C400E23496 /* AtxUtils.h */,
+				CA0C98EA0D15C2C400E23496 /* AtxVersion.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CA0C98EB0D15C2C400E23496 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98EC0D15C2C400E23496 /* Interfaces */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		CA0C98EC0D15C2C400E23496 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98ED0D15C2C400E23496 /* InterfacesExample.c */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CA0C98EE0D15C2C400E23496 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98EF0D15C2C400E23496 /* Bsd */,
+				CA0C98F10D15C2C400E23496 /* Posix */,
+				CA0C98F50D15C2C400E23496 /* StdC */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		CA0C98EF0D15C2C400E23496 /* Bsd */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98F00D15C2C400E23496 /* AtxBsdSockets.c */,
+			);
+			path = Bsd;
+			sourceTree = "<group>";
+		};
+		CA0C98F10D15C2C400E23496 /* Posix */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98F20D15C2C400E23496 /* AtxPosixSystem.c */,
+			);
+			path = Posix;
+			sourceTree = "<group>";
+		};
+		CA0C98F50D15C2C400E23496 /* StdC */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C98F60D15C2C400E23496 /* AtxStdcConsole.c */,
+				CA0C98F70D15C2C400E23496 /* AtxStdcDebug.c */,
+				CA0C98F80D15C2C400E23496 /* AtxStdcEnvironment.c */,
+				CA0C98F90D15C2C400E23496 /* AtxStdcFile.c */,
+			);
+			path = StdC;
+			sourceTree = "<group>";
+		};
+		CA0C990A0D15C2C400E23496 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3A9311064D22F00EBAD97 /* Json */,
+				CAA3D5AA0F97CD9300BAE44C /* Files */,
+				CA0C990B0D15C2C400E23496 /* Containers */,
+				CA0C990D0D15C2C400E23496 /* Http */,
+				CA0C990F0D15C2C400E23496 /* Logging */,
+				CA0C99110D15C2C400E23496 /* Misc */,
+				CA0C99130D15C2C400E23496 /* Properties */,
+				CA0C99150D15C2C400E23496 /* RingBuffer */,
+				CA0C99170D15C2C400E23496 /* Strings */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CA0C990B0D15C2C400E23496 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C990C0D15C2C400E23496 /* ContainersTest.c */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		CA0C990D0D15C2C400E23496 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C990E0D15C2C400E23496 /* HttpTest.c */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		CA0C990F0D15C2C400E23496 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C99100D15C2C400E23496 /* LoggingTest.c */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		CA0C99110D15C2C400E23496 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C99120D15C2C400E23496 /* MiscTest.c */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		CA0C99130D15C2C400E23496 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C99140D15C2C400E23496 /* PropertiesTest.c */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		CA0C99150D15C2C400E23496 /* RingBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C99160D15C2C400E23496 /* RingBufferTest.c */,
+			);
+			path = RingBuffer;
+			sourceTree = "<group>";
+		};
+		CA0C99170D15C2C400E23496 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C99180D15C2C400E23496 /* StringsTest.c */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		CAA3D5AA0F97CD9300BAE44C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAA3D5AB0F97CD9300BAE44C /* FilesTest.c */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		CAE3A9311064D22F00EBAD97 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3A9321064D22F00EBAD97 /* JsonTest.c */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99290D15C31600E23496 /* AtxSystem.h in Headers */,
+				CA0C992B0D15C31700E23496 /* AtxUtils.h in Headers */,
+				CA0C992C0D15C31800E23496 /* AtxDestroyable.h in Headers */,
+				CA0C992D0D15C31900E23496 /* AtxSockets.h in Headers */,
+				CA0C992E0D15C31A00E23496 /* AtxStreams.h in Headers */,
+				CA0C99300D15C31C00E23496 /* AtxInterfaces.h in Headers */,
+				CA0C99310D15C31C00E23496 /* AtxDebug.h in Headers */,
+				CA0C99320D15C31D00E23496 /* AtxList.h in Headers */,
+				CA0C99330D15C31E00E23496 /* AtxFile.h in Headers */,
+				CA0C99340D15C31E00E23496 /* AtxConsole.h in Headers */,
+				CA0C99360D15C32000E23496 /* AtxDefs.h in Headers */,
+				CA0C99370D15C32100E23496 /* AtxResults.h in Headers */,
+				CA0C99380D15C32200E23496 /* AtxModule.h in Headers */,
+				CA0C99390D15C32300E23496 /* AtxTime.h in Headers */,
+				CA0C993B0D15C32400E23496 /* AtxDataBuffer.h in Headers */,
+				CA0C993C0D15C32600E23496 /* AtxProperties.h in Headers */,
+				CA0C99400D15C32A00E23496 /* AtxLogging.h in Headers */,
+				CA0C99430D15C32C00E23496 /* AtxHttp.h in Headers */,
+				CA0C99440D15C32D00E23496 /* AtxRingBuffer.h in Headers */,
+				CA0C99450D15C32D00E23496 /* AtxReferenceable.h in Headers */,
+				CA0C99460D15C32E00E23496 /* AtxIterator.h in Headers */,
+				CA0C994D0D15C33300E23496 /* Atomix.h in Headers */,
+				CA0C994E0D15C33400E23496 /* AtxConfig.h in Headers */,
+				CA0C994F0D15C33500E23496 /* AtxString.h in Headers */,
+				CA0C99500D15C33700E23496 /* AtxVersion.h in Headers */,
+				CA0C99510D15C33800E23496 /* AtxTypes.h in Headers */,
+				CA0C99520D15C33900E23496 /* AtxMap.h in Headers */,
+				CAE3A9241064D1CD00EBAD97 /* AtxJson.h in Headers */,
+				CAF9556C1268EA390063F480 /* AtxThreads.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CA0C98AF0D15C14800E23496 /* PropertiesTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C98B70D15C16700E23496 /* Build configuration list for PBXNativeTarget "PropertiesTest" */;
+			buildPhases = (
+				CA0C98AD0D15C14800E23496 /* Sources */,
+				CA0C98AE0D15C14800E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C995E0D15C36C00E23496 /* PBXTargetDependency */,
+			);
+			name = PropertiesTest;
+			productName = PropertiesTest;
+			productReference = CA0C98B00D15C14800E23496 /* PropertiesTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C99A10D15CFBB00E23496 /* ContainersTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C99B10D15CFD700E23496 /* Build configuration list for PBXNativeTarget "ContainersTest" */;
+			buildPhases = (
+				CA0C999F0D15CFBB00E23496 /* Sources */,
+				CA0C99A00D15CFBB00E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C99B90D15D01E00E23496 /* PBXTargetDependency */,
+			);
+			name = ContainersTest;
+			productName = ContainersTest;
+			productReference = CA0C99A20D15CFBB00E23496 /* ContainersTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C99BC0D15D03500E23496 /* HttpTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C99E40D15D08500E23496 /* Build configuration list for PBXNativeTarget "HttpTest" */;
+			buildPhases = (
+				CA0C99BA0D15D03500E23496 /* Sources */,
+				CA0C99BB0D15D03500E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C99C50D15D03A00E23496 /* PBXTargetDependency */,
+			);
+			name = HttpTest;
+			productName = HttpTest;
+			productReference = CA0C99BD0D15D03500E23496 /* HttpTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C99CA0D15D06000E23496 /* RingBufferTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C99E50D15D08500E23496 /* Build configuration list for PBXNativeTarget "RingBufferTest" */;
+			buildPhases = (
+				CA0C99C80D15D06000E23496 /* Sources */,
+				CA0C99C90D15D06000E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C99D30D15D06500E23496 /* PBXTargetDependency */,
+			);
+			name = RingBufferTest;
+			productName = RingBufferTest;
+			productReference = CA0C99CB0D15D06000E23496 /* RingBufferTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C99E80D15D0AA00E23496 /* StringsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C99F90D15D0CD00E23496 /* Build configuration list for PBXNativeTarget "StringsTest" */;
+			buildPhases = (
+				CA0C99E60D15D0AA00E23496 /* Sources */,
+				CA0C99E70D15D0AA00E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C99F10D15D0B000E23496 /* PBXTargetDependency */,
+			);
+			name = StringsTest;
+			productName = StringsTest;
+			productReference = CA0C99E90D15D0AA00E23496 /* StringsTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C99FC0D15D0E900E23496 /* MiscTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C9A0D0D15D10500E23496 /* Build configuration list for PBXNativeTarget "MiscTest" */;
+			buildPhases = (
+				CA0C99FA0D15D0E900E23496 /* Sources */,
+				CA0C99FB0D15D0E900E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C9A050D15D0EE00E23496 /* PBXTargetDependency */,
+			);
+			name = MiscTest;
+			productName = MiscTest;
+			productReference = CA0C99FD0D15D0E900E23496 /* MiscTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C9A110D15D12100E23496 /* LoggingTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C9A220D15D13E00E23496 /* Build configuration list for PBXNativeTarget "LoggingTest" */;
+			buildPhases = (
+				CA0C9A0F0D15D12100E23496 /* Sources */,
+				CA0C9A100D15D12100E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C9A1A0D15D12700E23496 /* PBXTargetDependency */,
+			);
+			name = LoggingTest;
+			productName = LoggingTest;
+			productReference = CA0C9A120D15D12100E23496 /* LoggingTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CA0C9A250D15D16C00E23496 /* NetPump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C9A360D15D18700E23496 /* Build configuration list for PBXNativeTarget "NetPump" */;
+			buildPhases = (
+				CA0C9A230D15D16C00E23496 /* Sources */,
+				CA0C9A240D15D16C00E23496 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C9A2E0D15D17100E23496 /* PBXTargetDependency */,
+			);
+			name = NetPump;
+			productName = NetPump;
+			productReference = CA0C9A260D15D16C00E23496 /* NetPump */;
+			productType = "com.apple.product-type.tool";
+		};
+		CAA3D5A00F97CD6500BAE44C /* FilesTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAA3D5AD0F97CD9300BAE44C /* Build configuration list for PBXNativeTarget "FilesTest" */;
+			buildPhases = (
+				CAA3D59E0F97CD6500BAE44C /* Sources */,
+				CAA3D59F0F97CD6500BAE44C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAA3D5A60F97CD6A00BAE44C /* PBXTargetDependency */,
+			);
+			name = FilesTest;
+			productName = FilesTest;
+			productReference = CAA3D5A10F97CD6500BAE44C /* FilesTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		CAE3A9271064D1F900EBAD97 /* JsonTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAE3A9341064D23000EBAD97 /* Build configuration list for PBXNativeTarget "JsonTest" */;
+			buildPhases = (
+				CAE3A9251064D1F900EBAD97 /* Sources */,
+				CAE3A9261064D1F900EBAD97 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAE3A92D1064D1FF00EBAD97 /* PBXTargetDependency */,
+			);
+			name = JsonTest;
+			productName = JsonTest;
+			productReference = CAE3A9281064D1F900EBAD97 /* JsonTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		D2AAC045055464E500DB518D /* Atomix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "Atomix" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Atomix;
+			productName = Atomix;
+			productReference = D2AAC046055464E500DB518D /* libAtomix.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Atomix" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Atomix */;
+			projectDirPath = "";
+			projectRoot = ../../..;
+			targets = (
+				D2AAC045055464E500DB518D /* Atomix */,
+				CA0C98AF0D15C14800E23496 /* PropertiesTest */,
+				CA0C99A10D15CFBB00E23496 /* ContainersTest */,
+				CA0C99BC0D15D03500E23496 /* HttpTest */,
+				CA0C99CA0D15D06000E23496 /* RingBufferTest */,
+				CA0C99E80D15D0AA00E23496 /* StringsTest */,
+				CA0C99FC0D15D0E900E23496 /* MiscTest */,
+				CA0C9A110D15D12100E23496 /* LoggingTest */,
+				CAA3D5A00F97CD6500BAE44C /* FilesTest */,
+				CAE3A9271064D1F900EBAD97 /* JsonTest */,
+				CA0C9A250D15D16C00E23496 /* NetPump */,
+				CA0C9A370D15D1A700E23496 /* Tests */,
+				CA0C9A490D15D1C600E23496 /* Apps */,
+				CAAA4C660E35183B00783AE4 /* All */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA0C98AD0D15C14800E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C995B0D15C35F00E23496 /* PropertiesTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C999F0D15CFBB00E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99A90D15CFCA00E23496 /* ContainersTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99BA0D15D03500E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99D40D15D07300E23496 /* HttpTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99C80D15D06000E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99D50D15D07900E23496 /* RingBufferTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99E60D15D0AA00E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C99F30D15D0C900E23496 /* StringsTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C99FA0D15D0E900E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C9A070D15D10100E23496 /* MiscTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C9A0F0D15D12100E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C9A1C0D15D13B00E23496 /* LoggingTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0C9A230D15D16C00E23496 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C9A2F0D15D17D00E23496 /* NetPump.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAA3D59E0F97CD6500BAE44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA3D5AC0F97CD9300BAE44C /* FilesTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAE3A9251064D1F900EBAD97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE3A9331064D22F00EBAD97 /* JsonTest.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0C992A0D15C31600E23496 /* AtxUtils.c in Sources */,
+				CA0C992F0D15C31B00E23496 /* AtxDataBuffer.c in Sources */,
+				CA0C99350D15C31F00E23496 /* AtxHttp.c in Sources */,
+				CA0C993A0D15C32300E23496 /* AtxSockets.c in Sources */,
+				CA0C993D0D15C32600E23496 /* AtxInterfaces.c in Sources */,
+				CA0C993E0D15C32800E23496 /* AtxLogging.c in Sources */,
+				CA0C993F0D15C32900E23496 /* AtxDestroyable.c in Sources */,
+				CA0C99410D15C32A00E23496 /* AtxString.c in Sources */,
+				CA0C99420D15C32B00E23496 /* AtxStreams.c in Sources */,
+				CA0C99470D15C32F00E23496 /* AtxRingBuffer.c in Sources */,
+				CA0C99480D15C32F00E23496 /* AtxList.c in Sources */,
+				CA0C99490D15C33000E23496 /* AtxProperties.c in Sources */,
+				CA0C994A0D15C33100E23496 /* AtxMap.c in Sources */,
+				CA0C994B0D15C33200E23496 /* AtxDebug.c in Sources */,
+				CA0C994C0D15C33200E23496 /* AtxConsole.c in Sources */,
+				CA0C99530D15C33A00E23496 /* AtxFile.c in Sources */,
+				CA0C99540D15C34E00E23496 /* AtxStdcConsole.c in Sources */,
+				CA0C99550D15C34F00E23496 /* AtxBsdSockets.c in Sources */,
+				CA0C99560D15C35000E23496 /* AtxStdcEnvironment.c in Sources */,
+				CA0C99570D15C35000E23496 /* AtxStdcDebug.c in Sources */,
+				CA0C99580D15C35100E23496 /* AtxPosixSystem.c in Sources */,
+				CA0C99590D15C35200E23496 /* AtxStdcFile.c in Sources */,
+				CAE3A9231064D1CD00EBAD97 /* AtxJson.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA0C995E0D15C36C00E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C995D0D15C36C00E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C99B90D15D01E00E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C99B80D15D01E00E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C99C50D15D03A00E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C99C40D15D03A00E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C99D30D15D06500E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C99D20D15D06500E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C99F10D15D0B000E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C99F00D15D0B000E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A050D15D0EE00E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C9A040D15D0EE00E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A1A0D15D12700E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C9A190D15D12700E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A2E0D15D17100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CA0C9A2D0D15D17100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A3C0D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C98AF0D15C14800E23496 /* PropertiesTest */;
+			targetProxy = CA0C9A3B0D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A3E0D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C99A10D15CFBB00E23496 /* ContainersTest */;
+			targetProxy = CA0C9A3D0D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A400D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C99BC0D15D03500E23496 /* HttpTest */;
+			targetProxy = CA0C9A3F0D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A420D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C99CA0D15D06000E23496 /* RingBufferTest */;
+			targetProxy = CA0C9A410D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A440D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C99E80D15D0AA00E23496 /* StringsTest */;
+			targetProxy = CA0C9A430D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A460D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C99FC0D15D0E900E23496 /* MiscTest */;
+			targetProxy = CA0C9A450D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A480D15D1B100E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C9A110D15D12100E23496 /* LoggingTest */;
+			targetProxy = CA0C9A470D15D1B100E23496 /* PBXContainerItemProxy */;
+		};
+		CA0C9A4E0D15D1CC00E23496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C9A250D15D16C00E23496 /* NetPump */;
+			targetProxy = CA0C9A4D0D15D1CC00E23496 /* PBXContainerItemProxy */;
+		};
+		CAA3D5A60F97CD6A00BAE44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CAA3D5A50F97CD6A00BAE44C /* PBXContainerItemProxy */;
+		};
+		CAA3D5A90F97CD7E00BAE44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAA3D5A00F97CD6500BAE44C /* FilesTest */;
+			targetProxy = CAA3D5A80F97CD7E00BAE44C /* PBXContainerItemProxy */;
+		};
+		CAAA4C6A0E35184200783AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C9A490D15D1C600E23496 /* Apps */;
+			targetProxy = CAAA4C690E35184200783AE4 /* PBXContainerItemProxy */;
+		};
+		CAAA4C6C0E35184400783AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA0C9A370D15D1A700E23496 /* Tests */;
+			targetProxy = CAAA4C6B0E35184400783AE4 /* PBXContainerItemProxy */;
+		};
+		CAE3A92D1064D1FF00EBAD97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* Atomix */;
+			targetProxy = CAE3A92C1064D1FF00EBAD97 /* PBXContainerItemProxy */;
+		};
+		CAE3A9301064D21400EBAD97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAE3A9271064D1F900EBAD97 /* JsonTest */;
+			targetProxy = CAE3A92F1064D21400EBAD97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Atomix;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Atomix;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ATX_DEBUG,
+					ATX_CONFIG_ENABLE_LOGGING,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc x86_64 armv6 armv7";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+				);
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc x86_64 armv6 armv7";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+				);
+			};
+			name = Release;
+		};
+		CA0C98B50D15C14900E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = PropertiesTest;
+			};
+			name = Debug;
+		};
+		CA0C98B60D15C14900E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = PropertiesTest;
+			};
+			name = Release;
+		};
+		CA0C99A40D15CFBB00E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ContainersTest;
+			};
+			name = Debug;
+		};
+		CA0C99A50D15CFBB00E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ContainersTest;
+			};
+			name = Release;
+		};
+		CA0C99C20D15D03500E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = HttpTest;
+			};
+			name = Debug;
+		};
+		CA0C99C30D15D03500E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = HttpTest;
+			};
+			name = Release;
+		};
+		CA0C99CD0D15D06000E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RingBufferTest;
+			};
+			name = Debug;
+		};
+		CA0C99CE0D15D06000E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RingBufferTest;
+			};
+			name = Release;
+		};
+		CA0C99EE0D15D0AB00E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = StringsTest;
+			};
+			name = Debug;
+		};
+		CA0C99EF0D15D0AB00E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = StringsTest;
+			};
+			name = Release;
+		};
+		CA0C9A020D15D0E900E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = MiscTest;
+			};
+			name = Debug;
+		};
+		CA0C9A030D15D0E900E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = MiscTest;
+			};
+			name = Release;
+		};
+		CA0C9A140D15D12200E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = LoggingTest;
+			};
+			name = Debug;
+		};
+		CA0C9A150D15D12200E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = LoggingTest;
+			};
+			name = Release;
+		};
+		CA0C9A280D15D16D00E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = NetPump;
+			};
+			name = Debug;
+		};
+		CA0C9A290D15D16D00E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = NetPump;
+			};
+			name = Release;
+		};
+		CA0C9A380D15D1A700E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Tests;
+			};
+			name = Debug;
+		};
+		CA0C9A390D15D1A700E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Tests;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CA0C9A4A0D15D1C600E23496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Apps;
+			};
+			name = Debug;
+		};
+		CA0C9A4B0D15D1C600E23496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Apps;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CAA3D5A30F97CD6600BAE44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = FilesTest;
+			};
+			name = Debug;
+		};
+		CAA3D5A40F97CD6600BAE44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = FilesTest;
+			};
+			name = Release;
+		};
+		CAAA4C670E35183C00783AE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		CAAA4C680E35183C00783AE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		CAE3A92A1064D1FA00EBAD97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = JsonTest;
+			};
+			name = Debug;
+		};
+		CAE3A92B1064D1FA00EBAD97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = JsonTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "Atomix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Atomix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C98B70D15C16700E23496 /* Build configuration list for PBXNativeTarget "PropertiesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C98B50D15C14900E23496 /* Debug */,
+				CA0C98B60D15C14900E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C99B10D15CFD700E23496 /* Build configuration list for PBXNativeTarget "ContainersTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C99A40D15CFBB00E23496 /* Debug */,
+				CA0C99A50D15CFBB00E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C99E40D15D08500E23496 /* Build configuration list for PBXNativeTarget "HttpTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C99C20D15D03500E23496 /* Debug */,
+				CA0C99C30D15D03500E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C99E50D15D08500E23496 /* Build configuration list for PBXNativeTarget "RingBufferTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C99CD0D15D06000E23496 /* Debug */,
+				CA0C99CE0D15D06000E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C99F90D15D0CD00E23496 /* Build configuration list for PBXNativeTarget "StringsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C99EE0D15D0AB00E23496 /* Debug */,
+				CA0C99EF0D15D0AB00E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C9A0D0D15D10500E23496 /* Build configuration list for PBXNativeTarget "MiscTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C9A020D15D0E900E23496 /* Debug */,
+				CA0C9A030D15D0E900E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C9A220D15D13E00E23496 /* Build configuration list for PBXNativeTarget "LoggingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C9A140D15D12200E23496 /* Debug */,
+				CA0C9A150D15D12200E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C9A360D15D18700E23496 /* Build configuration list for PBXNativeTarget "NetPump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C9A280D15D16D00E23496 /* Debug */,
+				CA0C9A290D15D16D00E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C9AA40D15D1F700E23496 /* Build configuration list for PBXAggregateTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C9A380D15D1A700E23496 /* Debug */,
+				CA0C9A390D15D1A700E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0C9AA50D15D1F700E23496 /* Build configuration list for PBXAggregateTarget "Apps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C9A4A0D15D1C600E23496 /* Debug */,
+				CA0C9A4B0D15D1C600E23496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAA3D5AD0F97CD9300BAE44C /* Build configuration list for PBXNativeTarget "FilesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA3D5A30F97CD6600BAE44C /* Debug */,
+				CAA3D5A40F97CD6600BAE44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAAA4C940E35186200783AE4 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAAA4C670E35183C00783AE4 /* Debug */,
+				CAAA4C680E35183C00783AE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAE3A9341064D23000EBAD97 /* Build configuration list for PBXNativeTarget "JsonTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE3A92A1064D1FA00EBAD97 /* Debug */,
+				CAE3A92B1064D1FA00EBAD97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

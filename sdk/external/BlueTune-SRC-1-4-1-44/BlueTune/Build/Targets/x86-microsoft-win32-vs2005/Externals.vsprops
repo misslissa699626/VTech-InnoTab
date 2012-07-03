@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Externals"
+	>
+	<UserMacro
+		Name="BLT_DDPLUS_PLUGIN_HOME"
+		Value="$(SolutionDir)\..\..\..\..\DolbyDigitalPlusPlugin"
+	/>
+	<UserMacro
+		Name="BLT_DDPLUS_PLUGIN_LIB"
+		Value=""
+	/>
+	<UserMacro
+		Name="IPP_UMC_ROOT"
+		Value="C:\Program Files\Intel\IPP\6.1.1.044\ipp-samples\audio-video-codecs"
+	/>
+	<UserMacro
+		Name="IPP_UMC_LIB"
+		Value="&quot;C:\Program Files\Intel\IPP\6.1.1.044\ipp-samples\audio-video-codecs\application\IppUmcLib\$(ConfigurationName)\IppUmcLib.lib&quot;"
+	/>
+</VisualStudioPropertySheet>

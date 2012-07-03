@@ -1,0 +1,2 @@
+modprobe g_spmp_storage file=/dev/nanda3 stall=0 removable=1
+

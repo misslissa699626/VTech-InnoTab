@@ -1,0 +1,4 @@
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcm/lcm_SPFD5420A.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcm/lcm_GPM765I0.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcm/lcm_FTP300D62N_tft0.ko
+kernel//home/vicsiu/GPL/openplatform.M8/platform/common/driver/lcm/lcm_ILI9325_tft0.ko

@@ -1,0 +1,43 @@
+BlueTune Media Framework 
+    --- Examples ---
+------------------------
+
+1. Example Code
+
+The BlueTune distribution includes a number of sample application that
+illustrate the use of the API.
+
+1.1 BtPlay
+
+This application shows how to use the low-level synchronous decoding API
+in a command line application. The application is invoked with command line
+arguments that can set various options, and a list of name of inputs to play
+(such as file names, URLs, etc...). The application will play all inputs
+sequentially, and exit.
+
+1.2 BtController
+
+This application shows how to use the high-level asynchronous player API in 
+a command line application. The application is invoked from the command line, 
+and takes commands on its text input. See the source code for a list of
+commands and their syntax. All even notifications from the playback thread 
+are also displayed on the text output.
+
+1.3 BtGtk
+
+This application shows how to use the high-level asynchronous player API in 
+a GTK application. This application shows a simple dialog box with a menu
+to choose a file, and a text box to choose an non-file input name. The 
+dialog controls also include motion control buttons (play, stop, ...) and 
+a seek bar. The lower part of the dialog window shows properties of the stream
+that is being played.
+
+1.4 BtMfcGui
+
+This application shows how to use the high-level asynchronous player API in 
+a MFC GUI application (Windows). 
+This application shows a simple dialog box with a button to choose a file, 
+and a text box to choose an non-file input name. 
+The dialog controls also include motion control buttons (play, stop, ...) and 
+a seek bar. The lower part of the dialog window shows properties of the stream
+that is being played.

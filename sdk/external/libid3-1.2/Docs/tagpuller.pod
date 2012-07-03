@@ -1,0 +1,27 @@
+=head1 tagpuller
+
+tagpuller - Application for extracting ID3 tags from files.
+
+=head1 SYNOPSIS
+
+  tagpuller [ directory ] ...
+
+=head1 DESCRIPTION
+
+Application for extracting ID3 tags from files into new files. New files will be named as the old files except that the mp3 extention will be changed to ".tag".
+
+=head1 SEE ALSO
+
+libID3(3), http://tangent.org/
+
+=head1 AUTHOR
+
+Brian Aker, E<lt>brian@tangent.orgE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2004 by Brian Aker
+
+This application is free to use. See the LICENSE file for details. 
+
+=cut

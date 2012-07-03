@@ -1,0 +1,5 @@
+
+config SPMP8050_ROS
+	tristate "Support for ROS API"
+	depends on ARCH_SPMP8050
+	default m

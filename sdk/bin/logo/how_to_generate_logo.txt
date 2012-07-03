@@ -1,0 +1,12 @@
+
+1.Prepare RGB888 raw file
+
+2.Generate logo by using rgb2565, usage
+	rgb2565 -rle <input_filename> logo_0_480_272.rle
+
+3.Logo filename rule
+	logo_X_Width_Height.rle
+	X : display dev num
+	Width : width of logo
+	Height : Height of logo
+

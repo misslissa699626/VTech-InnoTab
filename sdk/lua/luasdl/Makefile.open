@@ -1,0 +1,68 @@
+#/**************************************************************************
+# *                                                                        *
+# *         Copyright (c) 2002 by Sunplus mMedia Technology Co., Ltd.      *
+# *                                                                        *
+# *  This software is copyrighted by and is the property of Sunplus        *
+# *  Technology Co., Ltd. All rights are reserved by Sunplus Technology    *
+# *  Co., Ltd. This software may only be used in accordance with the       *
+# *  corresponding license agreement. Any unauthorized use, duplication,   *
+# *  distribution, or disclosure of this software is expressly forbidden.  *
+# *                                                                        *
+# *  This Copyright notice MUST not be removed or modified without prior   *
+# *  written consent of Sunplus Technology Co., Ltd.                       *
+# *                                                                        *
+# *  Sunplus mMedia Technology Co., Ltd. reserves the right to modify this *
+# *  software without notice.                                              *
+# *                                                                        *
+# *  Sunplus mMedia Technology Co., Ltd.                                   *
+# *  19, Innovation First Road, Science-Based Industrial Park,             *
+# *  Hsin-Chu, Taiwan, R.O.C.                                              *
+# *                                                                        *
+# *  Author: Roger Hsu                                                     *
+# *                                                                        *
+# **************************************************************************/
+TOPDIR := ../../../
+include $(TOPDIR)sdk/build/core/config.mak
+
+GOAL     = lua_sdl
+
+CFLAGS += -I$(SDK_DIR)/include
+CFLAGS += -I$(OUT_SDK_DIR)/include
+CFLAGS += -I$(OUT_SDK_DIR)/include/SDL
+CFLAGS += -I$(OUT_DIR)/lua/lua-5.1/include
+CFLAGS += -I$(PRODUCT_DIR)
+CFLAGS += -g -O2 
+
+LDFLAGS += -lz -lpthread -lrt -L$(OUT_SDK_DIR)/lib -lSDL -lSDL_gfx -lts -lSDL_image -lpng -ljpeg -ltiff -lfreetype2 -lSDL_ttf
+
+#---------------------------------------------------------------------------
+# Intermediate objects
+#---------------------------------------------------------------------------
+OBJS += \
+	lua_sdl.o \
+	fntMgr.o
+
+#---------------------------------------------------------------------------
+# Explicit ruls
+#---------------------------------------------------------------------------
+all: $(GOAL).so
+	$(MSG_SPLIT_LINE)
+	@$(MKDIR) -p $(OUT_DIR)/lua/clib
+	@$(CP) -u $(GOAL).so $(OUT_DIR)/lua/clib/$(GOAL).so
+
+$(GOAL).so: $(OBJS)
+	$(MSG_SPLIT_LINE)
+	$(MSG_ARCHIVE)
+	@$(TARGET_CC) -shared $(LDFLAGS) -o $(GOAL).so $(OBJS)
+	$(MSG_GOAL_OK)
+
+.PHONY: clean
+clean:
+	$(MSG_SPLIT_LINE)
+	$(RM) -f $(OUT_DIR)/lua/clib/$(GOAL).so
+	$(RM) -f $(OBJS:.o=.d) $(OBJS) $(GOAL).a $(GOAL).so
+
+.PHONY: release
+release:
+
+-include $(OBJS:.o=.d)

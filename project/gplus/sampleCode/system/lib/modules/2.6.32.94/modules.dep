@@ -1,0 +1,101 @@
+kernel/arch/arm/mach-gpl32900/rtc/gp_rtc_module.ko:
+kernel/arch/arm/mach-gpl32900/display/gp_display.ko:
+kernel/arch/arm/mach-gpl32900/display/gp_fb.ko: kernel/arch/arm/mach-gpl32900/display/gp_display.ko
+kernel/arch/arm/mach-gpl32900/display/tv_ntsc.ko: kernel/arch/arm/mach-gpl32900/display/gp_display.ko
+kernel/arch/arm/mach-gpl32900/display/gp_display1.ko:
+kernel/arch/arm/mach-gpl32900/display/gp_fb1.ko: kernel/arch/arm/mach-gpl32900/display/gp_display1.ko
+kernel/arch/arm/mach-gpl32900/display/gp_display2.ko:
+kernel/arch/arm/mach-gpl32900/display/gp_fb2.ko: kernel/arch/arm/mach-gpl32900/display/gp_display2.ko
+kernel/arch/arm/mach-gpl32900/display/tv1.ko: kernel/arch/arm/mach-gpl32900/display/gp_display2.ko
+kernel/arch/arm/mach-gpl32900/ceva/gp_ceva_module.ko:
+kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko:
+kernel/arch/arm/mach-gpl32900/2d/gp_2d_module.ko: kernel/arch/arm/mach-gpl32900/line_buffer/gp_line_buffer_module.ko
+kernel/arch/arm/mach-gpl32900/scale/gp_scale_module.ko: kernel/arch/arm/mach-gpl32900/line_buffer/gp_line_buffer_module.ko
+kernel/arch/arm/mach-gpl32900/scale2/gp_scale2_module.ko:
+kernel/arch/arm/mach-gpl32900/watchdog/gp_wdt_module.ko:
+kernel/arch/arm/mach-gpl32900/timer/gp_timer_module.ko:
+kernel/arch/arm/mach-gpl32900/pwm/gp_pwm_module.ko: kernel/arch/arm/mach-gpl32900/timer/gp_timer_module.ko
+kernel/arch/arm/mach-gpl32900/line_buffer/gp_line_buffer_module.ko:
+kernel/arch/arm/mach-gpl32900/spi/gp_spi_module.ko:
+kernel/arch/arm/mach-gpl32900/spi_nor/gp_spi_nor_module.ko: kernel/arch/arm/mach-gpl32900/spi/gp_spi_module.ko kernel/arch/arm/mach-gpl32900/timer/gp_timer_module.ko
+kernel/arch/arm/mach-gpl32900/usb/gp_usb.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/arch/arm/mach-gpl32900/apbdma0/gp_apbdma0_module.ko:
+kernel/arch/arm/mach-gpl32900/sensor_mgr/sensor_mgr_module.ko:
+kernel/arch/arm/mach-gpl32900/csi/gp_csi_module.ko: kernel/arch/arm/mach-gpl32900/sensor_mgr/sensor_mgr_module.ko
+kernel/arch/arm/mach-gpl32900/csi/gp_csi1_module.ko: kernel/arch/arm/mach-gpl32900/sensor_mgr/sensor_mgr_module.ko
+kernel/arch/arm/mach-gpl32900/tv/gp_tv_module.ko:
+kernel/arch/arm/mach-gpl32900/ppu/gp_ppu_module.ko:
+kernel/arch/arm/mach-gpl32900/ppu_simple/gp_ppu_simple.ko:
+kernel/arch/arm/mach-gpl32900/mipi/gp_mipi_module.ko: kernel/arch/arm/mach-gpl32900/sensor_mgr/sensor_mgr_module.ko
+kernel/arch/arm/mach-gpl32900/cdsp/gp_cdsp_module.ko: kernel/arch/arm/mach-gpl32900/sensor_mgr/sensor_mgr_module.ko
+kernel/arch/arm/mach-gpl32900/aes/gp_aes_module.ko:
+kernel/arch/arm/mach-gpl32900/spu/spu_module.ko:
+kernel/arch/arm/mach-gpl32900/sdma/gp_sdma_module.ko:
+kernel/arch/arm/mach-gpl32900/adc/gp_adc_module.ko:
+kernel/arch/arm/mach-gpl32900/sd/gp_sd.ko: kernel/arch/arm/mach-gpl32900/apbdma0/gp_apbdma0_module.ko
+kernel/arch/arm/mach-gpl32900/audio2/gp_audio2.ko:
+kernel/arch/arm/mach-gpl32900/audio2/gp_mixer2.ko:
+kernel/arch/arm/mach-gpl32900/audio/gp_audio.ko:
+kernel/arch/arm/mach-gpl32900/audio/gp_mixer.ko: kernel/arch/arm/mach-gpl32900/audio/gp_audio.ko
+kernel/arch/arm/mach-gpl32900/gp_nand/gp_nand_module.ko:
+kernel/arch/arm/mach-gpl32900/gp_nand/gp_nand_module2.ko:
+kernel/arch/arm/mach-gpl32900/dc2dc/gp_dc2dc_module.ko:
+kernel/arch/arm/mach-gpl32900/spi1/gp_spi1_module.ko:
+kernel/arch/arm/mach-gpl32900/vpad-debug/vpad-debug_module.ko:
+kernel/arch/arm/mach-gpl32900/dac-jack/dac-jack_module.ko:
+kernel/arch/arm/mach-gpl32900/snapshot_nand.ko: kernel/arch/arm/mach-gpl32900/ceva/gp_ceva_module.ko
+kernel/arch/arm/mach-gpl32900/snapshot_sd.ko: kernel/arch/arm/mach-gpl32900/sd/gp_sd.ko kernel/arch/arm/mach-gpl32900/apbdma0/gp_apbdma0_module.ko kernel/arch/arm/mach-gpl32900/ceva/gp_ceva_module.ko
+kernel/fs/nls/nls_cp932.ko:
+kernel/fs/nls/nls_euc-jp.ko:
+kernel/fs/nls/nls_cp936.ko:
+kernel/fs/nls/nls_cp950.ko:
+kernel/fs/cramfs/cramfs.ko:
+kernel/fs/fuse/fuse.ko:
+kernel/fs/fuse/cuse.ko: kernel/fs/fuse/fuse.ko
+kernel/drivers/scsi/scsi_wait_scan.ko:
+kernel/drivers/mtd/nand/nand.ko: kernel/drivers/mtd/nand/nand_ecc.ko
+kernel/drivers/mtd/nand/nand_ecc.ko:
+kernel/drivers/mtd/tests/mtd_oobtest.ko:
+kernel/drivers/mtd/tests/mtd_pagetest.ko:
+kernel/drivers/mtd/tests/mtd_readtest.ko:
+kernel/drivers/mtd/tests/mtd_speedtest.ko:
+kernel/drivers/mtd/tests/mtd_stresstest.ko:
+kernel/drivers/mtd/tests/mtd_subpagetest.ko:
+kernel/drivers/mtd/tests/mtd_torturetest.ko:
+kernel/drivers/net/mii.ko:
+kernel/drivers/net/usb/asix.ko: kernel/drivers/net/usb/usbnet.ko kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko kernel/drivers/net/mii.ko
+kernel/drivers/net/usb/usbnet.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko kernel/drivers/net/mii.ko
+kernel/drivers/hid/hid-a4tech.ko:
+kernel/drivers/hid/hid-apple.ko:
+kernel/drivers/hid/hid-belkin.ko:
+kernel/drivers/hid/hid-cherry.ko:
+kernel/drivers/hid/hid-chicony.ko:
+kernel/drivers/hid/hid-cypress.ko:
+kernel/drivers/hid/hid-drff.ko:
+kernel/drivers/hid/hid-ezkey.ko:
+kernel/drivers/hid/hid-gyration.ko:
+kernel/drivers/hid/hid-kensington.ko:
+kernel/drivers/hid/hid-kye.ko:
+kernel/drivers/hid/hid-logitech.ko:
+kernel/drivers/hid/hid-microsoft.ko:
+kernel/drivers/hid/hid-monterey.ko:
+kernel/drivers/hid/hid-ntrig.ko:
+kernel/drivers/hid/hid-pl.ko:
+kernel/drivers/hid/hid-petalynx.ko:
+kernel/drivers/hid/hid-samsung.ko:
+kernel/drivers/hid/hid-sjoy.ko:
+kernel/drivers/hid/hid-sony.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/hid/hid-sunplus.ko:
+kernel/drivers/hid/hid-gaff.ko:
+kernel/drivers/hid/hid-tmff.ko:
+kernel/drivers/hid/hid-topseed.ko:
+kernel/drivers/hid/hid-twinhan.ko:
+kernel/drivers/hid/hid-zpff.ko:
+kernel/drivers/hid/usbhid/usbhid.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/usb/core/usbcore.ko: kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/usb/mon/usbmon.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/usb/host/ehci-hcd.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/usb/host/ohci-hcd.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/usb/storage/usb-storage.ko: kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko
+kernel/drivers/usb/gadget/spmp_udc.ko:
+kernel/drivers/usb/gadget/g_spmp_storage.ko: kernel/arch/arm/mach-gpl32900/usb/gp_usb.ko kernel/drivers/usb/core/usbcore.ko kernel/arch/arm/mach-gpl32900/i2c-bus/gp_i2c_bus_module.ko kernel/drivers/usb/gadget/spmp_udc.ko

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeloDecode", "MeloDecode\MeloDecode.vcproj", "{D51380EA-0195-457C-95BB-4E3C52BF872D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A714AA1C-45A9-403D-A6E1-020E520119A2} = {A714AA1C-45A9-403D-A6E1-020E520119A2}
+		{A5592F6F-C86E-40EB-8791-734C170942EB} = {A5592F6F-C86E-40EB-8791-734C170942EB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bento4", "..\..\..\..\Bento4\Build\Targets\x86-microsoft-win32-vs2005\Bento4\Bento4.vcproj", "{A714AA1C-45A9-403D-A6E1-020E520119A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Melo", "Melo\Melo.vcproj", "{A5592F6F-C86E-40EB-8791-734C170942EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D51380EA-0195-457C-95BB-4E3C52BF872D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D51380EA-0195-457C-95BB-4E3C52BF872D}.Debug|Win32.Build.0 = Debug|Win32
+		{D51380EA-0195-457C-95BB-4E3C52BF872D}.Release|Win32.ActiveCfg = Release|Win32
+		{D51380EA-0195-457C-95BB-4E3C52BF872D}.Release|Win32.Build.0 = Release|Win32
+		{A714AA1C-45A9-403D-A6E1-020E520119A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A714AA1C-45A9-403D-A6E1-020E520119A2}.Debug|Win32.Build.0 = Debug|Win32
+		{A714AA1C-45A9-403D-A6E1-020E520119A2}.Release|Win32.ActiveCfg = Release|Win32
+		{A714AA1C-45A9-403D-A6E1-020E520119A2}.Release|Win32.Build.0 = Release|Win32
+		{A5592F6F-C86E-40EB-8791-734C170942EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A5592F6F-C86E-40EB-8791-734C170942EB}.Debug|Win32.Build.0 = Debug|Win32
+		{A5592F6F-C86E-40EB-8791-734C170942EB}.Release|Win32.ActiveCfg = Release|Win32
+		{A5592F6F-C86E-40EB-8791-734C170942EB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

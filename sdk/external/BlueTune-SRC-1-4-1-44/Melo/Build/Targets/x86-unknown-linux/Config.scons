@@ -1,0 +1,5 @@
+LoadTool('gcc-generic', env)
+
+env['AP4_SYSTEM_SOURCES']={'System/StdC':'*.cpp'}
+
+         

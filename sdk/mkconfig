@@ -1,0 +1,671 @@
+
+-------------------------------------
+-- Chip ARCH and MACH
+-------------------------------------
+if config.ARCH == nil then
+	config.ARCH = selectList(
+		"CHIP ARCH",
+		{"SPMP8050", "GPL32900", "GPL64000"})
+end
+
+config["ARCH_" .. config.ARCH] = true
+
+if config.DEFCONFIG_FILE == nil then
+	config.DEFCONFIG_FILE = ""
+end
+
+if config.ARCH == "SPMP8050" then
+	config.GRAPHIC_2D = true
+	config.PPU = 0
+	config.PPU_TV = false
+	config.CEVA = true
+elseif config.ARCH == "GPL32900" then
+	config.GRAPHIC_2D = false
+	--config.PPU = true
+	--config.PPU_TV = true
+	config.CEVA = true
+elseif config.ARCH == "GPL64000" then
+	config.GRAPHIC_2D = false
+	config.PPU = 0
+	config.PPU_TV = false
+	config.CEVA = true
+else
+	config.GRAPHIC_2D = false
+	config.PPU = 0
+	config.PPU_TV = false
+	config.CEVA = false
+end
+
+-------------------------------------
+-- Memory
+-------------------------------------
+local MB = 1024 * 1024
+if config.MEM_SIZE == nil then
+	config.MEM_SIZE = selectList("Memory Size",
+		 {"32MB", "64MB", "128MB"},
+		 {(32 * MB), (64 * MB), (128 * MB)})
+end
+
+if config.CHUNKMEM_SIZE == nil then
+	config.CHUNKMEM_SIZE = selectList("Chunk Memory Size",
+		 {"2MB", "4MB", "8MB", "16MB", "24MB", "28MB", "32MB", "48MB", "64MB"},
+		 {(2 * MB), (4 * MB), (8 * MB), (16 * MB), (24 * MB), (28 * MB), (32 * MB), (48 * MB), (64 * MB)})
+end
+
+local kernelmem = config.MEM_SIZE - config.CHUNKMEM_SIZE
+config.KERNEL_CMDLINE =
+	string.format("mem=%dMB gp_chunkmem.membase=0x%08x gp_chunkmem.memsize=0x%08x",
+		kernelmem / MB, kernelmem, config.CHUNKMEM_SIZE
+	)
+
+	
+-------------------------------------
+-- Platform
+-------------------------------------
+IncludeConfig("platform/mkconfig")
+
+-------------------------------------
+-- Display
+-------------------------------------
+if config.DISP0 == nil then
+	config.DISP0 = selectBool("Display0 Config", "Enable Display0")
+end
+
+if config.DISP0 then
+	local panelList = {}
+	local panelPromptList = {}
+
+	-- collect all lcd/lcm panels
+	for i, v in ipairs(lcd_panels) do
+		panelList[#panelList + 1] = v.name
+		panelPromptList[#panelPromptList + 1] = v.prompt
+	end
+	for i, v in ipairs(lcm_panels) do
+		panelList[#panelList + 1] = v.name
+		panelPromptList[#panelPromptList + 1] = v.prompt
+	end
+	panelList[#panelList + 1] = "None"
+	panelPromptList[#panelPromptList + 1] = "None"
+
+	if config.DISP0_PANEL == nil then
+		config.DISP0_PANEL = selectList("Select panel of display0", panelPromptList, panelList) 
+	end
+	if config.DISP0_TVOUT == nil then
+		config.DISP0_TVOUT = selectBool("TVOUT of display0 Config", "Enable TVOUT of display0")
+	end
+	if config.DISP0_FB == nil then
+		config.DISP0_FB = selectBool("FB of display0 Config", "Enable FrameBuffer of display0")
+	end
+else
+	config.DISP0_PANEL = "None"
+	config.DISP0_TVOUT = false
+	config.DISP0_FB = false
+end
+
+
+if config.DISP1 == nil then
+	config.DISP1 = selectBool("Display1 Config", "Enable Display1")
+end
+
+if config.DISP1 then
+	local panelList1 = {}
+	local panelPromptList1 = {}
+
+	-- collect all lcd/lcm panels
+	for i, v in ipairs(lcd1_panels) do
+		panelList1[#panelList1 + 1] = v.name
+		panelPromptList1[#panelPromptList1 + 1] = v.prompt
+	end
+	for i, v in ipairs(lcm1_panels) do
+		panelList1[#panelList1 + 1] = v.name
+		panelPromptList1[#panelPromptList1 + 1] = v.prompt
+	end
+	panelList1[#panelList1 + 1] = "None"
+	panelPromptList1[#panelPromptList1 + 1] = "None"
+
+	if config.DISP1_PANEL == nil then
+		config.DISP1_PANEL = selectList("Select panel of display1", panelPromptList1, panelList1)
+	end
+
+	if config.DISP1_FB == nil then
+		config.DISP1_FB = selectBool("FB of display1 Config", "Enable FrameBuffer of display1")
+	end
+else
+	config.DISP1_PANEL = "None"
+	config.DISP1_FB = false
+end
+
+if config.DISP2 == nil then
+	config.DISP2 = selectBool("Display2 Config", "Enable Display2")
+end
+
+if config.DISP2 then
+	if config.DISP2_FB == nil then
+		config.DISP2_FB = selectBool("FB of display2 Config", "Enable FrameBuffer of display2")
+	end
+else
+	config.DISP2_FB = false
+end
+	
+-------------------------------------
+-- Show Logo
+-------------------------------------
+if config.SHOWLOGO == nil then
+	config.SHOWLOGO = selectBool("Show Logo Config", "Enable Show Logo")
+end
+
+-------------------------------------
+-- Storage
+-------------------------------------
+if config.MAINSTORAGE == nil then
+	config.MAINSTORAGE = selectList("Main Storage",
+		 {"RAM", "SD", "CF", "XD", "MS", "Serial Flash", "Nand", "EMMC_NAND", "USB Disk"},
+		 {"None", "gp_sd", "gp_cf", "gp_xd", "gp_mscard", "gp_spi_nor_module", "gp_nand_module", "gp_emmc_nand", "gp_usb_disk"})
+end
+
+if config.MAINSTORAGE == "gp_sd" then
+	config.SD = "y"
+elseif config.MAINSTORAGE == "gp_cf" then
+	config.CF = "y"
+elseif config.MAINSTORAGE == "gp_xd" then
+	config.XD = "y"
+elseif config.MAINSTORAGE == "gp_mscard" then
+	config.MS = "y"
+elseif config.MAINSTORAGE == "gp_spi_nor_module" then
+	config.SFLASH = "y"
+elseif config.MAINSTORAGE == "gp_nand_module" then
+	config.NAND = "y"
+elseif config.MAINSTORAGE == "gp_emmc_nand" then
+	config.EMMC_NAND = "y"
+end
+
+if config.SD == nil then
+	config.SD = selectBool("SD Config", "Enable SD")
+end
+
+if config.SDIO == nil then
+	config.SDIO = selectBool("SDIO Config", "Enable SDIO")
+end
+
+if config.CF == nil then
+	config.CF = selectBool("CF Config", "Enable CF")
+end
+
+if config.XD == nil then
+	config.XD = selectBool("XD Config", "Enable XD")
+end
+
+if config.MS == nil then
+	config.MS = selectBool("MS Config", "Enable MS")
+end
+
+if config.SFLASH == nil then
+	config.SFLASH = selectBool("Serial Flash Config", "Enable Serial Flash")
+end
+
+if config.NAND == nil then
+	config.NAND = selectBool("Nand Config", "Enable Nand")
+end
+
+if config.EMMC_NAND == nil then
+	config.EMMC_NAND = selectBool("eMMC Nand Config", "Enable eMMC Nand")
+end
+
+-------------------------------------
+-- Main Filesystem (cramfs or squashfs)
+-------------------------------------
+if config.MAIN_FILESYSTEM == nil then
+	config.MAIN_FILESYSTEM = "cramfs"
+end
+
+
+-------------------------------------
+-- USB
+-------------------------------------
+if config.USB_PHY0_EN == nil then
+		config.USB_PHY0_EN = selectBool("Select USB PHY0 Function (256 pins only)", "USB PHY0 FUNCTION [y]Host only [n]Disable")
+end
+		
+if config.USB_PHY1_SEL == nil then
+	config.USB_PHY1_SEL = selectList("Select USB PHY1 Function (256 & 216 pins)",
+		 {"HOST", "SLAVE", "HOST/SLAVE (SWITCH BY APP.)", "DISABLE"},
+		 {(0), (1), (2), (3)})
+end
+		 
+if config.USB_PHY0_EN or config.USB_PHY1_SEL == 0 or config.USB_PHY1_SEL == 2 then
+	config.USB_HOST = true
+	config.USB_HOST_STORAGE = true
+	if config.USB_HOST_HIGHSPEED_MODE == nil then
+		config.USB_HOST_HIGHSPEED_MODE = selectBool("Set USB HOST SPEED", "USB HOST SPEED [y]High Speed 2.0 [n]Full Speed 1.1")
+	end
+        if config.USB_HOST_HUB_CONFIG == nil then
+		config.USB_HOST_HUB_CONFIG = 5
+	end
+	--[[
+	--There's only storage driver now. So that we mark it for future usage.
+	if config.USB_HOST_STORAGE == nil then
+		config.USB_HOST_STORAGE = selectBool("USB Host Storage Config", "Enable USB Host Storage Driver")
+	end
+	--]]
+else
+	config.USB_HOST = false
+	config.USB_HOST_STORAGE = false
+end
+
+if config.USB_PHY1_SEL == 1 or config.USB_PHY1_SEL == 2 then
+	config.USB_SLAVE = true
+	config.USB_SLAVE_MSDC = true
+	--[[
+	--There's only MSDC driver now. So that we mark it for future usage.
+	if config.USB_SLAVE_MSDC == nil then
+		config.USB_SLAVE_MSDC = selectBool("USB MassStorage MSDC Config", "Enable USB MSDC Driver")
+	end
+	--]]
+
+else
+	config.USB_SLAVE = false
+	config.USB_SLAVE_MSDC = false
+end
+
+if config.USB_HOST or config.USB_SLAVE then
+	config.USB = true
+else
+	config.USB = false
+end
+
+
+-------------------------------------
+-- USB_WIFI
+-------------------------------------
+if config.USB_HOST then
+	local wifiList = {}
+	local wifiPromptList = {}
+
+	-- collect all wifi modules
+	for i, v in ipairs(usb_wifi) do
+		wifiList[#wifiList + 1] = v.name
+		wifiPromptList[#wifiPromptList + 1] = v.prompt
+	end
+
+	wifiList[#wifiList + 1] = "None"
+	wifiPromptList[#wifiPromptList + 1] = "None"
+
+	if config.USB_WIFI == nil then
+		config.USB_WIFI = selectList("Select USB WIFI", wifiPromptList, wifiList) 
+	end
+
+else
+	config.USB_WIFI = "None"
+end
+
+-------------------------------------
+-- Audio
+-------------------------------------
+if config.AUDIO == nil then
+	config.AUDIO = selectBool("Audio Config", "Enable Audio")
+end
+
+-------------------------------------
+-- SPU
+-------------------------------------
+if config.SPU == nil then
+	config.SPU = selectBool("SPU Config", "Enable SPU")
+end
+
+-------------------------------------
+-- PulseAudio
+-------------------------------------
+if config.AUDIO then
+	if config.PULSEAUDIO == nil then
+		config.PULSEAUDIO = selectBool("PulseAudio Config", "Enable PulseAudio")
+	end
+end
+
+-------------------------------------
+-- Audio Mixer
+-------------------------------------
+if config.AUDIO then
+	if config.AUDIOMIXER == nil then
+		config.AUDIOMIXER = selectBool("Audio Mixer Config", "Enable Audio Mixer")
+	end
+end
+
+-------------------------------------
+-- Resample
+-------------------------------------
+if config.RESAMPLE == nil then
+	if config.AUDIOMIXER then
+		config.RESAMPLE = true
+	else
+		config.RESAMPLE = selectBool("Resample Config", "Enable Resample")
+	end
+end
+
+-------------------------------------
+-- RTC
+-------------------------------------
+if config.INTERNAL_RTC == nil then
+	config.INTERNAL_RTC = selectBool("Internal RTC", "Enable Internal RTC")
+end
+
+
+-------------------------------------
+-- ADC
+-------------------------------------
+if config.INTERNAL_ADC == nil then
+	config.INTERNAL_ADC = selectBool("Internal ADC", "Enable Internal ADC")
+end
+
+-------------------------------------
+-- Input
+-------------------------------------
+if config.KEY == nil then
+	config.KEY = selectBool("Key Input", "Enable Key Input")
+end
+
+if config.KEYBOARD == nil then
+	config.KEYBOARD = selectBool("KeyBoard", "Enable KeyBoard")
+end
+
+if config.TOUCH == nil then
+	config.TOUCH = selectBool("Touch Input", "Enable Touch Input")
+end
+
+if config.TOUCHPAD == nil then
+	config.TOUCHPAD = selectBool("TouchPad", "Enable TouchPad")
+end
+
+if config.PS2MOUSE == nil then
+	config.PS2MOUSE = selectBool("PS2MOUSE Input", "Enable PS2MOUSE Input")
+end
+
+-------------------------------------
+-- PS2 mouse
+-------------------------------------
+if config.PS2MOUSE == nil then
+	config.PS2MOUSE = selectBool("PS2MOUSE Config", "Enable PS2MOUSE")
+end
+
+if config.PS2MOUSE then
+	local list = {}
+	local promptList = {}
+
+	for i, v in ipairs(ps2_uart_mouse) do
+		list[#list + 1] = v.name
+		promptList[#promptList + 1] = v.prompt
+	end
+
+	if config.PS2MOUSE_DEVICE == nil then
+		config.PS2MOUSE_DEVICE = selectList("Select PS2 mouse Device", promptList, list) 
+	end
+else
+	config.PS2MOUSE_DEVICE = "None"
+end
+
+-------------------------------------
+-- Cmos Sensor Interface
+-------------------------------------
+if config.CSI0 == nil then
+	config.CSI0 = selectBool("Cmos Sensor Interface0 Config", "Enable CSI0")
+end
+
+if config.CSI1 == nil then
+	config.CSI1 = selectBool("Cmos Sensor Interface1 Config", "Enable CSI1")
+end
+
+if config.CSI2 == nil then
+	config.CSI2 = selectBool("Cmos Sensor Interface2 Config", "Enable CSI2")
+end
+-------------------------------------
+-- Sensor driver
+-------------------------------------
+if 	config.SENSOR_DRIVER_NUM == nil then
+	config.SENSOR_DRIVER_NUM = selectList("Select Sensor driver number",
+		 {"1 set", "2 set", "3 set", "None"},
+		 {(1), (2), (3), (0)})
+end
+
+if 	config.SENSOR_DRIVER_NUM then
+	if config.SENSOR_DRIVER_NUM>=1 then
+		local list = {}
+		local promptList = {}
+	
+		for i, v in ipairs(sensors) do
+			list[#list + 1] = v.name
+			promptList[#promptList + 1] = v.prompt
+		end
+	
+		if config.SENSOR0 == nil then
+			config.SENSOR0 = selectList("Select Sensor0", promptList, list) 
+		end
+		if config.SENSOR0_PORT_SEL ==nil then
+			config.SENSOR0_PORT_SEL = selectList("Select Sensor0 Input Port",
+				{"PORT0", "MIPI","PORT_CUS"}, {"PORT0", "MIPI", "PORT_CUS"})
+		end
+		if config.SENSOR_DRIVER_NUM>=2 then
+			if config.SENSOR1 == nil then
+				config.SENSOR1 = selectList("Select Sensor1", promptList, list)
+			end
+			if config.SENSOR1_PORT_SEL == nil then
+				config.SENSOR1_PORT_SEL = selectList("Select Sensor1 Input Port",
+					{"PORT0", "MIPI", "PORT_CUS"}, {"PORT0", "MIPI", "PORT_CUS"})
+			end
+			if config.SENSOR_DRIVER_NUM>=3 then
+				if config.SENSOR2 == nil then
+					config.SENSOR2 = selectList("Select Sensor2", promptList, list)
+				end
+				if config.SENSOR2_PORT_SEL == nil then
+					config.SENSOR2_PORT_SEL = selectList("Select Sensor2 Input Port",
+						{"PORT0", "MIPI", "PORT_CUS"}, {"PORT0", "MIPI", "PORT_CUS"})
+				end
+			end
+		end
+	end
+	if config.SENSOR0 == nil then
+		config.SENSOR0 = "None"
+		config.SENSOR0_PORT_SEL = "None"
+	end
+	if config.SENSOR1 == nil then
+		config.SENSOR1 = "None"
+		config.SENSOR1_PORT_SEL = "None"
+	end
+	if config.SENSOR2 == nil then
+		config.SENSOR2 = "None"
+		config.SENSOR2_PORT_SEL = "None"
+	end
+end
+
+-------------------------------------
+-- touch pad
+-------------------------------------
+if config.TOUCHPAD == nil then
+	config.TOUCHPAD = selectBool("TOUCHPAD Config", "Enable TOUCHPAD")
+end
+
+if config.TOUCHPAD then
+	local list = {}
+	local promptList = {}
+
+	for i, v in ipairs(touchpad) do
+		list[#list + 1] = v.name
+		promptList[#promptList + 1] = v.prompt
+	end
+
+	if config.TOUCHPAD_DEVICE == nil then
+		config.TOUCHPAD_DEVICE = selectList("Select touch Device", promptList, list) 
+	end
+else
+	config.TOUCHPAD_DEVICE = "None"
+end
+
+-------------------------------------
+
+-- keyboard
+
+-------------------------------------
+
+if config.KEYBOARD == nil then
+	config.KEYBOARD = selectBool("KEYBOARD Config", "Enable KEYBOARD")
+end
+
+if config.KEYBOARD then
+	local list = {}
+	local promptList = {}
+
+	for i, v in ipairs(keyboard) do
+		list[#list + 1] = v.name
+		promptList[#promptList + 1] = v.prompt
+	end
+
+	if config.KEYBOARD_DEVICE == nil then
+		config.KEYBOARD_DEVICE = selectList("Select keyboard Device", promptList, list) 
+	end
+else
+	config.KEYBOARD_DEVICE = "None"
+end
+
+
+-------------------------------------
+-- G Sensor
+-------------------------------------
+if config.G_SENSOR == nil then
+	config.G_SENSOR = selectBool("G_SENSOR Config", "Enable GSENSOR")
+end
+
+if config.G_SENSOR then
+	local list = {}
+	local promptList = {}
+
+	for i, v in ipairs(gsensors) do
+		list[#list + 1] = v.name
+		promptList[#promptList + 1] = v.prompt
+	end
+
+	if config.G_SENSOR_DEVICE == nil then
+		config.G_SENSOR_DEVICE = selectList("Select G_Sensor Device", promptList, list) 
+	end
+else
+	config.G_SENSOR_DEVICE = "None"
+end
+
+-------------------------------------
+-- Flash
+-------------------------------------
+if config.FLASH == nil then
+	config.FLASH = selectBool("FlashLite Config", "Enable FlashLite")
+end
+-- flashplayer support mouse? 
+if config.FLASH then 
+       if config.FLASH_SUPPORT_MOUSE == nil then 
+               config.FLASH_SUPPORT_MOUSE = selectBool("Flashplayer support mouse", "Enable mouse support") 
+       end 
+end 
+-------------------------------------
+-- OpenVG
+-------------------------------------
+if config.OPENVG == nil then
+	config.OPENVG = selectBool("OpenVG Config", "Enable OpenVG")
+end
+
+-------------------------------------
+-- DSP Codec
+-------------------------------------
+if config.CODEC_IMAGE == nil then
+	config.CODEC_IMAGE = selectBool("DSP Codec Config", "Enable DSP Image Codec")
+end
+if config.CODEC_VIDEO == nil then
+	config.CODEC_VIDEO = selectBool("DSP Codec Config", "Enable DSP Video Codec")
+end
+
+-------------------------------------
+-- Bluetune Player
+-------------------------------------
+if config.BTPLAY == nil then
+	config.BTPLAY = selectBool("Bluetune Audio Player Config", "Enable BTPlay")
+end
+
+-------------------------------------
+-- Lib Fuse
+-------------------------------------
+if config.LIBFUSE == nil then
+	config.LIBFUSE = selectBool("Lib Fuse Config", "Enable Lib Fuse")
+end
+
+-------------------------------------
+-- ExFAT on Fuse
+-------------------------------------
+if config.EXFAT == nil then
+	config.EXFAT = selectBool("ExFAT on Fuse Config", "Enable ExFAT on FUse")
+end
+
+-------------------------------------
+-- Lua
+-------------------------------------
+if config.LUA == nil then
+	config.LUA = selectBool("LUA Config", "Enable LUA")
+end
+
+-------------------------------------
+-- PPU SELECT
+-------------------------------------
+if config.PPU == nil then
+	config.PPU = selectList("Select PPU Function",
+		 {"Disable", "PPU", "Simple PPU"},
+		 {(0), (1), (2)})
+end
+
+-------------------------------------
+-- PPU TV
+-------------------------------------
+if config.PPU_TV == nil then
+	config.PPU_TV = selectBool("PPU_TV Config", "Enable PPU_TV")
+end
+
+-------------------------------------
+-- Android Parts
+-------------------------------------
+if config.ANDROID == true then
+	-------------------------------------
+	-- Power Supply
+	-------------------------------------
+	if config.POWER == nil then
+		config.POWER = selectBool("Power Config", "Enable Power Supply")
+	end
+
+	-------------------------------------
+	-- Battery
+	-------------------------------------
+	if config.BATTERY == nil then
+		config.BATTERY = selectBool("BATTERY Config", "Enable Battery")
+	end
+
+	-------------------------------------
+	-- G-Sensor
+	-------------------------------------
+	if config.GSENSOR == nil then
+		config.GSENSOR = selectBool("G-SENSOR Config", "Enable G-SENSOR")
+	end
+else
+	config.POWER = false
+	config.BATTERY = false
+	config.GSENSOR = false
+end
+
+-------------------------------------
+-- External
+-------------------------------------
+IncludeConfig("sdk/external/mkconfig")
+
+-------------------------------------
+-- Lua
+-------------------------------------
+if config.GP_FAST_BOOT == nil then
+	config.GP_FAST_BOOT = selectBool("GP Fast Boot Config", "Enable FastBoot")
+end
+
+-------------------------------------
+-- DC2DC
+-------------------------------------
+if config.DC2DC == nil then
+	config.DC2DC = selectBool("DC2DC Config", "Enable DC2DC")
+end

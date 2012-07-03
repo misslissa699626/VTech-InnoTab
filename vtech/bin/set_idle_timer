@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -f /var/run/desktopManager.pid ]; then
+	if [ "$1" = "enable" ]; then
+		kill -62 `cat /var/run/desktopManager.pid`
+	elif [ "$1" = "disable" ]; then
+		kill -61 `cat /var/run/desktopManager.pid`
+	elif [ "$1" = "reset" ]; then
+		kill -63 `cat /var/run/desktopManager.pid`
+	fi
+fi
